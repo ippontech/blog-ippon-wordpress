@@ -34,15 +34,27 @@ Redémarrer les serveurs Apache et MySQL
 
 ### 1.2. Installation environnement de développement
 
-### 1.1. Pré-requis (Mac OS)
+#### 1.2.1. Pré-requis (Mac OS)
 
-1. Installer [MAMP](http://www.mamp.info/en/downloads/index.html) (Mac Apache MySQL PHP)
-2. Télécharger [WordPress](http://wordpress.org/download/) (version actuelle 3.7.1) et dézipper dans le dossier qui vous convient
+1. Installer [Git](http://git-scm.com/)
+2. Installer [Node JS](http://nodejs.org/)
+3. Installer [Ruby](http://www.ruby-lang.org/fr/)
+4. Installer [Compass](http://compass-style.org/install/)
 
-
-### 1.2. Initialisation base de données
+#### 1.2.2. Mise à jour des modules
 
 Se positionner à la racine du projet
 
 	sudo npm install
+	
+## 2. Développement
+
+### 2.1. Les commandes
+
+Se positionner à la racine du projet
+
+Pour lancer, les outils de développement
+
+	grunt dev
+
 
