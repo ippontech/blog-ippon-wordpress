@@ -1,7 +1,62 @@
 @import "bootstrap-sass/bootstrap";
 
 @import "ippon-variables";
+@import "functions";
+
+$main-footer-bgcolor: $gray;
+$main-footer-color: $gray-light;
+$main-footer-icon-color: $gray-light;
+
+
+
 
 body {
   background-color: $ippon-secondary;
+}
+
+.main-footer {
+  background-color: $main-footer-bgcolor;
+  color: $main-footer-color;
+  font-size: pxtoem(14px);
+  @media (min-width: $screen-sm-min) {
+    padding-left: $padding-large-horizontal;
+    padding-right: $padding-large-horizontal;
+  }
+  text-align: center;
+  a {
+    color: $main-footer-color;
+    font-size: pxtoem(24px);
+    text-decoration: none;
+    @media (min-width: $screen-sm-min) {
+      font-size: pxtoem(14px);
+    }
+    .fa {
+      color: $main-footer-icon-color;
+      padding: $padding-small-horizontal;
+      @media (min-width: $screen-sm-min) {
+        font-size: pxtoem(24px);
+        padding: $padding-large-horizontal;
+      }
+    }
+  }
+  .accounts-links, .friends-links {
+    border-bottom: 1px solid;
+    a {
+      padding: $padding-large-horizontal;
+      @media (min-width: $screen-sm-min) {
+        padding: $padding-base-horizontal;
+      }
+    }
+  }
+  .friends-links {
+    a {
+      display: block;
+      @media (min-width: $screen-sm-min) {
+        display: inline;
+      }
+    }
+  }
+  .copyrights {
+    padding: $padding-base-horizontal;
+  }
 }

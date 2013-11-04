@@ -1,0 +1,6 @@
+@import "ippon-variables";
+
+// Convert PX to EM global function
+@function pxtoem($px){
+  @return ($px/$base-font-size)+0em;
+}

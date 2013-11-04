@@ -28,6 +28,7 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
 </head>
 
 <body <?php body_class(); ?>>
@@ -48,4 +49,4 @@
 			</div><!-- #navbar -->
 		</header><!-- #masthead -->
 
-		<div id="main" class="site-main">
+		<div id="main" class="row">
