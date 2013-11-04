@@ -21,6 +21,13 @@ h1 {
 
 }
 
+.article-meta {
+  time {  
+    background-color: $ippon-complementary;
+    color: $light;
+    padding: $padding-base-horizontal;
+  }
+}
 
 
 aside.aside-site {
