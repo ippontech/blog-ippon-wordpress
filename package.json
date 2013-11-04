@@ -1,0 +1,14 @@
+{
+  "name": "blog-ippon-wordpress",
+  "version": "0.0.1",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-compass": "~0.3.0",
+    "grunt-contrib-watch": "~0.4.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}

@@ -1,0 +1,19 @@
+////////////////////////////////////////////////////////////////////////
+// Définitions des couleurs
+////////////////////////////////////////////////////////////////////////
+
+$black: #000;
+$white: #fff;
+$gray: lighten(#000, 50%); // #c0c0c0
+$gray-lighter: lighten(#000, 90%);
+$gray-lightest: lighten(#000, 95%);
+
+$ippon-primary: #e42420;
+$ippon-primary-lighter: #0c5d58;
+$ippon-secondary: #fcc007;
+$ippon-secondary-lighter: #fdcb15;
+$ippon-performance: #DDD;
+$ippon-performance-lighter: #ddd;
+$ippon-complementary: #10b5c6;
+$ippon-complementary-darker: #157187;
+
