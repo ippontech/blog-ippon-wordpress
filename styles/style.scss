@@ -1,22 +1,39 @@
+@import "ippon-variables";
+
+$headings-color: $ippon-complementary;
+$link-color: $ippon-primary;
+$link-hover-color: $ippon-primary-lighter;
+
 @import "bootstrap-sass/bootstrap";
 
-@import "ippon-variables";
+
 @import "functions";
 
-$main-footer-bgcolor: $gray;
-$main-footer-color: $gray-light;
-$main-footer-icon-color: $gray-light;
 
 
 
 
 body {
-  background-color: $ippon-secondary;
+  background-color: $light;
+}
+
+h1 {
+
+}
+
+
+
+aside.aside-site {
+
+}
+
+.site-content {
+ background-color: $gray-light; 
 }
 
 .main-footer {
-  background-color: $main-footer-bgcolor;
-  color: $main-footer-color;
+  background-color: $gray;
+  color: $gray-light;
   font-size: pxtoem(14px);
   @media (min-width: $screen-sm-min) {
     padding-left: $padding-large-horizontal;
@@ -24,14 +41,14 @@ body {
   }
   text-align: center;
   a {
-    color: $main-footer-color;
+    color: $gray-light;
     font-size: pxtoem(24px);
     text-decoration: none;
     @media (min-width: $screen-sm-min) {
       font-size: pxtoem(14px);
     }
     .fa {
-      color: $main-footer-icon-color;
+      color: $gray-light;
       padding: $padding-small-horizontal;
       @media (min-width: $screen-sm-min) {
         font-size: pxtoem(24px);

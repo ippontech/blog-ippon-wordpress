@@ -16,7 +16,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="col-md-8">
+	<div id="primary" class="col-sm-8">
 		<div id="content" class="site-content" role="main">
 		<?php if ( have_posts() ) : ?>
 

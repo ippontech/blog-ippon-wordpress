@@ -12,11 +12,11 @@
  */
 
 if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-	<div id="tertiary" class="col-md-4" role="complementary">
+	<aside class="col-sm-4 aside-site">
 		<div class="sidebar-inner">
 			<div class="widget-area">
 				<?php dynamic_sidebar( 'sidebar-2' ); ?>
 			</div><!-- .widget-area -->
 		</div><!-- .sidebar-inner -->
-	</div><!-- #tertiary -->
+	</aside><!-- #tertiary -->
 <?php endif; ?>
