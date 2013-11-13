@@ -4,13 +4,19 @@ $headings-color: $ippon-complementary;
 $link-color: $ippon-primary;
 $link-hover-color: $ippon-primary-lighter;
 
+// $grid-gutter-width: 0px !default;
+
 @import "bootstrap-sass/bootstrap";
 
 
 @import "functions";
+@import "mixins";
 
 
-
+.container-fluid {
+  padding-left:  ($grid-gutter-width / 2);
+  padding-right: ($grid-gutter-width / 2);
+}
 
 
 body {
@@ -21,12 +27,200 @@ h1 {
 
 }
 
-.article-meta {
-  time {  
+time {
+}
+
+// SIDEBAR
+// --------------------------------------------------
+
+.sidebar-inner {
+  .widget-title {
+    font-size: pxtoem(18px);
+    text-transform: uppercase;
+  }
+}
+
+// Widget custom pour afficher les liens des réseaux sociaux Ippon
+// --------------------------------------------------
+.widget_ippon_rs {
+  font-size: pxtoem(24px);
+  @include aside-secondary();
+}
+
+// Widget custom pour afficher les liens des annonces Ippon
+// --------------------------------------------------
+.widget_ippon_board {
+  a {
+    text-decoration: none;
+  }
+  h3 {
+    font-size: pxtoem(18px);
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    @include aside-complementary-darker();
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: ($line-height-computed / 2);
+    }
+  }
+  p, .board-info {
+    @include padding-horizontal-base();
+  }
+  p {
+    font-size: pxtoem(14px);
+  }
+  .board-info {
+    background-color: $ippon-complementary-darker;
+    color: $light;
+    @include padding-vertical-base();
+  }
+}
+
+// Widget Twitter (Plugin "Twitter Widget Pro")
+// --------------------------------------------------
+@include responsive-invisibility('.widget_twitter');
+@media (min-width: $screen-sm-min) {
+  @include responsive-visibility('.widget_twitter');
+}
+.widget_twitter {
+  ul {
+    color: $gray;
+    padding-left: 0;
+    list-style: none;
+    > li {
+      font-size: pxtoem(14px);
+      margin-bottom: $padding-base-vertical;
+      margin-left: $padding-base-horizontal;
+      margin-right: $padding-base-horizontal;
+      margin-top: $padding-base-vertical;
+      border-bottom: 1px solid $gray-light;
+      @include padding-vertical-base();
+    }
+  }
+  .widget-title {
     background-color: $ippon-complementary;
     color: $light;
-    padding: $padding-base-horizontal;
+    @include padding-base();
   }
+}
+
+// Widget Newsletter (Plugin "MailChimp Widget")
+// --------------------------------------------------
+.widget_ns_mailchimp {
+  .widget-title {
+    @include aside-secondary();
+    margin-bottom: 0px !important;
+  }
+  form {
+    @include aside-secondary();
+  }
+  input[type="submit"] {
+    background-color: $gray;
+    border: 0px;
+    color: $light;
+  }
+}
+
+// Widget Tags (Plugin  natif "Tag cloud")
+// --------------------------------------------------
+// @include responsive-invisibility('.widget_tag_cloud');
+// @media (min-width: $screen-sm-min) {
+//   @include responsive-visibility('.widget_tag_cloud');
+// }
+.widget_tag_cloud {
+  .tagcloud {
+    font-size: pxtoem(28px);
+    @include tags();
+  }
+}
+
+
+
+.color-primary {
+  color: $ippon-primary;
+}
+.color-secondary {
+  color: $ippon-secondary;
+}
+.color-complementary {
+  color: $ippon-complementary;
+}
+
+.comments-link {
+  background-color: $light;
+  color: $gray;
+  @include padding-base();
+  @include margin-base();
+  text-decoration: uppercase;
+  a {
+    color: $gray;
+  }
+}
+
+.tags-link {
+  @include tags();
+}
+
+.article-meta {
+  // .main {  
+    // background-color: $ippon-complementary;
+    // color: $light;
+    // padding: $padding-base-horizontal;
+
+    .main-meta {
+      background-color: $ippon-complementary;
+      color: $light;
+      a {
+        color: $light;
+        text-decoration: none;
+      }
+      // border-right: solid 1px;
+
+      // background-color: black;
+      // position: relative;
+      // width: pxtoem(108px);
+      // height: pxtoem(45px);
+      // float: left;
+      // .day, .month, .year {
+      //   position: absolute;
+
+      // }
+    }
+    .delimiter-meta {
+      border-right: solid 1px;
+    }
+      .day {
+        font-size: pxtoem(36px);
+        text-align: right;
+        // margin-left: pxtoem(64px);
+        // margin-top: pxtoem(-2px);
+        // padding-bottom: $padding-base-vertical;
+        // padding-left: $padding-large-horizontal;
+        // padding-right: $padding-small-horizontal;
+        // padding-top: $padding-base-vertical;
+      }
+      .month, .year {
+        font-size: pxtoem(18px);
+        text-transform: uppercase;
+      }
+    //   .month {
+    //     margin-top: pxtoem(3px);
+
+    //   }
+    //   .year {
+    //     margin-top: pxtoem(19px);
+
+    //   }
+    // }
+
+
+
+    time {
+      // float: left;
+      // width: 50%;
+    }
+
+  // }
+
 }
 
 
@@ -51,9 +245,6 @@ aside.aside-site {
     color: $gray-light;
     font-size: pxtoem(24px);
     text-decoration: none;
-    @media (min-width: $screen-sm-min) {
-      font-size: pxtoem(14px);
-    }
     .fa {
       color: $gray-light;
       padding: $padding-small-horizontal;
@@ -64,7 +255,7 @@ aside.aside-site {
     }
   }
   .accounts-links, .friends-links {
-    border-bottom: 1px solid;
+    border-bottom: 1px solid $gray-light;
     a {
       padding: $padding-large-horizontal;
       @media (min-width: $screen-sm-min) {
@@ -72,11 +263,19 @@ aside.aside-site {
       }
     }
   }
+  .accounts-links {
+    font-size: pxtoem(28px);
+    @media (min-width: $screen-sm-min) {
+      font-size: pxtoem(16px);
+    }
+  }
   .friends-links {
+    @include padding-vertical-large();
     a {
       display: block;
       @media (min-width: $screen-sm-min) {
         display: inline;
+        font-size: pxtoem(16px);
       }
     }
   }

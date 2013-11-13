@@ -1,0 +1,71 @@
+@import "ippon-variables";
+
+// ajoute un padding défini
+@mixin padding-horizontal-base() {
+  padding-left: $padding-base-horizontal;
+  padding-right: $padding-base-horizontal;
+}
+@mixin padding-vertical-base() {
+  padding-bottom: $padding-base-vertical;
+  padding-top: $padding-base-vertical;
+}
+@mixin padding-base() {
+  @include padding-horizontal-base();
+  @include padding-vertical-base();
+}
+
+@mixin padding-horizontal-large() {
+  padding-left: $padding-large-horizontal;
+  padding-right: $padding-large-horizontal;
+}
+@mixin padding-vertical-large() {
+  padding-bottom: $padding-large-vertical;
+  padding-top: $padding-large-vertical;
+}
+@mixin padding-large() {
+  @include padding-horizontal-large();
+  @include padding-vertical-large();
+}
+
+@mixin margin-horizontal-base() {
+  margin-left: $padding-base-horizontal;
+  margin-right: $padding-base-horizontal;
+}
+@mixin margin-vertical-base() {
+  margin-bottom: $padding-base-vertical;
+  margin-top: $padding-base-vertical;
+}
+@mixin margin-base() {
+  @include margin-horizontal-base();
+  @include margin-vertical-base();
+}
+
+
+
+@mixin tags() {
+  background-color: $light;
+  color: $gray;
+  @include padding-base();
+  @include margin-base();
+  text-decoration: uppercase;
+  a {
+    color: $gray;
+  }
+}
+
+@mixin aside-secondary() {
+  background-color: $ippon-secondary;
+  color: lighten($ippon-secondary, 33%);
+  a {
+    color: lighten($ippon-secondary, 33%);
+    &:hover {
+      color: $light;
+    }
+  }
+  @include padding-base();
+}
+@mixin aside-complementary-darker() {
+  background-color: $ippon-complementary-darker;
+  color: $light;
+  @include padding-base();
+}

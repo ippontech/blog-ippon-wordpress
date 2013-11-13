@@ -12,7 +12,8 @@
  */
 
 if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-	<aside class="col-sm-4 aside-site">
+	<aside class="col-sm-4">
+		coucou sidebar.php
 		<div class="sidebar-inner">
 			<div class="widget-area">
 				<?php dynamic_sidebar( 'sidebar-2' ); ?>
