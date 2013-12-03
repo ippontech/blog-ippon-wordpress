@@ -18,6 +18,7 @@
 		</div>
 		<?php endif; ?>
 
+		<!-- Affichage du titre avec ou sans lien -->
 		<?php if ( is_single() ) : ?>
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 		<?php else : ?>
@@ -28,38 +29,12 @@
 		</a>
 		<?php endif; // is_single() ?>
 
-		<div class="row">
-			<div class="col-xs-6 article-meta">
-				<?php twentythirteen_entry_meta(); ?>
-				<?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
-			</div><!-- .entry-meta -->
-
-
-			<div class="col-xs-6 text-right hidden-xs">
-			<!-- comments -->
-			<?php if ( comments_open() && ! is_single() ) : ?>				
-				<span class="comments-link">
-					<i class="fa fa-comment color-complementary"></i>
-					<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a comment', 'twentythirteen' ) . '</span>', __( 'One comment so far', 'twentythirteen' ), __( '% comments', 'twentythirteen' ) ); ?>
-				</span>
-			<?php endif; // comments_open() ?>
-			<!-- tags -->
-				<span class="tags-link">
-					<i class="fa fa-tags color-complementary"></i>
-					<?php
-					echo get_the_tag_list('',', ','');
-					?>
-				</span>
-			</div>
-
-
-		</div>
-
-
+		
 
 	</header><!-- .entry-header -->
 
-	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
+	<!-- Affichage du résumé ou de l'ensemble du post -->
+	<?php if ( is_search() || !is_single()) : ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->

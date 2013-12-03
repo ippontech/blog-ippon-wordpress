@@ -1,0 +1,56 @@
+
+
+// FOOTER
+// --------------------------------------------------
+
+.main-footer {
+  background-color: $gray;
+  color: $gray-light;
+  font-size: pxtoem(14px);
+  @media (min-width: $screen-sm-min) {
+    padding-left: $padding-large-horizontal;
+    padding-right: $padding-large-horizontal;
+  }
+  text-align: center;
+  a {
+    color: $gray-light;
+    font-size: pxtoem(24px);
+    text-decoration: none;
+    .fa {
+      color: $gray-light;
+      padding: $padding-small-horizontal;
+      @media (min-width: $screen-sm-min) {
+        font-size: pxtoem(24px);
+        padding: $padding-large-horizontal;
+      }
+    }
+  }
+  .accounts-links, .friends-links {
+    border-bottom: 1px solid $gray-light;
+    a {
+      padding: $padding-large-horizontal;
+      @media (min-width: $screen-sm-min) {
+        padding: $padding-base-horizontal;
+      }
+    }
+  }
+  .accounts-links {
+    font-size: pxtoem(28px);
+    @media (min-width: $screen-sm-min) {
+      font-size: pxtoem(16px);
+    }
+  }
+  .friends-links {
+    @include padding-vertical-large();
+    a {
+      display: block;
+      @media (min-width: $screen-sm-min) {
+        display: inline;
+        font-size: pxtoem(16px);
+      }
+    }
+  }
+  .copyrights {
+    padding: $padding-base-horizontal;
+  }
+}

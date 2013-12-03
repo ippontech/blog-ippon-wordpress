@@ -2,5 +2,5 @@
 
 // Convert PX to EM global function
 @function pxtoem($px){
-  @return ($px/$base-font-size)+0em;
+  @return ($px/$font-size-base)+0em;
 }

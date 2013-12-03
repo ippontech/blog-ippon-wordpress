@@ -15,30 +15,11 @@ $ippon-secondary-lighter: #fdcb15;
 $ippon-complementary: #10b5c6;
 $ippon-complementary-darker: #157187;
 
-// Components
-// -------------------------
-// Based on 14px font-size and 1.428 line-height (~20px to start)
-
-// $padding-base-vertical:          6px !default;
-// $padding-base-horizontal:        12px !default;
-
-// $padding-large-vertical:         10px !default;
-// $padding-large-horizontal:       16px !default;
-
-// $padding-small-vertical:         5px !default;
-// $padding-small-horizontal:       10px !default;
-
-// $line-height-large:              1.33 !default;
-// $line-height-small:              1.5 !default;
-
-// $border-radius-base:             4px !default;
-// $border-radius-large:            6px !default;
-// $border-radius-small:            3px !default;
-
-// $component-active-color:         #fff !default;
-// $component-active-bg:            $brand-primary !default;
-
-// $caret-width-base:               4px !default;
-// $caret-width-large:              5px !default;
-
-$base-font-size: 16px;
+////////////////////////////////////////////////////////////////////////
+// Surcharge des variables Bootstrap
+////////////////////////////////////////////////////////////////////////
+$font-size-base: 16px !default;
+$headings-color: $ippon-complementary;
+$link-color: $ippon-primary;
+$link-hover-color: $ippon-primary-lighter;
+// $grid-gutter-width: 0px !default;

@@ -1,0 +1,104 @@
+
+
+// SIDEBAR
+// --------------------------------------------------
+
+.sidebar-inner {
+  .widget-title {
+    font-size: pxtoem(18px);
+    text-transform: uppercase;
+  }
+}
+
+// Widget custom pour afficher les liens des réseaux sociaux Ippon
+// --------------------------------------------------
+.widget_ippon_rs {
+  font-size: pxtoem(24px);
+  @include aside-secondary();
+}
+
+// Widget custom pour afficher les liens des annonces Ippon
+// --------------------------------------------------
+.widget_ippon_board {
+  a {
+    text-decoration: none;
+  }
+  h3 {
+    font-size: pxtoem(18px);
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    @include aside-complementary-darker();
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: ($line-height-computed / 2);
+    }
+  }
+  p, .board-info {
+    @include padding-horizontal-base();
+  }
+  p {
+    font-size: pxtoem(14px);
+  }
+  .board-info {
+    background-color: $ippon-complementary-darker;
+    color: $light;
+    @include padding-vertical-base();
+  }
+}
+
+// Widget Twitter (Plugin "Twitter Widget Pro")
+// --------------------------------------------------
+@include responsive-invisibility('.widget_twitter');
+@media (min-width: $screen-sm-min) {
+  @include responsive-visibility('.widget_twitter');
+}
+.widget_twitter {
+  ul {
+    color: $gray;
+    padding-left: 0;
+    list-style: none;
+    > li {
+      font-size: pxtoem(14px);
+      margin-bottom: $padding-base-vertical;
+      margin-left: $padding-base-horizontal;
+      margin-right: $padding-base-horizontal;
+      margin-top: $padding-base-vertical;
+      border-bottom: 1px solid $gray-light;
+      @include padding-vertical-base();
+    }
+  }
+  .widget-title {
+    background-color: $ippon-complementary;
+    color: $light;
+    @include padding-base();
+  }
+}
+
+// Widget Newsletter (Plugin "MailChimp Widget")
+// --------------------------------------------------
+.widget_ns_mailchimp {
+  .widget-title {
+    @include aside-secondary();
+    margin-bottom: 0px !important;
+  }
+  form {
+    @include aside-secondary();
+  }
+  input[type="submit"] {
+    background-color: $gray;
+    border: 0px;
+    color: $light;
+  }
+}
+
+// Widget Tags (Plugin  natif "Tag cloud")
+// --------------------------------------------------
+// @include responsive-invisibility('.widget_tag_cloud');
+// @media (min-width: $screen-sm-min) {
+//   @include responsive-visibility('.widget_tag_cloud');
+// }
+.widget_tag_cloud {
+  .tagcloud {
+    font-size: pxtoem(28px);
+    @include tags();
+  }
+}
