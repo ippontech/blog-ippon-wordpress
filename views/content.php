@@ -29,7 +29,28 @@
 		</a>
 		<?php endif; // is_single() ?>
 
-		<?php ippon_meta(); ?>
+		<!-- Affichage des meta données -->
+		<div class="article-meta">
+			<?php ippon_meta(); ?>
+			
+			<?php if (comments_open() && ! is_single()) : ?>
+				<div class="comments-meta">
+					<i class="fa fa-comment"></i>
+					<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a comment', 'twentythirteen' ) . '</span>', __( 'One comment so far', 'twentythirteen' ), __( '% comments', 'twentythirteen' ) ); ?>
+				</div><!-- .comments-meta -->
+			<?php endif; // comments_open() ?>
+
+			<?php if (get_the_tag_list()) : ?>
+    		<div class="tags-meta">
+					<?php echo get_the_tag_list('<i class="fa fa-tag"></i> ',', ','');?>
+				</div><!-- .tags-meta -->
+			<?php endif; // get_the_tag_list() ?>
+		</div><!-- .article-meta -->
+		
+
+
+
+
 
 	</header><!-- .entry-header -->
 

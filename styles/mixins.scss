@@ -58,9 +58,10 @@
 @mixin meta-complementary() {
   background-color: $light;
   color: $gray;
-  @include padding-base();
-  @include margin-horizontal-base();
+  font-size: pxtoem($font-size-small);
   text-transform: uppercase;
+  @include padding-base();
+  @include margin-base();
   a {
     color: $gray;
   }

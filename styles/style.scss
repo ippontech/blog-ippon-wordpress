@@ -57,6 +57,7 @@ body {
 }
 
 .article-meta {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -91,10 +92,11 @@ body {
       }
     }
     .author {
+      text-transform: uppercase;
+      @include padding-large();
       @media (min-width: $screen-sm-min) {
         display: inline-block;
       }
-      text-transform: uppercase;
     }
   }
 

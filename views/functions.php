@@ -328,8 +328,6 @@ function ippon_meta() {
   // if ( is_sticky() && is_home() && ! is_paged() )
   //   echo '<span class="featured-post">' . __( 'Sticky', 'twentythirteen' ) . '</span>';
 
-  printf('<div class="article-meta">');
-
     printf('<div class="main-meta">');
       // Date de l'article
       printf('<div class="date-meta">');
@@ -351,79 +349,6 @@ function ippon_meta() {
       }
     printf('</div>');
 
-    printf('<div class="comments-meta">');
-      ippon_meta_comments();
-    printf('</div>');
-
-    printf('<div class="tags-meta">');
-      ippon_meta_tags();
-    printf('</div>');
-    
-  printf('</div>');
-}
-endif;
-
-if ( ! function_exists( 'ippon_meta_tags' ) ) :
-/**
- * Print HTML with meta tags information for current post.
- *
- * @since Ippon 1.0
- *
- * @param boolean $echo (optional) Whether to echo the tags. Default true.
- * @return string The HTML-formatted meta tags.
- */
-function ippon_meta_tags($echo = true) {
-
-  if (has_tag()) {
-    $tags = sprintf( '
-      <i class="fa fa-tag"></i>
-      Des tags
-      '
-    );
-  } else {
-    $tags = sprintf( '
-      <i class="fa fa-tag"></i>
-      Pas de tags
-      '
-    );
-  }
-
-  if ($echo)
-    echo $tags;
-
-  return $tags;
-}
-endif;
-
-if ( ! function_exists( 'ippon_meta_comments' ) ) :
-/**
- * Print HTML with meta comments information for current post.
- *
- * @since Ippon 1.0
- *
- * @param boolean $echo (optional) Whether to echo the comments. Default true.
- * @return string The HTML-formatted meta comments.
- */
-function ippon_meta_comments($echo = true) {
-
-  if (have_comments()) {
-    $comments = sprintf( '
-      <i class="fa fa-comment"></i>
-      Des commentaires
-      '
-    );
-  } else {
-    $comments = sprintf( '
-      <i class="fa fa-comment"></i>
-      Pas de commentaires
-      '
-    );
-  }
-
-  if ($echo)
-    echo $comments;
-
-  return $comments;
 }
 endif;
 
