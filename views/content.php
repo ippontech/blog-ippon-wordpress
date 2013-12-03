@@ -5,8 +5,8 @@
  * Used for both single and index/archive/search.
  *
  * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @subpackage Ippon
+ * @since Ippon 1.0
  */
 ?>
 
@@ -29,7 +29,7 @@
 		</a>
 		<?php endif; // is_single() ?>
 
-		
+		<?php ippon_meta(); ?>
 
 	</header><!-- .entry-header -->
 
@@ -46,7 +46,6 @@
 	<?php endif; ?>
 
 	<footer class="entry-meta">
-
 		<?php if ( is_single() && get_the_author_meta( 'description' ) && is_multi_author() ) : ?>
 			<?php get_template_part( 'author-bio' ); ?>
 		<?php endif; ?>

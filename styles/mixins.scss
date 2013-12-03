@@ -27,6 +27,19 @@
   @include padding-vertical-large();
 }
 
+@mixin padding-horizontal-small() {
+  padding-left: $padding-small-horizontal;
+  padding-right: $padding-small-horizontal;
+}
+@mixin padding-vertical-small() {
+  padding-bottom: $padding-small-vertical;
+  padding-top: $padding-small-vertical;
+}
+@mixin padding-small() {
+  @include padding-horizontal-small();
+  @include padding-vertical-small();
+}
+
 @mixin margin-horizontal-base() {
   margin-left: $padding-base-horizontal;
   margin-right: $padding-base-horizontal;
@@ -42,14 +55,17 @@
 
 
 
-@mixin tags() {
+@mixin meta-complementary() {
   background-color: $light;
   color: $gray;
   @include padding-base();
-  @include margin-base();
-  text-decoration: uppercase;
+  @include margin-horizontal-base();
+  text-transform: uppercase;
   a {
     color: $gray;
+  }
+  i {
+    color: $ippon-complementary;
   }
 }
 

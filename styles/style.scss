@@ -24,10 +24,13 @@ h1.entry-title {
 
 .site-content {
   background-color: $gray-light; 
-  @include padding-base();
+  // @include padding-base();
   article {
     border-bottom: solid 1px $light;
-    @include padding-vertical-large();
+    @include padding-vertical-base();
+  }
+  p, h1, h2, h3, h4, h5, h6, .main-meta {
+    @include padding-base();
   }
 }
 
@@ -53,82 +56,51 @@ body {
   color: $ippon-complementary;
 }
 
-.comments-link {
-  background-color: $light;
-  color: $gray;
-  @include padding-base();
-  @include margin-base();
-  text-decoration: uppercase;
-  a {
-    color: $gray;
-  }
-}
-
-.tags-link {
-  @include tags();
-}
-
 .article-meta {
-  // .main {  
-    // background-color: $ippon-complementary;
-    // color: $light;
-    // padding: $padding-base-horizontal;
-
-    .main-meta {
-      background-color: $ippon-complementary;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .main-meta {
+    background-color: $ippon-complementary;
+    color: $light;
+    a {
       color: $light;
-      a {
-        color: $light;
-        text-decoration: none;
+      text-decoration: none;
+    }
+    .date-meta {
+      border-bottom: solid 1px;
+      @media (min-width: $screen-sm-min) {
+        border-bottom: 0;
+        display: inline-block;
       }
-      // border-right: solid 1px;
-
-      // background-color: black;
-      // position: relative;
-      // width: pxtoem(108px);
-      // height: pxtoem(45px);
-      // float: left;
-      // .day, .month, .year {
-      //   position: absolute;
-
-      // }
-    }
-    .delimiter-meta {
-      border-right: solid 1px;
-    }
+      .day, .month-year {
+        display: inline-block;
+      }
+      .month-year {
+        @include padding-horizontal-small();
+        @media (min-width: $screen-sm-min) {
+          border-right: solid 1px;
+        }
+      }
       .day {
-        font-size: pxtoem(36px);
-        text-align: right;
-        // margin-left: pxtoem(64px);
-        // margin-top: pxtoem(-2px);
-        // padding-bottom: $padding-base-vertical;
-        // padding-left: $padding-large-horizontal;
-        // padding-right: $padding-small-horizontal;
-        // padding-top: $padding-base-vertical;
+        font-size: pxtoem($font-size-base * 2 * $line-height-base);
       }
       .month, .year {
-        font-size: pxtoem(18px);
+        font-size: pxtoem($font-size-base);
         text-transform: uppercase;
       }
-    //   .month {
-    //     margin-top: pxtoem(3px);
-
-    //   }
-    //   .year {
-    //     margin-top: pxtoem(19px);
-
-    //   }
-    // }
-
-
-
-    time {
-      // float: left;
-      // width: 50%;
     }
+    .author {
+      @media (min-width: $screen-sm-min) {
+        display: inline-block;
+      }
+      text-transform: uppercase;
+    }
+  }
 
-  // }
-
+  .comments-meta, .tags-meta {
+    @include meta-complementary();
+  }
 }
 
 

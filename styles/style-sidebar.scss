@@ -99,6 +99,6 @@
 .widget_tag_cloud {
   .tagcloud {
     font-size: pxtoem(28px);
-    @include tags();
+    @include meta-complementary();
   }
 }
