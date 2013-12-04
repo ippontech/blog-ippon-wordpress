@@ -15,12 +15,44 @@ $ippon-secondary-lighter: #fdcb15;
 $ippon-complementary: #10b5c6;
 $ippon-complementary-darker: #157187;
 
+
+
 ////////////////////////////////////////////////////////////////////////
 // Surcharge des variables Bootstrap
 ////////////////////////////////////////////////////////////////////////
 $font-size-base: 16px;
+$font-size-large:         ceil($font-size-base * 1.25) !default; // ~20px
+$font-size-small:         ceil($font-size-base * 0.85) !default; // ~14px
+
+$font-size-h1:            floor($font-size-base * 2.6) !default; // ~42px
+$font-size-h2:            floor($font-size-base * 2.15) !default; // ~34px
+$font-size-h3:            ceil($font-size-base * 1.7) !default; // ~27px
+$font-size-h4:            ceil($font-size-base * 1.25) !default; // ~20px
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil($font-size-base * 0.85) !default; // ~14px
+
+
 $headings-color: $ippon-complementary;
 $link-color: $ippon-primary;
 $link-hover-color: $ippon-primary-lighter;
 $line-height-base: 1.5;
 // $grid-gutter-width: 0px !default;
+
+////////////////////////////////////////////////////////////////////////
+// Spécificités
+////////////////////////////////////////////////////////////////////////
+$padding-none: 0;
+$padding-none-horizontal: $padding-none;
+$padding-none-vertical: $padding-none;
+
+$margin-none: 0;
+$margin-none-horizontal: $margin-none;
+$margin-none-vertical: $margin-none;
+$margin-base-vertical:          16px !default;
+$margin-base-horizontal:        16px !default;
+$margin-large-vertical:         20px !default;
+$margin-large-horizontal:       20px !default;
+$margin-small-vertical:         14px !default;
+$margin-small-horizontal:       14px !default;
+
+$font-size-meta: $font-size-small;

@@ -5,7 +5,7 @@
 
 .sidebar-inner {
   .widget-title {
-    font-size: pxtoem(18px);
+    font-size: pxtoem($font-size-large);
     text-transform: uppercase;
   }
 }
@@ -28,6 +28,7 @@
     margin-bottom: 0px;
     text-transform: uppercase;
     @include aside-complementary-darker();
+    @include pre-fa("\f0a1");
     @media (min-width: $screen-sm-min) {
       margin-bottom: ($line-height-computed / 2);
     }
@@ -36,7 +37,7 @@
     @include padding-horizontal-base();
   }
   p {
-    font-size: pxtoem(14px);
+    font-size: pxtoem($font-size-small);
   }
   .board-info {
     background-color: $ippon-complementary-darker;
@@ -57,7 +58,7 @@
     padding-left: 0;
     list-style: none;
     > li {
-      font-size: pxtoem(14px);
+      font-size: pxtoem($font-size-small);
       margin-bottom: $padding-base-vertical;
       margin-left: $padding-base-horizontal;
       margin-right: $padding-base-horizontal;
@@ -70,6 +71,7 @@
     background-color: $ippon-complementary;
     color: $light;
     @include padding-base();
+    @include pre-fa("\f099");
   }
 }
 
@@ -77,8 +79,9 @@
 // --------------------------------------------------
 .widget_ns_mailchimp {
   .widget-title {
-    @include aside-secondary();
     margin-bottom: 0px !important;
+    @include aside-secondary();
+    @include pre-fa("\f0e0");
   }
   form {
     @include aside-secondary();
@@ -97,6 +100,10 @@
 //   @include responsive-visibility('.widget_tag_cloud');
 // }
 .widget_tag_cloud {
+  h3 {
+    @include aside-complementary-darker();
+    @include pre-fa("\f02b");
+  }
   .tagcloud {
     font-size: pxtoem(28px);
     @include meta-complementary();

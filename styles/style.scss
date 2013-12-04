@@ -5,6 +5,8 @@
 @import "functions";
 @import "mixins";
 
+// @import "_paddings";
+
 @import "style-footer";
 @import "style-sidebar";
 
@@ -17,6 +19,27 @@
 //   }
 // }
 
+a.calltoaction {
+  color: $light;
+  background-color: $ippon-secondary;
+  display: block;
+  font-size: $font-size-large;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:hover {
+    text-decoration: none;
+  }
+  @include padding-large();
+  @include pre-fa("\f0da");
+  @media (min-width: $screen-sm-min) {
+    color: $ippon-complementary;
+    background-color: inherit;
+    font-size: $font-size-base;
+    text-transform: none;
+    @include padding-none();
+  }
+}
+
 header.entry-header {
   a {
     &:hover {
@@ -25,19 +48,30 @@ header.entry-header {
   }
 }
 
-h1.entry-title {
-  font-size: pxtoem(24px);
-}
+
+// h1.entry-title {
+//   font-size: pxtoem(24px);
+// }
 
 .site-content {
-  background-color: $gray-light; 
+  background-color: $light;
   // @include padding-base();
   article {
     border-bottom: solid 1px $light;
+    background-color: $gray-light;
     @include padding-vertical-base();
+    @include margin-vertical-large();
   }
-  p, h1, h2, h3, h4, h5, h6, .main-meta {
+  h1, h2, h3, h4, h5, h6, .main-meta, .entry-content, .entry-thumbnail {
     @include padding-base();
+  }
+  .entry-content, .entry-thumbnail {
+    @media (min-width: $screen-sm-min) {
+      @include padding-large();
+    }
+  }
+  p {
+    padding-top: $padding-base-vertical;
   }
 }
 
@@ -91,18 +125,21 @@ body {
         }
       }
       .day {
-        font-size: pxtoem($font-size-base * 2 * $line-height-base);
+        font-size: pxtoem($font-size-meta * 2 * $line-height-base);
       }
       .month, .year {
-        font-size: pxtoem($font-size-base);
+        font-size: pxtoem($font-size-meta);
         text-transform: uppercase;
       }
     }
     .author {
-      text-transform: uppercase;
-      @include padding-large();
+      display: inline-block;
+      font-size: pxtoem($font-size-meta);
+      // text-transform: uppercase;
+      @include padding-vertical-base();
       @media (min-width: $screen-sm-min) {
         display: inline-block;
+        @include padding-large();
       }
     }
   }

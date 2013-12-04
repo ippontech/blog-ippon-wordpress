@@ -1,59 +1,132 @@
 @import "ippon-variables";
 
-// ajoute un padding défini
+////////////////////////////////////////////////////////////////////////
+// Paddings
+////////////////////////////////////////////////////////////////////////
+
+// mixins génériques
+@mixin padding-horizontal($padding) {
+  padding-left: $padding;
+  padding-right: $padding;
+}
+@mixin padding-vertical($padding) {
+  padding-bottom: $padding;
+  padding-top: $padding;
+}
+
+// padding none
+@mixin padding-horizontal-none() {
+  @include padding-horizontal($padding-none-horizontal);
+}
+@mixin padding-vertical-none() {
+  @include padding-vertical($padding-none-vertical);
+}
+@mixin padding-none() {
+  @include padding-horizontal-none();
+  @include padding-vertical-none();
+}
+
+// padding base
 @mixin padding-horizontal-base() {
-  padding-left: $padding-base-horizontal;
-  padding-right: $padding-base-horizontal;
+  @include padding-horizontal($padding-base-horizontal);
 }
 @mixin padding-vertical-base() {
-  padding-bottom: $padding-base-vertical;
-  padding-top: $padding-base-vertical;
+  @include padding-vertical($padding-base-vertical);
 }
 @mixin padding-base() {
   @include padding-horizontal-base();
   @include padding-vertical-base();
 }
 
-@mixin padding-horizontal-large() {
-  padding-left: $padding-large-horizontal;
-  padding-right: $padding-large-horizontal;
-}
-@mixin padding-vertical-large() {
-  padding-bottom: $padding-large-vertical;
-  padding-top: $padding-large-vertical;
-}
-@mixin padding-large() {
-  @include padding-horizontal-large();
-  @include padding-vertical-large();
-}
-
+// padding small
 @mixin padding-horizontal-small() {
-  padding-left: $padding-small-horizontal;
-  padding-right: $padding-small-horizontal;
+  @include padding-horizontal($padding-small-horizontal);
 }
 @mixin padding-vertical-small() {
-  padding-bottom: $padding-small-vertical;
-  padding-top: $padding-small-vertical;
+  @include padding-vertical($padding-small-vertical);
 }
 @mixin padding-small() {
   @include padding-horizontal-small();
   @include padding-vertical-small();
 }
 
+// padding large
+@mixin padding-horizontal-large() {
+  @include padding-horizontal($padding-large-horizontal);
+}
+@mixin padding-vertical-large() {
+  @include padding-vertical($padding-large-vertical);
+}
+@mixin padding-large() {
+  @include padding-horizontal-large();
+  @include padding-vertical-large();
+}
+
+////////////////////////////////////////////////////////////////////////
+// Margins
+////////////////////////////////////////////////////////////////////////
+
+// mixins génériques
+@mixin margin-horizontal($margin) {
+  margin-left: $margin;
+  margin-right: $margin;
+}
+@mixin margin-vertical($margin) {
+  margin-bottom: $margin;
+  margin-top: $margin;
+}
+
+// margin none
+@mixin margin-horizontal-none() {
+  @include margin-horizontal($margin-none-horizontal);
+}
+@mixin margin-vertical-none() {
+  @include margin-vertical($margin-none-vertical);
+}
+@mixin margin-none() {
+  @include margin-horizontal-none();
+  @include margin-vertical-none();
+}
+
+// margin base
 @mixin margin-horizontal-base() {
-  margin-left: $padding-base-horizontal;
-  margin-right: $padding-base-horizontal;
+  @include margin-horizontal($margin-base-horizontal);
 }
 @mixin margin-vertical-base() {
-  margin-bottom: $padding-base-vertical;
-  margin-top: $padding-base-vertical;
+  @include margin-vertical($margin-base-vertical);
 }
 @mixin margin-base() {
   @include margin-horizontal-base();
   @include margin-vertical-base();
 }
 
+// margin small
+@mixin margin-horizontal-small() {
+  @include margin-horizontal($margin-small-horizontal);
+}
+@mixin margin-vertical-small() {
+  @include margin-vertical($margin-small-vertical);
+}
+@mixin margin-small() {
+  @include margin-horizontal-small();
+  @include margin-vertical-small();
+}
 
+// margin large
+@mixin margin-horizontal-large() {
+  @include margin-horizontal($margin-large-horizontal);
+}
+@mixin margin-vertical-large() {
+  @include margin-vertical($margin-large-vertical);
+}
+@mixin margin-large() {
+  @include margin-horizontal-large();
+  @include margin-vertical-large();
+}
+
+////////////////////////////////////////////////////////////////////////
+// 
+////////////////////////////////////////////////////////////////////////
 
 @mixin meta-complementary() {
   background-color: $light;
@@ -86,3 +159,25 @@
   color: $light;
   @include padding-base();
 }
+
+// reprend les propriétés pour la typo Font Awesome
+@mixin config-fa() {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin content-fa($content) {
+  @include config-fa();
+  content: $content + "  ";
+}
+
+@mixin pre-fa($content) {
+  &:before {
+    @include content-fa($content);
+  }
+}
+

@@ -65,7 +65,7 @@
             <?php the_excerpt(); ?>
           <?php endif; ?>
           <p>
-            <a href="<?php the_permalink(); ?>" rel="bookmark">
+            <a class="calltoaction" href="<?php the_permalink(); ?>" rel="bookmark">
               Lire la suite
             </a>
           </p>
@@ -75,15 +75,15 @@
     <?php else : ?>
       <div class="entry-content">
         <?php if ($pos=strpos($post->post_content, '<!--more-->')): ?>
-          <?php the_content('<span class="complementary">Lire la suite</span>'); ?>
+          <?php the_content(''); ?>
         <?php else : ?>
           <?php the_excerpt(); ?>
-          <p>
-            <a href="<?php the_permalink(); ?>" rel="bookmark">
-              Lire la suite
-            </a>
-          </p>
         <?php endif; ?>
+        <p>
+          <a class="calltoaction" href="<?php the_permalink(); ?>" rel="bookmark">
+            Lire la suite
+          </a>
+        </p>
       </div><!-- .entry-content -->
     <?php endif; ?>
 
