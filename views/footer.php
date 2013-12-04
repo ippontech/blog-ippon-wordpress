@@ -37,8 +37,18 @@
         </p>
       </div>
     </footer><!-- #colophon -->
+    
   </div><!-- #page -->
 
   <?php wp_footer(); ?>
+
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/functions.js"></script>
+  <script>
+    $(document).ready(function() {
+      MY_MENU.init();
+    });
+  </script>
+
 </body>
 </html>

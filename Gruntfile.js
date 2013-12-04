@@ -31,6 +31,12 @@ module.exports = function(grunt) {
           cwd: 'views/',
           src: ['**'],
           dest: '<%= dist %>'
+        },
+        {
+          expand: true,
+          cwd: 'js/',
+          src: ['**'],
+          dest: '<%= dist %>/js'
         }]
       }
     },
@@ -47,7 +53,7 @@ module.exports = function(grunt) {
     // Prise en compte des fichiers modifiés
     watch: {
       copy: {
-        files: ['views/**'],
+        files: ['views/**', 'js/**'],
         tasks: ['copy']
       },
       compass: {
