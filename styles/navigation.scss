@@ -1,53 +1,77 @@
 @import "ippon-variables";
 
 a.menu-link {
-        float: right;
-        display: block;
-        padding: 1em;
-    }
-    nav[role=navigation] {
-      clear: both;
-      -webkit-transition: all 0.3s ease-out;  
-      -moz-transition: all 0.3s ease-out;
-      -ms-transition: all 0.3s ease-out;
-      -o-transition: all 0.3s ease-out;
-      transition: all 0.3s ease-out;
-    }
-    .js nav[role=navigation] {
-      overflow: hidden;
-      max-height: 0;
-    }
-    nav[role=navigation].active {
-      max-height: 15em;
-    }
-    nav[role=navigation] ul {
-      margin: 0;
-      padding: 0;
-      border-top: 1px solid #808080;
-    }
-    nav[role=navigation] li a {
+  background-color: $ippon-secondary;
+  color: $light;
+  display: block;
+  font-size: $font-size-large;
+  float: right;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:hover {
+    text-decoration: none;
+  }
+  @include padding-large();
+  @include pre-fa("\f0c9");
+}
+
+.js nav[role=navigation] {
+  overflow: hidden;
+  max-height: 0;
+}
+
+nav[role=navigation].active {
+  max-height: 30em;
+}
+
+nav[role=navigation] {
+  background-color: $gray-dark;
+  clear: both;
+  -webkit-transition: all 0.5s ease-out;  
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  ul {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid $gray-light;
+  }
+  li {
+    a {
+      border-bottom: 1px solid $gray-light;
+      color: $light;
       display: block;
       padding: 0.8em;
-      border-bottom: 1px solid #808080;
-    }
-
-    @media screen and (min-width: 48.25em) {
-      a.menu-link {
-         display: none;
-      }
-      .js nav[role=navigation] {
-        max-height: none;
-      }
-      nav[role=navigation] ul {
-        margin: 0 0 0 -0.25em;
-        border: 0;
-      }
-
-      nav[role=navigation]  li {
-        display: inline-block;
-        margin: 0 0.25em;
-      }
-      nav[role=navigation] li a {
-        border: 0;
+      text-decoration: none;
+      text-transform: uppercase;
+      &:hover {
+        background-color: $ippon-secondary;
+        color: $dark;
+        text-decoration: none;
       }
     }
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  a.menu-link {
+    display: none;
+  }
+  .js nav[role=navigation] {
+    max-height: none;
+  }
+  nav[role=navigation] {
+    ul {
+      margin: 0 0 0 -0.25em;
+      border: 0;
+    }
+    li {
+      display: inline-block;
+      margin: 0 0.25em;
+      a {
+        border: 0;
+      }
+    }
+  }
+}

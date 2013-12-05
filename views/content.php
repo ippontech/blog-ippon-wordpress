@@ -65,7 +65,7 @@
             <?php the_excerpt(); ?>
           <?php endif; ?>
           <p>
-            <a class="calltoaction" href="<?php the_permalink(); ?>" rel="bookmark">
+            <a class="calltoaction next" href="<?php the_permalink(); ?>" rel="bookmark">
               Lire la suite
             </a>
           </p>
@@ -80,7 +80,7 @@
           <?php the_excerpt(); ?>
         <?php endif; ?>
         <p>
-          <a class="calltoaction" href="<?php the_permalink(); ?>" rel="bookmark">
+          <a class="calltoaction next" href="<?php the_permalink(); ?>" rel="bookmark">
             Lire la suite
           </a>
         </p>

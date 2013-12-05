@@ -30,7 +30,6 @@ a.calltoaction {
     text-decoration: none;
   }
   @include padding-large();
-  @include pre-fa("\f0da");
   @media (min-width: $screen-sm-min) {
     color: $ippon-complementary;
     background-color: inherit;
@@ -38,6 +37,12 @@ a.calltoaction {
     text-transform: none;
     @include padding-none();
   }
+}
+
+
+
+a.next {
+  @include pre-fa("\f0da");
 }
 
 header.entry-header {
