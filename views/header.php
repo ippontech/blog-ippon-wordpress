@@ -39,61 +39,34 @@
         <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
       </a>
 
+      <a href="#menu" class="menu-link">Menu</a>
+      <nav id="menu" role="navigation">
+          <?php
 
+          $defaults = array(
+            'theme_location'  => '',
+            'menu'            => '',
+            'container'       => '',
+            // 'container_class' => '',
+            'container_id'    => '',
+            // 'menu_class'      => '',
+            'menu_id'         => '',
+            'echo'            => true,
+            'fallback_cb'     => 'wp_page_menu',
+            'before'          => '',
+            'after'           => '',
+            'link_before'     => '',
+            'link_after'      => '',
+            'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+            'depth'           => 0,
+            'walker'          => ''
+          );
 
+          wp_nav_menu( $defaults );
 
-<!--      <div id="navbar" class="navbar">
-        <nav id="site-navigation" class="navigation main-navigation" role="navigation">
-          <h3 class="menu-toggle"><?php _e( 'Menu', 'twentythirteen' ); ?></h3>
-          <a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentythirteen' ); ?>"><?php _e( 'Skip to content', 'twentythirteen' ); ?></a>
-          <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+          ?>
           <?php get_search_form(); ?>
-        </nav>
-      </div>-->
-
-
-    <!--Begin Pattern HTML-->
-    <a href="#menu" class="menu-link">Menu</a>
-    <nav id="menu" role="navigation">
-<!--       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul> -->
-        <?php
-
-        $defaults = array(
-          'theme_location'  => '',
-          'menu'            => '',
-          'container'       => '',
-          // 'container_class' => '',
-          'container_id'    => '',
-          // 'menu_class'      => '',
-          'menu_id'         => '',
-          'echo'            => true,
-          'fallback_cb'     => 'wp_page_menu',
-          'before'          => '',
-          'after'           => '',
-          'link_before'     => '',
-          'link_after'      => '',
-          'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-          'depth'           => 0,
-          'walker'          => ''
-        );
-
-        wp_nav_menu( $defaults );
-
-        ?>
-        <!-- <?php wp_nav_menu(); ?> -->
-      
-    </nav>
-  </div>
-  <!--End Pattern HTML-->
-
-
-
+      </nav>
     </header><!-- #masthead -->
 
     <div id="main">
