@@ -1,5 +1,9 @@
 @import "ippon-variables";
 
+.header-banner {
+  @include padding-vertical-large();
+}
+
 .menu-search {
   @media (min-width: $screen-sm-min) {
     background-color: $gray-dark;
@@ -32,11 +36,11 @@
 }
 
 a.menu-link {
+  // background-color: $ippon-primary;
   background-color: $ippon-secondary;
   color: $light;
   display: block;
   font-size: $font-size-large;
-  float: right;
   text-decoration: none;
   text-transform: uppercase;
   &:hover {
@@ -82,21 +86,9 @@ nav[role=navigation] {
       }
     }
   }
-  // li:first-child {
-  //   background-color: $ippon-secondary;
-  //   a {
-  //     // pas si simple ...
-  //     // font-size: 1.5em;
-  //     // line-height: 1em;
-  //     @include pre-fa("\f015");
-  //   } 
-  // }
 }
 
 @media (min-width: $screen-sm-min) {
-  a.menu-link {
-    display: none;
-  }
   .js nav[role=navigation] {
     max-height: none;
   }

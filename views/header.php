@@ -34,6 +34,27 @@
 <body <?php body_class(); ?>>
   <div id="page" class="container-fluid">
     <header id="masthead" class="" role="banner">
+      <div class="row header-banner">
+        <div class="col-sm-2">
+          <div class="row visible-xs">
+            <div class="col-xs-8">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/logo_IpponGroupe.png" class="img-responsive"/>
+            </div>
+            <div class="col-xs-4">
+              <a href="#menu" class="menu-link">
+                <i class="fa fa-bars"></i><span class="hidden-xs"> Menu</span>
+              </a>
+            </div>
+          </div>
+          <div class="hidden-xs">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/logo_IpponGroupe.png" class="img-responsive"/>
+          </div>
+        </div>
+        <div class="col-sm-10 hidden-xs">
+          <img src="<?php echo get_header_image() ?>" class="img-responsive"/>
+        </div>
+      </div>
+
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
         <h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
         <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
@@ -44,9 +65,7 @@
             <i class="fa fa-home fa-lg"></i>
           </a>
         </div>
-        <a href="#menu" class="menu-link">
-          <i class="fa fa-bars"></i> Menu
-        </a>
+
         <nav id="menu" role="navigation">
 
             <?php
