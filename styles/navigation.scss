@@ -57,15 +57,24 @@ nav[role=navigation] {
       border-bottom: 1px solid $gray-light;
       color: $light;
       display: block;
-      padding: 0.8em;
       text-decoration: none;
       text-transform: uppercase;
+      @include padding-large();
       &:hover {
         background-color: $ippon-secondary;
         color: $dark;
         text-decoration: none;
       }
     }
+  }
+  li:first-child {
+    background-color: $ippon-secondary;
+    a {
+      // pas si simple ...
+      // font-size: 1.5em;
+      // line-height: 1em;
+      @include pre-fa("\f015");
+    } 
   }
 }
 
