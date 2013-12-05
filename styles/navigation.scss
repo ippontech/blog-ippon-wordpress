@@ -1,11 +1,27 @@
 @import "ippon-variables";
 
 .menu-search {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
   @media (min-width: $screen-sm-min) {
     background-color: $gray-dark;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+.home-link, a.menu-link {
+  @include padding-large();
+}
+
+.home-link {
+  align-self: center;
+  background-color: $ippon-secondary;
+  a {
+    color: $light;
+    text-decoration: none;
+    &:hover {
+      color: $dark;
+    }
   }
 }
 
@@ -26,7 +42,6 @@ a.menu-link {
   &:hover {
     text-decoration: none;
   }
-  @include padding-large();
   @include pre-fa("\f0c9");
 }
 
@@ -67,15 +82,15 @@ nav[role=navigation] {
       }
     }
   }
-  li:first-child {
-    background-color: $ippon-secondary;
-    a {
-      // pas si simple ...
-      // font-size: 1.5em;
-      // line-height: 1em;
-      @include pre-fa("\f015");
-    } 
-  }
+  // li:first-child {
+  //   background-color: $ippon-secondary;
+  //   a {
+  //     // pas si simple ...
+  //     // font-size: 1.5em;
+  //     // line-height: 1em;
+  //     @include pre-fa("\f015");
+  //   } 
+  // }
 }
 
 @media (min-width: $screen-sm-min) {
@@ -87,7 +102,7 @@ nav[role=navigation] {
   }
   nav[role=navigation] {
     ul {
-      margin: 0 0 0 -0.25em;
+      margin: 0 0 0 0.25em;
       border: 0;
     }
     li {

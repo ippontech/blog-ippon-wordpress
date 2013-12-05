@@ -39,10 +39,16 @@
         <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
       </a>
       <div class="menu-search">
+        <div class="home-link hidden-xs">
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+            <i class="fa fa-home fa-lg"></i>
+          </a>
+        </div>
         <a href="#menu" class="menu-link">
           <i class="fa fa-bars"></i> Menu
         </a>
         <nav id="menu" role="navigation">
+
             <?php
             $defaults = array(
               'theme_location'  => '',
