@@ -12,12 +12,11 @@
  */
 
 if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-	<aside class="col-sm-4">
-		coucou sidebar.php
-		<div class="sidebar-inner">
-			<div class="widget-area">
-				<?php dynamic_sidebar( 'sidebar-2' ); ?>
-			</div><!-- .widget-area -->
-		</div><!-- .sidebar-inner -->
-	</aside><!-- #tertiary -->
+  <aside class="col-sm-4">
+    <div class="sidebar-inner">
+      <div class="widget-area">
+        <?php dynamic_sidebar( 'sidebar-2' ); ?>
+      </div><!-- .widget-area -->
+    </div><!-- .sidebar-inner -->
+  </aside><!-- #tertiary -->
 <?php endif; ?>

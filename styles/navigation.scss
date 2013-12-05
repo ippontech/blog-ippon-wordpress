@@ -1,5 +1,20 @@
 @import "ippon-variables";
 
+.menu-search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  @media (min-width: $screen-sm-min) {
+    background-color: $gray-dark;
+  }
+}
+
+.search-link {
+  align-self: center;
+  margin-left: auto;
+  @include padding-base();
+}
+
 a.menu-link {
   background-color: $ippon-secondary;
   color: $light;
