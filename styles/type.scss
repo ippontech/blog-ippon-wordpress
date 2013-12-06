@@ -1,0 +1,21 @@
+
+@import "ippon-variables";
+
+/*
+Feuille de style pour les types
+*/
+
+////////////////////////////////////////////////////////////////////////
+// Titres
+////////////////////////////////////////////////////////////////////////
+
+
+@media (min-width: $screen-sm-min) {
+  h1, .h1 { font-size: $font-size-h1-large; }
+  h2, .h2 { font-size: $font-size-h2-large; }
+  h3, .h3 { font-size: $font-size-h3-large; }
+  h4, .h4 { font-size: $font-size-h4-large; }
+  h5, .h5 { font-size: $font-size-h5-large; }
+  h6, .h6 { font-size: $font-size-h6-large; }
+}
+

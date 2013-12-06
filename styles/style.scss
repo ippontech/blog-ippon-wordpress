@@ -9,6 +9,7 @@
 @import "commons";
 @import "content";
 @import "navigation";
+@import "type";
 
 @import "style-footer";
 @import "style-sidebar";
@@ -26,7 +27,6 @@ a.calltoaction {
   color: $light;
   background-color: $ippon-secondary;
   display: block;
-  font-size: $font-size-large;
   text-decoration: none;
   text-transform: uppercase;
   &:hover {

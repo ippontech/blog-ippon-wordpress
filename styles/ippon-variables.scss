@@ -22,9 +22,9 @@ $font-size-base: 16px;
 $font-size-large:         ceil($font-size-base * 1.25) !default; // ~20px
 $font-size-small:         ceil($font-size-base * 0.85) !default; // ~14px
 
-$font-size-h1:            floor($font-size-base * 2.15) !default; // ~34px
-$font-size-h2:            floor($font-size-base * 1.7) !default; // ~27px
-$font-size-h3:            ceil($font-size-base * 1.25) !default; // ~20px
+$font-size-h1:            floor($font-size-base * 1.5) !default; // ~24px
+$font-size-h2:            floor($font-size-base * 1.25) !default; // ~20px
+$font-size-h3:            ceil($font-size-base * 1.15) !default; // ~18px
 $font-size-h4:            $font-size-base !default;
 $font-size-h5:            ceil($font-size-base * 0.85) !default; // ~14px
 $font-size-h6:            ceil($font-size-base * 0.85) !default; // ~14px
@@ -63,3 +63,9 @@ $margin-small-vertical:         14px !default;
 $margin-small-horizontal:       14px !default;
 
 $font-size-meta: $font-size-small;
+$font-size-h1-large:            floor($font-size-base * 2.15) !default; // ~34px
+$font-size-h2-large:            floor($font-size-base * 1.7) !default; // ~27px
+$font-size-h3-large:            ceil($font-size-base * 1.25) !default; // ~20px
+$font-size-h4-large:            $font-size-base !default;
+$font-size-h5-large:            ceil($font-size-base * 0.85) !default; // ~14px
+$font-size-h6-large:            ceil($font-size-base * 0.85) !default; // ~14px
