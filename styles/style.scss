@@ -5,6 +5,8 @@
 @import "functions";
 @import "mixins";
 
+@import "archive";
+@import "commons";
 @import "navigation";
 
 @import "style-footer";
@@ -72,9 +74,7 @@ header.entry-header {
       margin-top: 0;
     }
   }
-  h1, h2, h3, h4, h5, h6, .main-meta, .entry-content, .entry-thumbnail {
-    @include padding-base();
-  }
+
   .entry-content, .entry-thumbnail {
     @media (min-width: $screen-sm-min) {
       @include padding-large();

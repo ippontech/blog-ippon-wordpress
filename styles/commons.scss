@@ -1,0 +1,37 @@
+
+@import "ippon-variables";
+
+/*
+Feuille de style factorisant les styles sur différentes pages
+*/
+
+////////////////////////////////////////////////////////////////////////
+// Paddings
+////////////////////////////////////////////////////////////////////////
+
+/*
+Cf :
+- content.php
+- category.php
+*/
+
+.main-meta,
+.entry-content, .entry-thumbnail, .entry-header h1,
+.archive-header, {
+  @include padding-base();
+}
+
+////////////////////////////////////////////////////////////////////////
+// Titres
+////////////////////////////////////////////////////////////////////////
+
+/*
+Cf :
+- content.php
+- category.php
+*/
+
+a.menu-link,
+.archive-header > h1.archive-title {
+  text-transform: uppercase;
+}
