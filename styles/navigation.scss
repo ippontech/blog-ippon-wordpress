@@ -1,9 +1,17 @@
+
 @import "ippon-variables";
 
+////////////////////////////////////////////////////////////////////////
+// Bannière
+////////////////////////////////////////////////////////////////////////
 .header-banner {
   @include padding-vertical-large();
 }
 
+
+////////////////////////////////////////////////////////////////////////
+// Navigation principale
+////////////////////////////////////////////////////////////////////////
 .menu-search {
   @media (min-width: $screen-sm-min) {
     background-color: $gray-dark;
@@ -49,16 +57,16 @@ a.menu-link {
   @include pre-fa("\f0c9");
 }
 
-.js nav[role=navigation] {
+.js nav#menu {
   overflow: hidden;
   max-height: 0;
 }
 
-nav[role=navigation].active {
+nav#menu.active {
   max-height: 30em;
 }
 
-nav[role=navigation] {
+nav#menu {
   background-color: $gray-dark;
   clear: both;
   -webkit-transition: all 0.5s ease-out;  
@@ -89,10 +97,10 @@ nav[role=navigation] {
 }
 
 @media (min-width: $screen-sm-min) {
-  .js nav[role=navigation] {
+  .js nav#menu {
     max-height: none;
   }
-  nav[role=navigation] {
+  nav#menu {
     ul {
       margin: 0 0 0 0.25em;
       border: 0;
@@ -102,6 +110,25 @@ nav[role=navigation] {
       margin: 0 0.25em;
       a {
         border: 0;
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////
+// Navigation de pagination
+////////////////////////////////////////////////////////////////////////
+.nav-links {
+  .nav-previous, .nav-next {
+    font-size: $font-size-large;
+    @include margin-vertical-large();
+    a {
+      background-color: $gray-light;
+      color: $gray;
+      text-decoration: none;
+    @include padding-large();
+      &:hover {
+        color: $gray-dark;
       }
     }
   }
