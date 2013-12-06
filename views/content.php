@@ -77,32 +77,35 @@
   <?php else : ?>
     <!-- Avec image -->
     <?php if (has_post_thumbnail() && !post_password_required()) : ?>
-      <div class="entry-thumbnail row">
-        <div class="col-sm-6">
-          <?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
-        </div>
-        <div class="col-sm-6">
-<?php 
-global $more;    // Declare global $more (before the loop).
-$more = 0;       // Set (inside the loop) to display content above the more tag.
-the_content('');
-?>
+      <div class="entry-thumbnail">
+        <div class="row">
+          <div class="col-sm-6">
+            <?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
+          </div>
+          <div class="col-sm-6">
+            <?php 
+            global $more;    // Declare global $more (before the loop).
+            $more = 0;       // Set (inside the loop) to display content above the more tag.
+            the_content('');
+            ?>
+          </div>
+          <div class="col-sm-12">
+            <?php 
+                  global $more;    // Declare global $more (before the loop).
+                  $more = 1;       // Set (inside the loop) to display all content, including text below more.
+                  the_content('',false);
+                  ?>
+          </div>
         </div>
       </div>
-      <div>
-        UU<?php 
-global $more;    // Declare global $more (before the loop).
-$more = 1;       // Set (inside the loop) to display all content, including text below more.
-the_content('',false);
-?>
-      </div>
+
     <!-- Sans image -->
     <?php else : ?>
       <?php the_content(); ?>
     <?php endif; ?>
     <footer class="entry-meta">
-      <?php if (is_single() && get_the_author_meta( 'description' ) && is_multi_author() ) : ?>
-        <?php get_template_part( 'author-bio' ); ?>
+      <?php if (is_single() && get_the_author_meta('description') && is_multi_author() ) : ?>
+        <?php get_template_part('author-bio'); ?>
       <?php endif; ?>
     </footer><!-- .entry-meta -->
   <?php endif; ?>
