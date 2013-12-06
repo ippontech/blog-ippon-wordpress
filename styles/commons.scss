@@ -15,8 +15,8 @@ Cf :
 - category.php
 */
 
-.main-meta,
-.entry-content, .entry-thumbnail, .entry-header h1,
+.main-meta, .secondary-meta,
+.entry-content, .entry-thumbnail, .entry-header h1, #content article footer,
 .archive-header, {
   @include padding-base();
 }

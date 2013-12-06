@@ -130,11 +130,12 @@
 
 @mixin meta-complementary() {
   background-color: $light;
+  // border: 1px solid $gray;
   color: $gray;
   font-size: pxtoem($font-size-small);
   text-transform: uppercase;
   @include padding-base();
-  @include margin-base();
+  // @include margin-base();
   a {
     color: $gray;
   }

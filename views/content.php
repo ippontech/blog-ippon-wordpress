@@ -14,7 +14,7 @@
   <header class="entry-header">
 
     <!-- Affichage du titre avec ou sans lien -->
-    <?php if ( is_single() ) : ?>
+    <?php if (is_single()) : ?>
     <h1 class="entry-title"><?php the_title(); ?></h1>
     <?php else : ?>
     <a href="<?php the_permalink(); ?>" rel="bookmark">
@@ -24,31 +24,21 @@
     </a>
     <?php endif; // is_single() ?>
 
-    <!-- Affichage des meta données -->
+    <!-- Affichage des principales meta données -->
     <div class="article-meta">
       <?php ippon_meta(); ?>
-      
-      <?php if (comments_open() && ! is_single()) : ?>
-        <div class="comments-meta">
-          <i class="fa fa-comment"></i>
-          <?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a comment', 'twentythirteen' ) . '</span>', __( 'One comment so far', 'twentythirteen' ), __( '% comments', 'twentythirteen' ) ); ?>
-        </div><!-- .comments-meta -->
-      <?php endif; // comments_open() ?>
-
-      <?php if (get_the_tag_list()) : ?>
-        <div class="tags-meta">
-          <?php echo get_the_tag_list('<i class="fa fa-tag"></i> ',', ','');?>
-        </div><!-- .tags-meta -->
-      <?php endif; // get_the_tag_list() ?>
     </div><!-- .article-meta -->
-    
-
-
-
-
 
   </header><!-- .entry-header -->
 
+  <!-- Affichage des meta données secondaires -->
+  <div class="secondary-meta">
+    <?php if (get_the_tag_list()) : ?>
+      <div class="tags-meta">
+        <?php echo get_the_tag_list('<i class="fa fa-tags"></i> ',', ','');?>
+      </div><!-- .tags-meta -->
+    <?php endif; // get_the_tag_list() ?>
+  </div>
 
   <!-- Affichage du résumé -->
   <?php if (is_search() || !is_single()) : ?>
@@ -64,11 +54,6 @@
           <?php else : ?>
             <?php the_excerpt(); ?>
           <?php endif; ?>
-          <p>
-            <a class="calltoaction next" href="<?php the_permalink(); ?>" rel="bookmark">
-              Lire la suite
-            </a>
-          </p>
         </div>
       </div>
     <!-- Sans image -->
@@ -79,13 +64,14 @@
         <?php else : ?>
           <?php the_excerpt(); ?>
         <?php endif; ?>
-        <p>
-          <a class="calltoaction next" href="<?php the_permalink(); ?>" rel="bookmark">
-            Lire la suite
-          </a>
-        </p>
       </div><!-- .entry-content -->
     <?php endif; ?>
+    <!-- Lien pour accéder à l'article en entier -->
+    <footer>
+      <a class="calltoaction next" href="<?php the_permalink(); ?>" rel="bookmark">
+        Lire l'article
+      </a>
+    </footer>
 
   <!-- Affichage de l'ensemble de l'article -->
   <?php else : ?>
@@ -114,14 +100,11 @@ the_content('',false);
     <?php else : ?>
       <?php the_content(); ?>
     <?php endif; ?>
+    <footer class="entry-meta">
+      <?php if (is_single() && get_the_author_meta( 'description' ) && is_multi_author() ) : ?>
+        <?php get_template_part( 'author-bio' ); ?>
+      <?php endif; ?>
+    </footer><!-- .entry-meta -->
   <?php endif; ?>
 
-
-
-
-  <footer class="entry-meta">
-    <?php if (is_single() && get_the_author_meta( 'description' ) && is_multi_author() ) : ?>
-      <?php get_template_part( 'author-bio' ); ?>
-    <?php endif; ?>
-  </footer><!-- .entry-meta -->
 </article><!-- #post -->

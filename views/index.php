@@ -17,7 +17,7 @@
 get_header(); ?>
 
   <div id="primary" class="col-sm-8 content-area">
-    <div id="content" class="site-content" role="main">
+    <section id="content" class="site-content" role="main">
     <?php if (have_posts()) : ?>
 
       <?php /* The loop */ ?>
@@ -31,7 +31,7 @@ get_header(); ?>
       <?php get_template_part('content', 'none'); ?>
     <?php endif; ?>
 
-    </div><!-- #content -->
+    </section><!-- #content -->
   </div><!-- #primary -->
 
 <?php get_sidebar(); ?>

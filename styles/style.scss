@@ -7,6 +7,7 @@
 
 @import "archive";
 @import "commons";
+@import "content";
 @import "navigation";
 
 @import "style-footer";
@@ -75,11 +76,6 @@ header.entry-header {
     }
   }
 
-  .entry-content, .entry-thumbnail {
-    @media (min-width: $screen-sm-min) {
-      @include padding-large();
-    }
-  }
   p {
     padding-top: $padding-base-vertical;
   }
@@ -108,31 +104,32 @@ body {
 }
 
 .article-meta {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  // align-items: center;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
   .main-meta {
     background-color: $ippon-complementary;
     color: $light;
+    display: inline-block;
     a {
       color: $light;
       text-decoration: none;
     }
     .date-meta {
-      border-bottom: solid 1px;
-      @media (min-width: $screen-sm-min) {
+      // border-bottom: solid 1px;
+      // @media (min-width: $screen-sm-min) {
         border-bottom: 0;
         display: inline-block;
-      }
+      // }
       .day, .month-year {
         display: inline-block;
       }
       .month-year {
         @include padding-horizontal-small();
-        @media (min-width: $screen-sm-min) {
+        // @media (min-width: $screen-sm-min) {
           border-right: solid 1px;
-        }
+        // }
       }
       .day {
         font-size: pxtoem($font-size-meta * 2 * $line-height-base);
@@ -147,17 +144,18 @@ body {
       font-size: pxtoem($font-size-meta);
       // text-transform: uppercase;
       @include padding-vertical-base();
-      @media (min-width: $screen-sm-min) {
-        display: inline-block;
+      // @media (min-width: $screen-sm-min) {
         @include padding-large();
-      }
+      // }
     }
   }
 
+}
+
+.secondary-meta {
   .comments-meta, .tags-meta {
     @include meta-complementary();
   }
 }
-
 
 

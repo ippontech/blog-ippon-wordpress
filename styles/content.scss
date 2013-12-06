@@ -1,0 +1,26 @@
+
+@import "ippon-variables";
+
+/*
+Feuille de style pour le contenu d'un article
+*/
+
+////////////////////////////////////////////////////////////////////////
+// Paddings
+////////////////////////////////////////////////////////////////////////
+
+#content {
+  article {
+    > div {
+      display: none;
+      @media (min-width: $screen-sm-min) {
+        display: inherit;
+      }
+    }
+    &:first-of-type {
+      > div {
+        display: inherit;
+      }
+    }
+  }
+}
