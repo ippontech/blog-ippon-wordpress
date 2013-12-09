@@ -3,6 +3,12 @@
 
 Ce projet est la structure pour le thème du blog d'Ippon.
 
+Il repose :
+
+- Bootstrap 3
+- Modernizr
+- jQuery
+
 ***
 
 ## 1. Installations locales

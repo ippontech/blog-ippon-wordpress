@@ -1,34 +1,45 @@
-<?php
-/**
- * The Header template for our theme
- *
- * Displays all of the <head> section and everything up till <div id="main">
- *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
- */
-?><!DOCTYPE html>
-<!--[if IE 7]>
-<html class="ie ie7" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if IE 8]>
-<html class="ie ie8" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if !(IE 7) | !(IE 8)  ]><!-->
-<html <?php language_attributes(); ?>>
-<!--<![endif]-->
+
+<!doctype html>
+
+<!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
+
 <head>
-  <meta charset="<?php bloginfo( 'charset' ); ?>">
-  <meta name="viewport" content="width=device-width">
+  <meta charset="<?php bloginfo('charset'); ?>">
+
+  <?php // Google Chrome Frame for IE ?>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
   <title><?php wp_title( '|', true, 'right' ); ?></title>
+  <meta name="description" content="<?php echo get_bloginfo ('description' );  ?>">
+
+  <?php // mobile meta (hooray!) ?>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
+  <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon_129x129.png">
+  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon_32x32.png">
+  <!--[if IE]>
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon_16x16.ico">
+    <![endif]-->
+  <?php // or, set /favicon.ico for IE10 win ?>
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/img/favicon_144x144.png">
+
   <link rel="profile" href="http://gmpg.org/xfn/11">
+
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+
   <!--[if lt IE 9]>
   <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
   <![endif]-->
   <?php wp_head(); ?>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
