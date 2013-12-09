@@ -22,6 +22,10 @@
 
   <?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
   <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon_129x129.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_template_directory_uri(); ?>/img/favicon_144x144.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/img/favicon_114x114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/img/favicon_72x72.png">
+  <link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/img/favicon_57x57.png">
   <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon_32x32.png">
   <!--[if IE]>
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon_16x16.ico">
@@ -30,14 +34,13 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/img/favicon_144x144.png">
 
-  <link rel="profile" href="http://gmpg.org/xfn/11">
-
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
   <!--[if lt IE 9]>
   <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
   <![endif]-->
   <?php wp_head(); ?>
+
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
