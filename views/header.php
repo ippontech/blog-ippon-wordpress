@@ -36,12 +36,10 @@
 
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-  <!--[if lt IE 9]>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
-  <![endif]-->
   <?php wp_head(); ?>
 
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+
   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 
