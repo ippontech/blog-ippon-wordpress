@@ -29,7 +29,10 @@ Feuille de style pour le contenu d'un article
   .main-meta {
     background-color: $ippon-complementary;
     color: $light;
-    display: inline-block;
+    display: block;
+    @media (min-width: $screen-sm-min) {
+      display: inline-block;
+    }
     a {
       color: $light;
       text-decoration: none;
@@ -66,9 +69,6 @@ Feuille de style pour le contenu d'un article
       display: inline-block;
       font-size: pxtoem($font-size-meta);
       text-transform: uppercase;
-      @media (min-width: $screen-sm-min) {
-        @include padding-large();
-      }
     }
   }
 
