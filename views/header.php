@@ -49,12 +49,14 @@
       <div class="row header-banner">
         <div class="col-sm-2">
           <div class="row visible-xs">
-            <div class="col-xs-8">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/logo_IpponGroupe.png" class="img-responsive"/>
+            <div class="col-xs-6">
+              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/logo_IpponGroupe.png" class="img-responsive"/>
+              </a>
             </div>
-            <div class="col-xs-4">
+            <div class="col-xs-6">
               <a href="#menu" class="menu-link">
-                <i class="fa fa-bars"></i><span class="hidden-xs"> Menu</span>
+                <i class="fa fa-bars"></i> Menu
               </a>
             </div>
           </div>
