@@ -18,6 +18,7 @@ Cf :
 .main-meta, .secondary-meta,
 .entry-content, .entry-thumbnail, .entry-header h1, #content article footer,
 .archive-header, {
+  text-align: justify;
   @include padding-base();
 }
 

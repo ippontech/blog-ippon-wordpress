@@ -40,8 +40,6 @@
     
   </div><!-- #page -->
 
-  COUCOU 2
-
   <?php wp_footer(); ?>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>

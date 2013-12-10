@@ -22,6 +22,16 @@ Feuille de style pour le contenu d'un article
         display: inherit;
       }
     }
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    h5, .h5,
+    h6, .h6 {
+      color: $ippon-complementary-darker;
+    }
+    .content-teaser {
+      font-weight: bold;
+    }
   }
 }
 
