@@ -24,3 +24,58 @@ Feuille de style pour le contenu d'un article
     }
   }
 }
+
+.article-meta {
+  .main-meta {
+    background-color: $ippon-complementary;
+    color: $light;
+    display: inline-block;
+    a {
+      color: $light;
+      text-decoration: none;
+    }
+    .date-meta {
+      border-bottom: 0;
+      display: inline-block;
+      padding-right: $padding-small-horizontal;
+      .day, .month-year {
+        display: inline-block;
+      }
+      .month-year {
+        @media (min-width: $screen-sm-min) {
+          border-right: solid 1px;
+          @include padding-horizontal-small();
+        }
+      }
+      .day {
+        font-size: pxtoem($font-size-meta);
+        @media (min-width: $screen-sm-min) {
+          font-size: pxtoem($font-size-meta * 2 * $line-height-base);
+        }
+      }
+      .month, .year {
+        display: inline-block;
+        font-size: pxtoem($font-size-meta);
+        text-transform: uppercase;
+        @media (min-width: $screen-sm-min) {
+          display: block;
+        }
+      }
+    }
+    .author {
+      display: inline-block;
+      font-size: pxtoem($font-size-meta);
+      text-transform: uppercase;
+      @media (min-width: $screen-sm-min) {
+        @include padding-large();
+      }
+    }
+  }
+
+}
+
+.secondary-meta {
+  .comments-meta, .tags-meta {
+    @include meta-complementary();
+  }
+}
