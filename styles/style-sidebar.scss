@@ -17,6 +17,77 @@
   @include aside-secondary();
 }
 
+// Widget custom pour Eventbrite
+// --------------------------------------------------
+.eb_event_list {
+  display: block;
+  .eb_event_list_item {
+    background-color: lighten($gray-light, 5%);
+    @include margin-vertical-large();
+    .info-item {
+      @include padding-base();
+      h2 {
+        color: $gray-dark;
+        font-size: $font-size-h2;
+        @include margin-none();
+        @include padding-vertical-base();
+        a {
+          text-decoration: none;
+        }
+      }
+      .author {
+        color: $gray;
+        font-size: pxtoem($font-size-meta);
+        text-transform: uppercase;
+      }
+    }
+
+    .main-item {
+      background-color: $gray;
+      color: $light;
+      display: block;
+      @include padding-base();
+      a {
+        color: $light;
+        text-decoration: none;
+      }
+      .date-item {
+        border-bottom: 0;
+        display: inline-block;
+        padding-right: $padding-small-horizontal;
+        .day, .month-year {
+          display: inline-block;
+        }
+        .month-year {
+          @media (min-width: $screen-sm-min) {
+            border-right: solid 1px;
+            @include padding-horizontal-small();
+          }
+        }
+        .day {
+          font-size: pxtoem($font-size-meta);
+          @media (min-width: $screen-sm-min) {
+            font-size: pxtoem($font-size-meta * 2 * $line-height-base);
+          }
+        }
+        .month, .year {
+          display: inline-block;
+          font-size: pxtoem($font-size-meta);
+          text-transform: uppercase;
+          @media (min-width: $screen-sm-min) {
+            display: block;
+          }
+        }
+      }
+      .ippevent {
+        display: inline-block;
+        font-size: pxtoem($font-size-meta);
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
 // Widget custom pour afficher les liens des annonces Ippon
 // --------------------------------------------------
 .widget_ippon_board {

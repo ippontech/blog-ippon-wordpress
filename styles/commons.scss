@@ -16,8 +16,15 @@ Cf :
 */
 
 .main-meta, .secondary-meta,
-.entry-content, .entry-thumbnail, .entry-header h1, #content article footer,
+.entry-content, .entry-header h1, #content article footer,
 .archive-header, {
+  @include padding-base();
+}
+.entry-thumbnail {
+  @include padding-horizontal-base();
+  @include padding-vertical-large();
+}
+.entry-content, .entry-thumbnail {
   text-align: justify;
   @include padding-base();
 }

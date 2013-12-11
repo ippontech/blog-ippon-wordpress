@@ -27,9 +27,6 @@
     <!-- Affichage des principales meta données -->
     <div class="article-meta">
       <?php ippon_meta(); ?>
-    </div><!-- .article-meta -->
-
-  </header><!-- .entry-header -->
 
   <!-- Affichage des meta données secondaires -->
   <div class="secondary-meta">
@@ -39,6 +36,10 @@
       </div><!-- .tags-meta -->
     <?php endif; // get_the_tag_list() ?>
   </div>
+
+    </div><!-- .article-meta -->
+
+  </header><!-- .entry-header -->
 
   <!-- Affichage du résumé -->
   <?php if (is_search() || !is_single()) : ?>

@@ -1,4 +1,24 @@
 <?php
+// load the API Client library
+// include(get_template_directory_uri() . "/Eventbrite.php");
+include(get_template_directory()."/Eventbrite.php");
+
+// Initialize the API client
+//  Eventbrite API / Application key (REQUIRED)
+//   http://www.eventbrite.com/api/key/
+//  Eventbrite user_key (OPTIONAL, only needed for reading/writing private user data)
+//   http://www.eventbrite.com/userkeyapi
+$authentication_tokens = array('app_key'  => 'VBGXTDKF6KIURVPCBR',
+                               'user_key' => '138668242583242740277');
+$eb_client = new Eventbrite( $authentication_tokens );
+
+// For more information about the features that are available through the Eventbrite API, see http://developer.eventbrite.com/doc/
+$events = $eb_client->user_list_events();
+
+//mark-up the list of events that were requested 
+// render in html - ?>
+
+<?php
 /**
  * The sidebar containing the secondary widget area
  *
@@ -14,6 +34,8 @@
 if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
   <aside class="col-sm-4">
     <div class="sidebar-inner">
+      <!-- insertions automatiques des événements Eventbrite rattachés au compte Ippon -->
+      <?= Eventbrite::eventList( $events, 'eventListRow'); ?>
       <div class="widget-area">
         <?php dynamic_sidebar( 'sidebar-2' ); ?>
       </div><!-- .widget-area -->

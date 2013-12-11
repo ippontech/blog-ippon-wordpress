@@ -51,31 +51,6 @@ header.entry-header {
   }
 }
 
-
-// h1.entry-title {
-//   font-size: pxtoem(24px);
-// }
-.site-content, .sidebar-inner {
-  @include margin-vertical-large(); 
-}
-.site-content {
-  background-color: $light;
-  // @include padding-base();
-  article {
-    border-bottom: solid 1px $light;
-    background-color: $gray-light;
-    @include padding-vertical-base();
-    @include margin-vertical-large();
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-
-  p {
-    padding-top: $padding-base-vertical;
-  }
-}
-
 // 
 // --------------------------------------------------
 .container-fluid {
