@@ -1,64 +1,89 @@
 
 var casper = require("casper").create();
 
-var screenshot,
-    screenshotNow = new Date(),
-    screenshotDateTime = screenshotNow.getFullYear() + pad(screenshotNow.getMonth() + 1) + pad(screenshotNow.getDate()) + '-' + pad(screenshotNow.getHours()) + pad(screenshotNow.getMinutes()) + pad(screenshotNow.getSeconds()),
-    devices = [
-      {
-        'name': 'smartphone-portrait',
-        'viewport': {width: 320, height: 480}
-      },
-      {
-        'name': 'smartphone-landscape',
-        'viewport': {width: 480, height: 320}
-      },
-      {
-        'name': 'tablet-portrait',
-        'viewport': {width: 768, height: 1024}
-      },
-      {
-        'name': 'tablet-landscape',
-        'viewport': {width: 1024, height: 768}
-      },
-      {
-        'name': 'desktop-standard',
-        'viewport': {width: 1280, height: 1024}
-      }
-    ],
-    screenshots = [
-      {
-        'name': 'index',
-        'url': 'http://localhost:8888'
-      },
-      {
-        'name': 'categorie-front',
-        'url': 'http://localhost:8888/?cat=7'
-      },
-      {
-        'name': 'article-10',
-        'url': 'http://localhost:8888/?p=10'
-      }
-    ];
+var fs = require("fs");
 
-if (casper.cli.args.length < 2) {
-  casper
-    .echo("SCREENSHOTS Impossible car il faut 2 paramètres : nom & url")
+var moment = require("../moment-with-langs.js");
+
+var
+  pathConfigDevice = "./config/device.json",
+  configDevice,
+  listDevice,
+  pathConfigScreenshot = "./config/screenshot.json",
+  configScreenshot,
+  listScreenshot,
+  now = moment().format("YYYY-MM-DDTHH:mm");
+
+
+// if (casper.cli.args.length < 3) {
+
+
+
+
+// } else {
+//   screenshot = {'name' : casper.cli.args[0], 'url' : casper.cli.args[1]};
+//   casper
+//     .echo('SCREENSHOTS Nom : ' + screenshot.name + ', URL : ' + screenshot.url);
+// }
+
+
+// récupération de la configuration des devices
+try {
+  configDevice = fs.read(pathConfigDevice);
+  try {
+    listDevice = JSON.parse(configDevice);
+    casper.echo("-_-_-_-_-_-_-_-_-_-_-_-_-_", "INFO");
+    casper.echo("Devices", "INFO");
+    casper.echo("-_-_-_-_-_-_-_-_-_-_-_-_-_", "INFO");
+    for (var i = 0; i < listDevice.length; i++) {
+      casper.echo(listDevice[i].name + " : " + listDevice[i].viewport.width + " - " + listDevice[i].viewport.height);
+    }
+    casper.echo("-_-_-_-_-_-_-_-_-_-_-_-_-_", "INFO");
+  } catch(e) {
+    casper.echo("Impossible d'interpréter le fichier de configuration des terminaux : " + pathConfigDevice, "ERROR")
     .exit(1);
-} else {
-  screenshot = {'name' : casper.cli.args[0], 'url' : casper.cli.args[1]};
+  }
+} catch(e) {
   casper
-    .echo('SCREENSHOTS Nom : ' + screenshot.name + ', URL : ' + screenshot.url);
+    .echo("Impossible d'accéder au fichier de configuration des terminaux : " + pathConfigDevice, "ERROR")
+    .exit(1);
 }
 
-casper.start().each(devices, function(self, device) {
+// récupération de la configuration des screenshots
+try {
+  configScreenshot = fs.read(pathConfigScreenshot);
+  try {
+    listScreenshot = JSON.parse(configScreenshot);
+    casper.echo("-_-_-_-_-_-_-_-_-_-_-_-_-_", "INFO");
+    casper.echo("Screenshots", "INFO");
+    casper.echo("-_-_-_-_-_-_-_-_-_-_-_-_-_", "INFO");
+    for (var i = 0; i < listScreenshot.length; i++) {
+      casper.echo(listScreenshot[i].name + " : " + listScreenshot[i].url);
+    }
+    casper.echo("-_-_-_-_-_-_-_-_-_-_-_-_-_", "INFO");
+  } catch(e) {
+    casper.echo("Impossible d'interpréter le fichier de configuration des impressions écran : " + pathConfigScreenshot, "ERROR")
+    .exit(1);
+  }
+} catch(e) {
+  casper
+    .echo("Impossible d'accéder au fichier de configuration des impressions écran : " + pathConfigScreenshot, "ERROR")
+    .exit(1);
+}
+
+
+
+var screenshot = listScreenshot[0];
+
+
+casper.start().each(listDevice, function(self, device) {
   // on laisse 5s au navigateur pour s'ouvrir et se mettre sur le bon viewport
   casper.wait(5000, function() {
     this.viewport(device.viewport.width, device.viewport.height);
     self.thenOpen(screenshot.url, function() {
       this.capture(
         'screenshots/'
-          + screenshotDateTime + '/'
+          + now + '/'
           + screenshot.name
           + '-' + device.name
           + '-' + device.viewport.width
@@ -76,12 +101,3 @@ casper.start().each(devices, function(self, device) {
 });
 
 casper.run();
-
-
-function pad(number) {
-  var r = String(number);
-  if ( r.length === 1 ) {
-    r = '0' + r;
-  }
-  return r;
-}
