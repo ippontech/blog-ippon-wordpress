@@ -146,24 +146,6 @@
   }
 }
 
-// Widget Newsletter (Plugin "MailChimp Widget")
-// --------------------------------------------------
-.widget_ns_mailchimp {
-  .widget-title {
-    margin-bottom: 0px !important;
-    @include aside-secondary();
-    @include pre-fa("\f0e0");
-  }
-  form {
-    @include aside-secondary();
-  }
-  input[type="submit"] {
-    background-color: $gray;
-    border: 0px;
-    color: $light;
-  }
-}
-
 // Widget Tags (Plugin  natif "Tag cloud")
 // --------------------------------------------------
 // @include responsive-invisibility('.widget_tag_cloud');

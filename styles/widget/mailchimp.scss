@@ -1,0 +1,23 @@
+
+
+// Widget Newsletter (Plugin "MailChimp Widget")
+// --------------------------------------------------
+.widget_ns_mailchimp {
+  .widget-title {
+    margin-bottom: 0px !important;
+    @include aside-secondary();
+    @include pre-fa("\f0e0");
+  }
+  form {
+    white-space: nowrap;
+    max-width: 100%;
+    @include aside-secondary();
+    input[type="submit"] {
+      background-color: $gray;
+      border: 0px;
+      color: $light;
+      vertical-align: top;
+    }
+  }
+}
+
