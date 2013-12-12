@@ -1,6 +1,8 @@
-<form action="/" method="get">
-    <fieldset>
-        <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="Rechercher ..."/>
-        <button type="submit" class=""><i class="fa fa-search"></i></button>
-    </fieldset>
+<form action="/" method="get" role="form">
+    <div class="input-group input-group-sm">
+        <input type="text" class="form-control" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="Rechercher ..."/>
+        <span class="input-group-btn">
+          <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+        </span>
+    </div>
 </form>

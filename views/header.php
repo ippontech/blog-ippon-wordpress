@@ -71,44 +71,49 @@
         </div>
       </div>
 
-      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-        <h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-        <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-      </a>
-      <div class="menu-search">
-        <div class="home-link hidden-xs">
+      <div class="menu-search row">
+        <div class="col-md-8">
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-            <i class="fa fa-home fa-lg"></i>
+            <h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+            <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
           </a>
+          <div class="menu">
+            <div class="home-link hidden-xs">
+              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                <i class="fa fa-home fa-lg"></i>
+              </a>
+            </div>
+
+            <nav id="menu" role="navigation">
+
+                <?php
+                $defaults = array(
+                  'theme_location'  => '',
+                  'menu'            => '',
+                  'container'       => '',
+                  // 'container_class' => '',
+                  'container_id'    => '',
+                  // 'menu_class'      => '',
+                  'menu_id'         => '',
+                  'echo'            => true,
+                  'fallback_cb'     => 'wp_page_menu',
+                  'before'          => '',
+                  'after'           => '',
+                  'link_before'     => '',
+                  'link_after'      => '',
+                  'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                  'depth'           => 0,
+                  'walker'          => ''
+                );
+                wp_nav_menu( $defaults );
+                ?>
+            </nav>
+          </div>
         </div>
-
-        <nav id="menu" role="navigation">
-
-            <?php
-            $defaults = array(
-              'theme_location'  => '',
-              'menu'            => '',
-              'container'       => '',
-              // 'container_class' => '',
-              'container_id'    => '',
-              // 'menu_class'      => '',
-              'menu_id'         => '',
-              'echo'            => true,
-              'fallback_cb'     => 'wp_page_menu',
-              'before'          => '',
-              'after'           => '',
-              'link_before'     => '',
-              'link_after'      => '',
-              'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-              'depth'           => 0,
-              'walker'          => ''
-            );
-            wp_nav_menu( $defaults );
-            ?>
-        </nav>
-        <div class="search-link hidden-xs">
+        <div class="col-md-4 search-link hidden-xs">
           <?php get_search_form(); ?>
         </div>
+      </div>
     </header><!-- #masthead -->
 
     <div id="main">

@@ -15,11 +15,16 @@
 .menu-search {
   @media (min-width: $screen-sm-min) {
     background-color: $gray-dark;
+  }
+}
+.menu {
+  @media (min-width: $screen-sm-min) {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
   }
 }
+
 
 .home-link, a.menu-link {
   @include padding-large();
@@ -38,9 +43,7 @@
 }
 
 .search-link {
-  align-self: center;
-  margin-left: auto;
-  @include padding-base();
+  @include padding-vertical-small();
 }
 
 a.menu-link {
