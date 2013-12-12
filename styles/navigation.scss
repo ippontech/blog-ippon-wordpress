@@ -19,9 +19,10 @@
 }
 .menu {
   @media (min-width: $screen-sm-min) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    display: inline-block;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: flex-start;
   }
 }
 
@@ -33,6 +34,10 @@
 .home-link {
   align-self: center;
   background-color: $ippon-secondary;
+  display: none;
+  @media (min-width: $screen-sm-min) {
+    display: inline-block;
+  }
   a {
     color: $light;
     text-decoration: none;
@@ -103,6 +108,7 @@ nav#menu {
     max-height: none;
   }
   nav#menu {
+    display: inline;
     ul {
       margin: 0 0 0 0.25em;
       border: 0;

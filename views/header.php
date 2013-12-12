@@ -78,7 +78,7 @@
             <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
           </a>
           <div class="menu">
-            <div class="home-link hidden-xs">
+            <div class="home-link">
               <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
                 <i class="fa fa-home fa-lg"></i>
               </a>
