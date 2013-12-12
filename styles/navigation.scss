@@ -52,12 +52,7 @@
 }
 
 a.menu-link {
-  // background-color: $ippon-primary;
-  background-color: $ippon-secondary;
-  color: $light;
-  display: block;
-  font-size: $font-size-large;
-  text-decoration: none;
+  @include block-colorized($ippon-secondary);
   &:hover {
     text-decoration: none;
   }

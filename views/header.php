@@ -12,7 +12,7 @@
   <?php // Google Chrome Frame for IE ?>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title><?php wp_title( '|', true, 'right' ); ?></title>
+  <title><?php bloginfo('name'); ?></title>
   <meta name="description" content="<?php echo get_bloginfo ('description' );  ?>">
 
   <?php // mobile meta (hooray!) ?>
@@ -113,6 +113,9 @@
         <div class="col-md-4 search-link hidden-xs">
           <?php get_search_form(); ?>
         </div>
+      </div>
+      <div class="description text-center visible-xs">
+        <?php bloginfo('name'); ?>
       </div>
     </header><!-- #masthead -->
 

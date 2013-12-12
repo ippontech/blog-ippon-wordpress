@@ -37,7 +37,9 @@ a.calltoaction {
   }
 }
 
-
+.description {
+  @include block-colorized($ippon-primary);
+}
 
 a.next {
   @include pre-fa("\f0da");

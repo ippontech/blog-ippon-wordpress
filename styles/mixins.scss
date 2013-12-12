@@ -188,3 +188,16 @@
   height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
 }
 
+@mixin block-colorized($color) {
+  background-color: $color;
+  color: $light;
+  display: block;
+  font-size: $font-size-large;
+  text-transform: uppercase;
+  @include padding-large();
+}
+
+
+
+
+
