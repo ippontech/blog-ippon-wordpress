@@ -15,11 +15,13 @@ Feuille de style pour le contenu d'un article
 .site-content {
   background-color: $light;
   // @include padding-base();
-  article {
+  article.post {
     border-bottom: solid 1px $light;
     background-color: $gray-light;
-    @include padding-vertical-base();
     @include margin-vertical-large();
+    @media (min-width: $screen-sm-min) {
+      @include padding-vertical-base();
+    }
     &:first-child {
       margin-top: 0;
     }
@@ -32,7 +34,10 @@ Feuille de style pour le contenu d'un article
 
 #content {
   article {
-    > div {
+    header .article-meta .secondary-meta,
+    > div.entry-thumbnail,
+    > div.entry-content,
+    {
       display: none;
       @media (min-width: $screen-sm-min) {
         display: inherit;
@@ -56,26 +61,31 @@ Feuille de style pour le contenu d'un article
   }
 }
 
-.article-meta {
-  // @media (min-width: $screen-sm-min) {
-  //   display: inline-block;
-  // }
-  background-color: lighten($gray-light, 5%);
+.post-meta {
+  background-color: $ippon-complementary;
+  display: block;
+  @media (min-width: $screen-sm-min) {
+    // background-color: lighten($gray-light, 5%);
+    // display: inline-block;
+  }
   .main-meta {
-    background-color: $ippon-complementary;
+    // background-color: $ippon-complementary;
     color: $light;
-    display: block;
-    @media (min-width: $screen-sm-min) {
+    // display: block;
+    // @media (min-width: $screen-sm-min) {
       display: inline-block;
-    }
+    // }
     a {
       color: $light;
       text-decoration: none;
     }
     .date-meta {
       border-bottom: 0;
-      display: inline-block;
+      display: block;
       padding-right: $padding-small-horizontal;
+      @media (min-width: $screen-sm-min) {
+        display: inline-block;
+      }
       .day, .month-year {
         display: inline-block;
       }
@@ -101,19 +111,47 @@ Feuille de style pour le contenu d'un article
       }
     }
     .author {
-      display: inline-block;
+      display: block;
+      @media (min-width: $screen-sm-min) {
+        display: inline-block;
+      }
       font-size: pxtoem($font-size-meta);
       text-transform: uppercase;
     }
   }
   .secondary-meta {
+    
     vertical-align: top;
     @media (min-width: $screen-sm-min) {
       display: inline-block;
     }
-  .comments-meta, .tags-meta {
-    // font-size: pxtoem($font-size-meta);
-    @include meta-complementary();
   }
 }
+
+.post-annex {
+  background-color: $ippon-secondary;
+  @media (min-width: $screen-sm-min) {
+    background-color: lighten($gray-light, 5%);
+  }
 }
+
+
+.post-meta-secondary {
+  text-align: right;
+  @include padding-vertical-base();
+  @include meta-complementary();
+  @media (min-width: $screen-sm-min) {
+    text-align: left;
+  }
+  .post-goto {
+    color: $light;
+    display: block;
+    // @include padding-vertical-base();
+    text-transform: uppercase;
+    a {
+      color: $light;
+    }
+  }
+}
+
+// }

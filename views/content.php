@@ -11,35 +11,50 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <header class="entry-header">
+  <header class="entry-header row">
 
     <!-- Affichage du titre avec ou sans lien -->
-    <?php if (is_single()) : ?>
-    <h1 class="entry-title"><?php the_title(); ?></h1>
-    <?php else : ?>
-    <a href="<?php the_permalink(); ?>" rel="bookmark">
-      <h1 class="entry-title">
-        <?php the_title(); ?>
-      </h1>
-    </a>
-    <?php endif; // is_single() ?>
-
-    <!-- Affichage des principales meta données -->
-    <div class="article-meta">
-      <?php ippon_meta(); ?>
-
-  <!-- Affichage des meta données secondaires -->
-  <div class="secondary-meta">
-    <?php if (get_the_tag_list()) : ?>
-      <div class="tags-meta">
-        <?php echo get_the_tag_list('<i class="fa fa-tags"></i> ',', ','');?>
-      </div><!-- .tags-meta -->
-    <?php endif; // get_the_tag_list() ?>
-  </div>
-
-    </div><!-- .article-meta -->
+    <div class="col-xs-12">
+      <?php if (is_single()) : ?>
+      <h1 class="entry-title"><?php the_title(); ?></h1>
+      <?php else : ?>
+      <a href="<?php the_permalink(); ?>" rel="bookmark">
+        <h1 class="entry-title">
+          <?php the_title(); ?>
+        </h1>
+      </a>
+      <?php endif; // is_single() ?>
+    </div>
 
   </header><!-- .entry-header -->
+
+  <div class="row hack-row post-annex">
+
+      <div class="col-xs-9 col-sm-6 post-meta">
+        <!-- Affichage des meta données -->
+        <!-- <div class="article-meta"> -->
+          <!-- Affichage des meta données principales -->
+          <?php ippon_meta(); ?>
+
+        <!-- </div> --><!-- .article-meta -->
+      </div>
+      <div class="col-xs-3 col-sm-6 post-meta-secondary">
+        <div class="article-goto visible-xs">
+          <a class="next" href="<?php the_permalink(); ?>" rel="bookmark">
+            Lire<span class="hidden-xs"> l'article</span>
+          </a>
+        </div>
+        <!-- Affichage des meta données secondaires -->
+        <div class="secondary-meta hidden-xs">
+          <?php if (get_the_tag_list()) : ?>
+            <div class="tags-meta">
+              <?php echo get_the_tag_list('<i class="fa fa-tags"></i> ',', ','');?>
+            </div><!-- .tags-meta -->
+          <?php endif; // get_the_tag_list() ?>
+        </div>
+      </div>
+  </div>
+
 
   <!-- Affichage du résumé -->
   <?php if (is_search() || !is_single()) : ?>
@@ -68,7 +83,7 @@
       </div><!-- .entry-content -->
     <?php endif; ?>
     <!-- Lien pour accéder à l'article en entier -->
-    <footer>
+    <footer class="hidden-xs">
       <a class="calltoaction next" href="<?php the_permalink(); ?>" rel="bookmark">
         Lire l'article
       </a>

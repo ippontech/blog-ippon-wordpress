@@ -76,3 +76,10 @@ body {
 .color-complementary {
   color: $ippon-complementary;
 }
+
+.hack-row {
+  margin: 0 !important;
+  [class^="col-"] {
+    box-sizing: border-box;
+  }
+}

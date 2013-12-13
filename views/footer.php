@@ -45,10 +45,14 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="<?php bloginfo('template_url'); ?>/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/vendor/lazyload.js"></script>
+  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/vendor/jquery.fittext.js"></script>
   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/functions.js"></script>
   <script>
     $(document).ready(function() {
       MY_MENU.init();
+
+    $(".fittext").fitText();
+
     });
   </script>
 
