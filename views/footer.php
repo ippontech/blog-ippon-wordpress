@@ -51,7 +51,7 @@
     $(document).ready(function() {
       MY_MENU.init();
 
-    $(".fittext").fitText();
+    $(".fittext").fitText(1.2);
 
     });
   </script>

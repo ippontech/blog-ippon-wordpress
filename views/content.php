@@ -30,20 +30,18 @@
 
   <div class="row hack-row post-annex">
 
+      <!-- Affichage des meta données principales -->
       <div class="col-xs-9 col-sm-6 post-meta">
-        <!-- Affichage des meta données -->
-        <!-- <div class="article-meta"> -->
-          <!-- Affichage des meta données principales -->
-          <?php ippon_meta(); ?>
-
-        <!-- </div> --><!-- .article-meta -->
+        <?php ippon_meta(); ?>
       </div>
       <div class="col-xs-3 col-sm-6 post-meta-secondary">
+        <!-- <a href="<?php the_permalink(); ?>" rel="bookmark"> -->
         <div class="article-goto visible-xs">
-          <a class="next" href="<?php the_permalink(); ?>" rel="bookmark">
+          <a class="next post-goto" href="<?php the_permalink(); ?>" rel="bookmark">
             Lire<span class="hidden-xs"> l'article</span>
           </a>
         </div>
+      <!-- </a> -->
         <!-- Affichage des meta données secondaires -->
         <div class="secondary-meta hidden-xs">
           <?php if (get_the_tag_list()) : ?>

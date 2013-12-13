@@ -138,20 +138,29 @@ Feuille de style pour le contenu d'un article
 
 .post-meta-secondary {
   text-align: right;
-  @include padding-vertical-base();
+  // @include padding-vertical-large();
   @include meta-complementary();
   @media (min-width: $screen-sm-min) {
     text-align: left;
+    @include padding-vertical-base();
   }
   .post-goto {
     color: $light;
+    font-size: $font-size-base;
     display: block;
     // @include padding-vertical-base();
     text-transform: uppercase;
+      @include padding-vertical-base();
     a {
+
       color: $light;
     }
   }
 }
+
+.tutu {
+  width: 100%;
+}
+
 
 // }
