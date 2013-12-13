@@ -40,7 +40,8 @@ a.calltoaction {
 }
 
 .description {
-  @include block-colorized($ippon-primary);
+  @include block-colorized($gray);
+  // @include block-colorized($ippon-primary);
 }
 
 a.next {

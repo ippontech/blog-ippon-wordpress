@@ -9,12 +9,14 @@ Feuille de style pour le contenu d'un article
 // Paddings
 ////////////////////////////////////////////////////////////////////////
 
-.site-content, .sidebar-inner {
-  @include margin-vertical-large(); 
+.sidebar-inner {
+  // @include margin-vertical-large();
 }
 .site-content {
-  background-color: $light;
-  // @include padding-base();
+  background-color: $light;  
+  @media (min-width: $screen-sm-min) {
+    @include margin-vertical-large();
+  }
   article.post {
     border-bottom: solid 1px $light;
     background-color: $gray-light;
