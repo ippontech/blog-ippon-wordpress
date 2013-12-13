@@ -62,6 +62,9 @@ nav#menu {
       background-color: $ippon-secondary;
       white-space:nowrap;
     }
+    &.current-menu-item {
+      background-color: $ippon-primary;
+    }
     a {
       border-bottom: 1px solid $gray-light;
       color: $light;
