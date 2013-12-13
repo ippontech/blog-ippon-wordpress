@@ -78,14 +78,14 @@
             <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
           </a>
           <div class="menu">
-            <div class="home-link">
-              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                <i class="fa fa-home fa-lg"></i>
-              </a>
-            </div>
-
             <nav id="menu" role="navigation">
-
+              <ul>
+                <li>
+                  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                    <span class="visible-xs"><i class="fa fa-home fa-lg"></i> Accueil</span>
+                    <span class="hidden-xs"><i class="fa fa-home fa-lg"></i></span>
+                  </a>
+                </li>
                 <?php
                 $defaults = array(
                   'theme_location'  => '',
@@ -101,12 +101,13 @@
                   'after'           => '',
                   'link_before'     => '',
                   'link_after'      => '',
-                  'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                  'items_wrap'      => '%3$s',
                   'depth'           => 0,
                   'walker'          => ''
                 );
                 wp_nav_menu( $defaults );
                 ?>
+              </ul>
             </nav>
           </div>
         </div>
