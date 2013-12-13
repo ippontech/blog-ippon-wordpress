@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         // Gets the port from the connect configuration
         path: 'http://localhost:<%= express.all.options.port%>'
       }
-    },
+    },  
     // Copie les fichiers
     copy: {
       dist: {
@@ -43,6 +43,12 @@ module.exports = function(grunt) {
           cwd: 'img/',
           src: ['**'],
           dest: '<%= dist %>/img'
+        },
+        {
+          expand: true,
+          cwd: 'img/',
+          src: ['favicon_16x16.ico', 'favicon_32x32.png'],
+          dest: '<%= dist %>'
         }]
       }
     },
