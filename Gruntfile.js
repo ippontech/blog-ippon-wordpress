@@ -4,7 +4,9 @@ module.exports = function(grunt) {
   // Configuration
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    dist : 'dist',
+    dist: 'dist',
+    test: 'test',
+    screenshots: ['http://localhost:8888'],
     // grunt-express will serve the files from the folders listed in `bases`
     // on specified `port` and `hostname`
     express: {
@@ -22,7 +24,17 @@ module.exports = function(grunt) {
         // Gets the port from the connect configuration
         path: 'http://localhost:<%= express.all.options.port%>'
       }
-    },  
+    },
+    //
+    casper: {
+      screenshots : {
+        options : {
+          test : false
+        },
+        src: ['<%= test %>/rendering/screenshots-index.js','<%= test %>/rendering/screenshots-post.js'],
+        dest: '<%= test %>/rendering'
+      }
+    },
     // Copie les fichiers
     copy: {
       dist: {
@@ -62,6 +74,12 @@ module.exports = function(grunt) {
         }        
       }
     },
+    // jshint: {
+    //   options : {
+    //     jshintrc : '.jshintrc'
+    //   },
+    //   all : ['tasks/**/*.js', 'test/*.js', 'Gruntfile.js']
+    // },
     // Prise en compte des fichiers modifiés
     watch: {
       copy: {
@@ -79,14 +97,18 @@ module.exports = function(grunt) {
     }
   });
 
-  // Plugin pour copier les fichiers
+  // plugin pour copier les fichiers
   grunt.loadNpmTasks('grunt-contrib-copy');
-  // Plugin de pré-processing CSS via Compass
+  // plugin de pré-processing CSS via Compass
   grunt.loadNpmTasks('grunt-contrib-compass');
-  // Plugin pour prendre en compte les modifications à chaud
+  // plugin pour prendre en compte les modifications à chaud
   grunt.loadNpmTasks('grunt-contrib-watch');
   // grunt.loadNpmTasks('grunt-express');
   // grunt.loadNpmTasks('grunt-open');
+
+  // plugin pour lancer CasperJS
+  grunt.loadNpmTasks('grunt-casper');
+
 
   // Réalise le "live reload"
   // grunt.loadNpmTasks('grunt-livereload');
@@ -104,4 +126,6 @@ module.exports = function(grunt) {
   grunt.registerTask('css', ['compass']);
   // Réalise les tâches de développement
   grunt.registerTask('dev', ['watch']);
+  // Réalise les screenshots
+  grunt.registerTask('screenshots', ['casper:screenshots']);
 };

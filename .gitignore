@@ -3,5 +3,5 @@ dist
 .tmp
 .sass-cache
 .DS_Store
-test/rendering/screenshots/
+screenshots
 npm-debug.log

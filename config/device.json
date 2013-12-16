@@ -1,0 +1,25 @@
+
+  [
+    {
+      "name": "smartphone-portrait",
+      "viewport": {"width": 320, "height": 2000}
+    },
+    {
+      "name": "smartphone-landscape",
+      "viewport": {"width": 480, "height": 2000}
+    },
+    {
+      "name": "tablet-portrait",
+      "viewport": {"width": 768, "height": 2000}
+    },
+    {
+      "name": "tablet-landscape",
+      "viewport": {"width": 1024, "height": 2000}
+    },
+    {
+      "name": "desktop-standard",
+      "viewport": {"width": 1280, "height": 2000}
+    }
+  ]
+
+

@@ -15,6 +15,26 @@ var
   now = moment().format("YYYY-MM-DD-HH-mm");
 
 
+if (casper.cli.args.length > 0) {
+  casper
+    .echo('SCREENSHOTS URL : ' + casper.cli.args[0]);
+  casper
+    .echo('SCREENSHOTS URL : ' + casper.cli.args[1]);
+  casper
+    .echo('SCREENSHOTS URL : ' + casper.cli.args['host']);
+  casper
+    .echo('SCREENSHOTS URL : ' + casper.cli.args['port']);
+
+
+}
+
+// else {
+//   screenshot = {'name' : casper.cli.args[0], 'url' : casper.cli.args[1]};
+//   casper
+//     .echo('SCREENSHOTS Nom : ' + screenshot.name + ', URL : ' + screenshot.url);
+// }
+
+
 // if (casper.cli.args.length < 3) {
 
 
@@ -98,23 +118,23 @@ casper.start().each(listDevice, function(self, device) {
         );
     });
 
-    // Click on 1st result link
-    self.click('a.menu-link');
-          this.capture(
-        'screenshots/'
-          + now + '/'
-          + screenshot.name
-          + '-' + device.name
-          + '-' + device.viewport.width
-          + '-' + device.viewport.height
-          + '.png',
-        {
-          top: 0,
-          left: 0,
-          width: device.viewport.width,
-          height: device.viewport.height
-        }
-        );
+    // // Click on 1st result link
+    // self.click('a.menu-link');
+    //       this.capture(
+    //     'screenshots/'
+    //       + now + '/'
+    //       + screenshot.name
+    //       + '-' + device.name
+    //       + '-' + device.viewport.width
+    //       + '-' + device.viewport.height
+    //       + '.png',
+    //     {
+    //       top: 0,
+    //       left: 0,
+    //       width: device.viewport.width,
+    //       height: device.viewport.height
+    //     }
+    //     );
 
   });
 });
