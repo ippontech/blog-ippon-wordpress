@@ -12,7 +12,7 @@ var
   pathConfigScreenshot = "./config/screenshot.json",
   configScreenshot,
   listScreenshot,
-  now = moment().format("YYYY-MM-DDTHH:mm");
+  now = moment().format("YYYY-MM-DD-HH-mm");
 
 
 // if (casper.cli.args.length < 3) {
@@ -97,6 +97,25 @@ casper.start().each(listDevice, function(self, device) {
         }
         );
     });
+
+    // Click on 1st result link
+    self.click('a.menu-link');
+          this.capture(
+        'screenshots/'
+          + now + '/'
+          + screenshot.name
+          + '-' + device.name
+          + '-' + device.viewport.width
+          + '-' + device.viewport.height
+          + '.png',
+        {
+          top: 0,
+          left: 0,
+          width: device.viewport.width,
+          height: device.viewport.height
+        }
+        );
+
   });
 });
 
