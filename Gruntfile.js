@@ -39,21 +39,21 @@ module.exports = function(grunt) {
     // 
     clean: {
       dist: [
-        '<%= tmp %>'
+        '<%= tmp %>', '<%= dist %>/**'
       ]
     },
-    // Réalise le pré-processing CSS via Compass
+    // réalise le pré-processing CSS via Compass
     compass: {
       dist:{
         options: {
           sassDir: 'styles',
           specify: 'styles/style.scss',
-          cssDir: '<%= tmp %>/styles',
+          cssDir: '<%= tmp %>',
           outputStyle: 'compressed'
         }        
       }
     },
-    // Copie les fichiers
+    // copie les fichiers
     copy: {
       dist: {
         files: [{
@@ -61,6 +61,12 @@ module.exports = function(grunt) {
           cwd: 'views/',
           src: ['**'],
           dest: '<%= tmp %>'
+        },
+        {
+          expand: true,
+          cwd: 'js/vendor/',
+          src: ['**'],
+          dest: '<%= tmp %>/js/vendor'
         },
         {
           expand: true,
@@ -113,24 +119,13 @@ module.exports = function(grunt) {
     uglify: {
       dist: {
         files: {
-          '<%= tmp %>/js/scripts.min.js': [
+          '<%= tmp %>/js/functions.js': [
           'js/functions.js'
           ]
         }
       }
     },
-
-    // version: {
-    //   options: {
-    //     file: 'lib/scripts.php',
-    //     css: '<%= tmp %>/styles/style.css',
-    //     cssHandle: 'roots_main',
-    //     js: '<%= tmp %>/js/scripts.min.js',
-    //     jsHandle: 'roots_scripts'
-    //   }
-    // },
-
-    // Prise en compte des fichiers modifiés
+    // prise en compte (à chaud) des fichiers modifiés
     watch: {
       copy: {
         files: ['views/**', 'js/**', 'img/**'],
@@ -144,6 +139,28 @@ module.exports = function(grunt) {
         //   livereload: true
         // }
       }
+    },
+    //
+    zip: {
+      theme: {
+        cwd: '<%= tmp %>',
+        src: ['<%= tmp %>/**'],
+        dest: '<%= dist %>/theme-ippon-<%= pkg.version %>.zip'
+      }
+
+
+      // 'destinationZip': ['firstFileToZip', 'secondFileToZip', ...]
+      // '<%= dist %>/theme-ippon-<%= pkg.version %>.zip': ['<%= tmp %>/img/*']
+
+
+      // Specify working directory to zip from via `cwd`
+      // 'more-widgets': {
+      //   cwd: '<%= tmp %>/'
+      //   // Files will zip to 'corkscrew.js' and 'sillyStraw.js'
+      //   src: ['*'],
+      //   dest: '<%= dist %>/theme-ippon-<%= pkg.version %>.zip'
+      // }
+
     }
   });
 
@@ -155,6 +172,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   // plugin de pré-processing CSS via Compass
   grunt.loadNpmTasks('grunt-contrib-compass');
+  // plugin pour zipper des fichiers
+  grunt.loadNpmTasks('grunt-zip');
   //
   grunt.loadNpmTasks('grunt-contrib-uglify');
   // plugin pour prendre en compte les modifications à chaud
@@ -164,8 +183,6 @@ module.exports = function(grunt) {
 
   // plugin pour lancer CasperJS
   grunt.loadNpmTasks('grunt-casper');
-  // 
-  grunt.loadNpmTasks('grunt-wp-version');
 
 
   // Réalise le "live reload"
@@ -183,7 +200,8 @@ module.exports = function(grunt) {
     'clean',
     'compass',
     'uglify',
-    'copy:dist']);
+    'copy:dist',
+    'zip']);
   // Réalise le pré-processing CSS via Compass
   grunt.registerTask('css', ['compass']);
   // Réalise les tâches de développement
