@@ -8,6 +8,7 @@ Il repose :
 - Bootstrap 3
 - Modernizr
 - jQuery
+- SASS
 
 ***
 
@@ -57,10 +58,25 @@ Se positionner à la racine du projet
 
 ### 2.1. Les commandes
 
-Se positionner à la racine du projet
+Se positionner à la racine du projet.
+
+#### 2.1.1 Développement
 
 Pour lancer, les outils de développement
 
 	grunt dev
+
+Pour un redéploiement à chaud dans dist, penser à faire un lien symbolique dans le dossier thème de WordPress. Par exemple :
+
+	ln -s /Users/t074/work/workspaces/blogs/blog-ippon-wordpress/dist/theme-ippon theme-ippon
+	
+#### 2.1.2 Production
+	
+Pour lancer, le build du thème zippé
+
+	grunt build
+
+Celui-ci se retrouve dans le dossier 'dist'
+
 
 

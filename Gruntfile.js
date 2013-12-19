@@ -6,6 +6,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     tmp: '.tmp',
     dist: 'dist',
+    hotdeploy: '<%= dist %>/theme-ippon',
     test: 'test',
     screenshots: ['http://localhost:8888'],
     // grunt-express will serve the files from the folders listed in `bases`
@@ -51,6 +52,14 @@ module.exports = function(grunt) {
           cssDir: '<%= tmp %>',
           outputStyle: 'compressed'
         }        
+      },
+      dev:{
+        options: {
+          sassDir: 'styles',
+          specify: 'styles/style.scss',
+          cssDir: '<%= hotdeploy %>',
+          outputStyle: 'expanded'
+        }        
       }
     },
     // copie les fichiers
@@ -86,25 +95,25 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'views/',
           src: ['**'],
-          dest: '<%= dist %>'
+          dest: '<%= hotdeploy %>'
         },
         {
           expand: true,
           cwd: 'js/',
           src: ['**'],
-          dest: '<%= dist %>/js'
+          dest: '<%= hotdeploy %>/js'
         },
         {
           expand: true,
           cwd: 'img/',
           src: ['**'],
-          dest: '<%= dist %>/img'
+          dest: '<%= hotdeploy %>/img'
         },
         {
           expand: true,
           cwd: 'img/',
           src: ['favicon_16x16.ico', 'favicon_32x32.png'],
-          dest: '<%= dist %>'
+          dest: '<%= hotdeploy %>'
         }]
       },
     },
@@ -133,7 +142,7 @@ module.exports = function(grunt) {
       },
       compass: {
         files: ['styles/**/*.{scss,sass}'],
-        tasks: ['compass']
+        tasks: ['compass:dev']
         // ,
         // options: {
         //   livereload: true
