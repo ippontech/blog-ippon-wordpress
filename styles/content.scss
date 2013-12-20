@@ -160,9 +160,17 @@ Feuille de style pour le contenu d'un article
   }
 }
 
-.tutu {
-  width: 100%;
+.format-video .entry-thumbnail img:before {
+    content: "\f000"; 
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    color: #000;
+    font-size: 18px;
+    padding-right: 0.5em;
+    position: absolute;
+    top: 10px;
+    left: 0;
 }
-
-
-// }

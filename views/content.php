@@ -90,7 +90,7 @@
   <!-- Affichage de l'ensemble de l'article -->
   <?php else : ?>
     <!-- Avec image -->
-    <?php if (has_post_thumbnail() && !post_password_required()) : ?>
+    <?php if (has_post_thumbnail() && !post_password_required() && get_post_format()!=='video') : ?>
       <div class="entry-thumbnail">
         <div class="row">
           <div class="col-sm-6">
@@ -120,11 +120,13 @@
       <div class="entry-content">
         <div class="row">
           <div class="col-sm-12 content-teaser">
-            <?php 
-              global $more;    // Declare global $more (before the loop).
-              $more = 0;       // Set (inside the loop) to display content above the more tag.
-              the_content('');
-            ?>
+            <?php if ($pos=strpos($post->post_content, '<!--more-->')): ?>
+              <?php 
+                global $more;    // Declare global $more (before the loop).
+                $more = 0;       // Set (inside the loop) to display content above the more tag.
+                the_content('');
+              ?>
+            <?php endif; ?>
           </div>
           <div class="col-sm-12">
             <?php 
