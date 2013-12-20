@@ -97,11 +97,13 @@
             <?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
           </div>
           <div class="col-sm-6 content-teaser">
-            <?php 
-              global $more;    // Declare global $more (before the loop).
-              $more = 0;       // Set (inside the loop) to display content above the more tag.
-              the_content('');
-            ?>
+            <?php if ($pos=strpos($post->post_content, '<!--more-->')): ?>
+              <?php 
+                global $more;    // Declare global $more (before the loop).
+                $more = 0;       // Set (inside the loop) to display content above the more tag.
+                the_content('');
+              ?>
+            <?php endif; ?>
           </div>
           <div class="col-sm-12">
             <?php 
