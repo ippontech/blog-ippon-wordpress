@@ -25,6 +25,8 @@ Version: 0.0.1
 @import "style-footer";
 @import "style-sidebar";
 
+@import "video";
+
 img {
   @include img-responsive();
 }
