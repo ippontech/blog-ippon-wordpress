@@ -214,7 +214,7 @@ module.exports = function(grunt) {
   // Réalise le pré-processing CSS via Compass
   grunt.registerTask('css', ['compass']);
   // Réalise les tâches de développement
-  grunt.registerTask('dev', ['watch']);
+  grunt.registerTask('dev', ['copy:dev', 'watch']);
   // Réalise les screenshots
   grunt.registerTask('screenshots', ['casper:screenshots']);
 };
