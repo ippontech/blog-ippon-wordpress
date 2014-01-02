@@ -52,6 +52,7 @@
       MY_MENU.init();
 
     $(".fittext").fitText(1.2);
+    $(".player-btn").fitText(1);
 
     });
   </script>

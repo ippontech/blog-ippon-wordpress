@@ -105,6 +105,9 @@ function twentythirteen_setup() {
 
   // This theme uses its own gallery styles.
   add_filter( 'use_default_gallery_style', '__return_false' );
+
+  // pour les résumés permet de filtrer le contenu de TubePress
+  add_filter('the_excerpt',  array('org_tubepress_env_wordpress_Main', 'contentFilter'));
 }
 add_action( 'after_setup_theme', 'twentythirteen_setup' );
 

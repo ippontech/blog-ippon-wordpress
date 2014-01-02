@@ -60,7 +60,17 @@
     <?php if (has_post_thumbnail() && !post_password_required()) : ?>
       <div class="entry-thumbnail row">
         <div class="col-sm-6">
-          <?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
+          <figure class="centerImage">
+          <?php if (get_post_format()=='video') : ?>
+            <div class="player-btn">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-flag fa-stack-1x fa-play"></i>
+              </span>
+            </div>
+          <?php endif; ?>
+          <?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>  
+          </figure>
         </div>
         <div class="col-sm-6">
           <?php if ($pos=strpos($post->post_content, '<!--more-->')): ?>
