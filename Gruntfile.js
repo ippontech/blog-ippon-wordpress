@@ -35,6 +35,13 @@ module.exports = function(grunt) {
         },
         src: ['<%= test %>/rendering/screenshots-index.js','<%= test %>/rendering/screenshots-post.js'],
         dest: '<%= test %>/rendering'
+      },
+      theme : {
+        options : {
+          test : false
+        },
+        src: ['<%= test %>/rendering/screenshot-theme.js'],
+        dest: '<%= test %>/rendering/theme'
       }
     },
     // 
@@ -87,6 +94,12 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'img/',
           src: ['favicon_16x16.ico', 'favicon_32x32.png'],
+          dest: '<%= tmp %>'
+        },
+        {
+          expand: true,
+          cwd: 'screenshots/theme',
+          src: ['screenshot.png'],
           dest: '<%= tmp %>'
         }]
       },
@@ -206,6 +219,7 @@ module.exports = function(grunt) {
   ]);
   // Réalise la distribution
   grunt.registerTask('build', [
+    'casper:theme',
     'clean',
     'compass',
     'uglify',
