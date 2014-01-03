@@ -18,7 +18,8 @@ Cf :
 .entry-content,
 .entry-header h1,
 #content article footer,
-.archive-header, {
+.archive-header,
+.nav-previous, .nav-next {
   @include padding-base();
 }
 .entry-thumbnail {

@@ -5,6 +5,9 @@
 Feuille de style pour le contenu d'un article
 */
 
+$post-bg-color: $gray-light;
+
+
 ////////////////////////////////////////////////////////////////////////
 // Paddings
 ////////////////////////////////////////////////////////////////////////
@@ -19,13 +22,13 @@ Feuille de style pour le contenu d'un article
   }
   article.post {
     border-bottom: solid 1px $light;
-    background-color: $gray-light;
+    background-color: $post-bg-color;
     @include margin-vertical-large();
     @media (min-width: $screen-sm-min) {
       @include padding-vertical-base();
     }
     &:first-child {
-      margin-top: 0;
+      @include margin-vertical-none();
     }
   }
 
@@ -178,5 +181,9 @@ Feuille de style pour le contenu d'un article
   .fa-play {
     color: $light;
   }
+}
+
+.post-navigation {
+  background-color: $post-bg-color;
 }
 

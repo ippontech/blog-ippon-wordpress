@@ -273,11 +273,19 @@ function ippon_paging_nav() {
     <div class="nav-links row">
 
       <?php if (get_next_posts_link()) : ?>
-      <div class="nav-previous col-sm-6 text-left"><?php next_posts_link('<i class="fa fa-angle-double-left"></i> Articles précédents', 0); ?></div>
+      <div class="col-sm-6">
+        <div class="nav-previous">
+          <?php next_posts_link('<i class="fa fa-angle-double-left"></i> Articles précédents', 0); ?>
+        </div>
+      </div>
       <?php endif; ?>
 
       <?php if ( get_previous_posts_link()) : ?>
-      <div class="nav-next col-sm-6 text-right"><?php previous_posts_link('Articles suivants <i class="fa fa-angle-double-right"></i>', 0); ?></div>
+      <div class="col-sm-6">
+        <div class="nav-next text-right">
+          <?php previous_posts_link('Articles suivants <i class="fa fa-angle-double-right"></i>', 0); ?>
+        </div>
+      </div>
       <?php endif; ?>
 
     </div><!-- .nav-links -->
@@ -304,15 +312,24 @@ function ippon_post_nav() {
   if ( ! $next && ! $previous )
     return;
   ?>
-  <nav class="navigation post-navigation" role="navigation">
-    <h1 class="screen-reader-text"><?php _e( 'Post navigation', 'twentythirteen' ); ?></h1>
-    <div class="nav-links">
 
-      <?php previous_post_link( '%link', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'twentythirteen' ) ); ?>
-      <?php next_post_link( '%link', _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link', 'twentythirteen' ) ); ?>
+    <nav class="navigation post-navigation" role="navigation">
+      <div class="nav-links row">
 
-    </div><!-- .nav-links -->
-  </nav><!-- .navigation -->
+        <div class="col-sm-6">
+          <div class="nav-previous text-left">
+            <?php previous_post_link('%link', '<i class="fa fa-angle-double-left"></i> %title', true); ?>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="nav-next text-right">
+            <?php next_post_link('%link', '%title <i class="fa fa-angle-double-right"></i>', true); ?>
+          </div>
+        </div>
+
+      </div><!-- .nav-links -->
+    </nav><!-- .navigation -->
   <?php
 }
 endif;
