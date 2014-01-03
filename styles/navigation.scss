@@ -109,6 +109,7 @@ nav#menu {
     @include margin-vertical-large();
     @media (min-width: $screen-sm-min) {
       font-size: $font-size-small;
+      @include margin-vertical-none();
     }
     a {
       color: $gray;
