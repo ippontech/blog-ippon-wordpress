@@ -13,7 +13,9 @@
 // Widget custom pour afficher les liens des réseaux sociaux Ippon
 // --------------------------------------------------
 .widget_ippon_rs {
+  display: flex;
   font-size: pxtoem(24px);
+  justify-content: space-between;
   @include aside-secondary();
 }
 
