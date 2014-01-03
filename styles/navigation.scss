@@ -104,16 +104,15 @@ nav#menu {
 ////////////////////////////////////////////////////////////////////////
 .nav-links {
   .nav-previous, .nav-next {
+    background-color: $gray-light;
     font-size: $font-size-large;
-    // @include margin-vertical-large();
+    @include margin-vertical-large();
     @media (min-width: $screen-sm-min) {
       font-size: $font-size-small;
     }
     a {
-      background-color: $gray-light;
       color: $gray;
       text-decoration: none;
-      // @include padding-large();
       &:hover {
         color: $gray-dark;
       }

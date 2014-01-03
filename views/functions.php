@@ -274,7 +274,7 @@ function ippon_paging_nav() {
 
       <?php if (get_next_posts_link()) : ?>
       <div class="col-sm-6">
-        <div class="nav-previous">
+        <div class="nav-previous text-left">
           <?php next_posts_link('<i class="fa fa-angle-double-left"></i> Articles précédents', 0); ?>
         </div>
       </div>
