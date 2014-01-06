@@ -19,7 +19,7 @@
 .widget_tag_cloud {
   h3 {
     @include aside-complementary-darker();
-    @include pre-icon("\e80a");
+    @include pre-icon("\e80a", pxtoem($margin-icon));
   }
   .tagcloud {
     font-size: pxtoem(28px);

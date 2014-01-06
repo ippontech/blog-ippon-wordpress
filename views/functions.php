@@ -275,7 +275,7 @@ function ippon_paging_nav() {
       <?php if (get_next_posts_link()) : ?>
       <div class="col-sm-6">
         <div class="nav-previous text-left">
-          <?php next_posts_link('<i class="fa fa-angle-double-left"></i> Articles précédents', 0); ?>
+          <?php next_posts_link('<i class="icon-left-open"></i> Articles précédents', 0); ?>
         </div>
       </div>
       <?php endif; ?>
@@ -283,7 +283,7 @@ function ippon_paging_nav() {
       <?php if ( get_previous_posts_link()) : ?>
       <div class="col-sm-6">
         <div class="nav-next text-right">
-          <?php previous_posts_link('Articles suivants <i class="fa fa-angle-double-right"></i>', 0); ?>
+          <?php previous_posts_link('Articles suivants <i class="icon-right-open"></i>', 0); ?>
         </div>
       </div>
       <?php endif; ?>

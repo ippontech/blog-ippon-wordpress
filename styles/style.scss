@@ -36,7 +36,7 @@ img {
 a.calltoaction {
   color: $light;
   background-color: $ippon-secondary;
-  display: block;
+  // display: block;
   text-decoration: none;
   text-transform: uppercase;
   &:hover {
@@ -58,7 +58,7 @@ a.calltoaction {
 }
 
 a.next {
-  @include pre-icon("\e812");
+  @include pre-icon("\e812", 0);
 }
 
 header.entry-header {

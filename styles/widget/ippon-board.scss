@@ -12,7 +12,7 @@
     font-size: pxtoem(18px);
     text-transform: uppercase;
     @include aside-complementary-darker();
-    @include pre-icon("\e808");
+    @include pre-icon("\e808", pxtoem($margin-icon));
     @media (min-width: $screen-sm-min) {
       margin-bottom: ($line-height-computed / 2);
     }

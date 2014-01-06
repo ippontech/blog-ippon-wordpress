@@ -24,6 +24,6 @@
     background-color: #55acee;
     color: $light;
     @include padding-base();
-    @include pre-icon("\e805");
+    @include pre-icon("\e805", pxtoem($margin-icon));
   }
 }

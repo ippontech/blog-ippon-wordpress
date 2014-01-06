@@ -219,8 +219,8 @@
  
   display: inline-block;
   text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
+  // width: 1em;
+  // margin-right: .2em;
   text-align: center;
   /* opacity: .8; */
  
@@ -252,8 +252,9 @@
   content: $content + "  ";
 }
 
-@mixin pre-icon($content) {
+@mixin pre-icon($content, $margin-right) {
   &:before {
+    margin-right: $margin-right;
     @include content-icon($content);
   }
 }

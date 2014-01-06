@@ -32,7 +32,7 @@ a.menu-link {
   &:hover {
     text-decoration: none;
   }
-  @include pre-icon("\e808");
+  // @include pre-icon("\e808", 0);
 }
 
 .js nav#menu {

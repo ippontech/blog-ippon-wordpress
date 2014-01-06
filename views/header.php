@@ -60,7 +60,7 @@
             </div>
             <div class="col-xs-6">
               <a href="#menu" class="menu-link">
-                <i class="fa fa-bars"></i>
+                <i class="icon-menu"></i>
               </a>
             </div>
           </div>

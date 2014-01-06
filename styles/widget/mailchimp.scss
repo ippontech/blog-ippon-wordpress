@@ -6,7 +6,7 @@
   .widget-title {
     margin-bottom: 0px !important;
     @include aside-secondary();
-    @include pre-icon("\e816");
+    @include pre-icon("\e816", pxtoem($margin-icon));
     @include padding-base();
   }
   form {
