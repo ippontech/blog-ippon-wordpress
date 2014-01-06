@@ -31,7 +31,7 @@
   <div class="row hack-row post-annex">
 
       <!-- Affichage des meta données principales -->
-      <div class="col-xs-9 col-sm-6 post-meta">
+      <div class="col-xs-6 post-meta">
         <?php ippon_meta(); ?>
           <!-- Affichage des meta données secondaires -->
 <!--           <div class="secondary-meta hidden-xs">
@@ -45,24 +45,14 @@
           </div>
           <?php if (get_the_tag_list()) : ?>
             <div class="tags-meta">
-              <?php echo get_the_tag_list('<i class="fa fa-tags"></i> ',', ','');?>
+              <?php echo get_the_tag_list('<i class="icon-tags"></i> ',', ','');?>
             </div><!-- .tags-meta -->
           <?php endif; // get_the_tag_list() ?>
         </div>
 
           
       </div>
-      <div class="col-xs-3 col-sm-6 post-meta-secondary">
-        <!-- <a href="<?php the_permalink(); ?>" rel="bookmark"> -->
-
-
-
-        <div class="article-goto visible-xs">
-          <a class="next post-goto" href="<?php the_permalink(); ?>" rel="bookmark">
-            Lire<span class="hidden-xs"> l'article</span>
-          </a>
-        </div>
-      <!-- </a> -->
+      <div class="col-xs-6 post-meta-secondary">
       </div>
   </div>
 
@@ -88,9 +78,11 @@
           <?php else : ?>
             <?php the_excerpt(); ?>
           <?php endif; ?>
-          <a class="calltoaction next" href="<?php the_permalink(); ?>" rel="bookmark">
-            Lire l'article
-          </a>
+          <div class="calltoaction">
+            <a class="next" href="<?php the_permalink(); ?>" rel="bookmark">
+              Lire l'article
+            </a>
+          </div>
         </div>
       </div>
     <?php else : ?>

@@ -33,22 +33,27 @@ img {
   @include img-responsive();
 }
 
-a.calltoaction {
-  color: $light;
+.calltoaction {
   background-color: $ippon-secondary;
-  // display: block;
-  text-decoration: none;
-  text-transform: uppercase;
-  &:hover {
-    text-decoration: none;
-  }
   @include padding-large();
+  a {
+    color: $light;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      text-decoration: none;
+    }
+  }
   @media (min-width: $screen-sm-min) {
-    color: $ippon-complementary;
     background-color: inherit;
     font-size: $font-size-base;
     text-transform: none;
     @include padding-none();
+    a {
+      color: $ippon-complementary;
+      text-decoration: inherit;
+      text-transform: none;
+    }
   }
 }
 
