@@ -1,0 +1,29 @@
+
+// Widget Twitter (Plugin "Twitter Widget Pro")
+// --------------------------------------------------
+@include responsive-invisibility('.widget_twitter');
+@media (min-width: $screen-sm-min) {
+  @include responsive-visibility('.widget_twitter');
+}
+.widget_twitter {
+  ul {
+    color: $gray;
+    padding-left: 0;
+    list-style: none;
+    > li {
+      font-size: pxtoem($font-size-small);
+      margin-bottom: $padding-base-vertical;
+      margin-left: $padding-base-horizontal;
+      margin-right: $padding-base-horizontal;
+      margin-top: $padding-base-vertical;
+      border-bottom: 1px solid $gray-light;
+      @include padding-vertical-base();
+    }
+  }
+  .widget-title {
+    background-color: #55acee;
+    color: $light;
+    @include padding-base();
+    @include pre-fa("\f099");
+  }
+}
