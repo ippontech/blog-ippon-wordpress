@@ -80,6 +80,12 @@ module.exports = function(grunt) {
         },
         {
           expand: true,
+          cwd: 'fonts/',
+          src: ['**'],
+          dest: '<%= tmp %>/fonts'
+        },
+        {
+          expand: true,
           cwd: 'js/vendor/',
           src: ['**'],
           dest: '<%= tmp %>/js/vendor'
@@ -109,6 +115,12 @@ module.exports = function(grunt) {
           cwd: 'views/',
           src: ['**'],
           dest: '<%= hotdeploy %>'
+        },
+        {
+          expand: true,
+          cwd: 'fonts/',
+          src: ['**'],
+          dest: '<%= hotdeploy %>/fonts'
         },
         {
           expand: true,
@@ -228,7 +240,7 @@ module.exports = function(grunt) {
   // Réalise le pré-processing CSS via Compass
   grunt.registerTask('css', ['compass']);
   // Réalise les tâches de développement
-  grunt.registerTask('dev', ['copy:dev', 'watch']);
+  grunt.registerTask('dev', ['copy:dev', 'compass', 'watch']);
   // Réalise les screenshots
   grunt.registerTask('screenshots', ['casper:screenshots']);
 };

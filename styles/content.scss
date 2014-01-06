@@ -5,39 +5,8 @@
 Feuille de style pour le contenu d'un article
 */
 
-$post-bg-color: $gray-light;
-
-
-////////////////////////////////////////////////////////////////////////
-// Paddings
-////////////////////////////////////////////////////////////////////////
-
-.sidebar-inner {
-  // @include margin-vertical-large();
-}
-.site-content {
-  background-color: $light;  
-  @media (min-width: $screen-sm-min) {
-    @include margin-vertical-large();
-  }
-  article.post {
-    border-bottom: solid 1px $light;
-    background-color: $post-bg-color;
-    padding-top: 1px;
-    @media (min-width: $screen-sm-min) {
-      @include padding-vertical-base();
-    }
-    &:first-child {
-      @include margin-vertical-none();
-    }
-  }
-
-  p {
-    padding-top: $padding-base-vertical;
-  }
-}
-
 #content {
+  background-color: $gray-light;
   article {
     header .article-meta .secondary-meta,
     > div.entry-thumbnail,
@@ -63,6 +32,35 @@ $post-bg-color: $gray-light;
     .content-teaser {
       font-weight: bold;
     }
+  }
+}
+
+
+////////////////////////////////////////////////////////////////////////
+// Paddings
+////////////////////////////////////////////////////////////////////////
+
+.sidebar-inner {
+  // @include margin-vertical-large();
+}
+.site-content {
+  background-color: $light;
+  @media (min-width: $screen-sm-min) {
+    // @include margin-vertical-large();
+  }
+  article.post {
+    border-bottom: solid 1px $light;
+    padding-top: 1px;
+    @media (min-width: $screen-sm-min) {
+      @include padding-vertical-base();
+    }
+    &:first-child {
+      @include margin-vertical-none();
+    }
+  }
+
+  p {
+    padding-top: $padding-base-vertical;
   }
 }
 
@@ -140,6 +138,7 @@ $post-bg-color: $gray-light;
   // @media (min-width: $screen-sm-min) {
   //   background-color: lighten($gray-light, 5%);
   // }
+  display: inline-block;
 }
 
 
@@ -173,7 +172,9 @@ $post-bg-color: $gray-light;
 
 
 .player-btn {
-  color: $ippon-secondary;
+  background-color: $ippon-secondary;
+  color: $light;
+  // color: $ippon-secondary;
   margin-top: 15%;
   opacity: 0.75;
   position: absolute;

@@ -41,12 +41,13 @@
 
   <?php wp_head(); ?>
 
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+  <link href="<?php echo get_template_directory_uri(); ?>/fonts/fontello/css/fontello.css" rel="stylesheet">
 
   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
+
   <div id="page" class="container-fluid">
     <header id="masthead" class="" role="banner">
       <div class="row header-banner">
@@ -81,8 +82,8 @@
               <ul>
                 <li>
                   <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                    <span class="visible-xs"><i class="fa fa-home fa-lg"></i> Accueil</span>
-                    <span class="hidden-xs"><i class="fa fa-home fa-lg"></i></span>
+                    <span class="visible-xs"><i class="icon-home"></i> Accueil</span>
+                    <span class="hidden-xs"><i class="icon-home"></i></span>
                   </a>
                 </li>
                 <?php

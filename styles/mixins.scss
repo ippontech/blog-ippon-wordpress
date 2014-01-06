@@ -66,14 +66,27 @@
 // Margins
 ////////////////////////////////////////////////////////////////////////
 
-// mixins génériques
-@mixin margin-horizontal($margin) {
+@mixin margin-bottom($margin) {
+  margin-bottom: $margin;
+}
+@mixin margin-left($margin) {
   margin-left: $margin;
+}
+@mixin margin-right($margin) {
   margin-right: $margin;
 }
-@mixin margin-vertical($margin) {
-  margin-bottom: $margin;
+@mixin margin-top($margin) {
   margin-top: $margin;
+}
+
+// mixins génériques
+@mixin margin-horizontal($margin) {
+  @include margin-left($margin);
+  @include margin-right($margin);
+}
+@mixin margin-vertical($margin) {
+  @include margin-bottom($margin);
+  @include margin-top($margin);
 }
 
 // margin none
@@ -89,6 +102,18 @@
 }
 
 // margin base
+@mixin margin-bottom-base() {
+  @include margin-bottom($margin-base-vertical);
+}
+@mixin margin-left-base() {
+  @include margin-left($margin-base-horizontal);
+}
+@mixin margin-right-base() {
+  @include margin-right($margin-base-horizontal);
+}
+@mixin margin-top-base() {
+  @include margin-top($margin-base-vertical);
+}
 @mixin margin-horizontal-base() {
   @include margin-horizontal($margin-base-horizontal);
 }
@@ -101,6 +126,18 @@
 }
 
 // margin small
+@mixin margin-bottom-small() {
+  @include margin-bottom($margin-small-vertical);
+}
+@mixin margin-left-small() {
+  @include margin-left($margin-small-horizontal);
+}
+@mixin margin-right-small() {
+  @include margin-right($margin-small-horizontal);
+}
+@mixin margin-top-small() {
+  @include margin-top($margin-small-vertical);
+}
 @mixin margin-horizontal-small() {
   @include margin-horizontal($margin-small-horizontal);
 }
@@ -113,6 +150,18 @@
 }
 
 // margin large
+@mixin margin-bottom-large() {
+  @include margin-bottom($margin-large-vertical);
+}
+@mixin margin-left-large() {
+  @include margin-left($margin-large-horizontal);
+}
+@mixin margin-right-large() {
+  @include margin-right($margin-large-horizontal);
+}
+@mixin margin-top-large() {
+  @include margin-top($margin-large-vertical);
+}
 @mixin margin-horizontal-large() {
   @include margin-horizontal($margin-large-horizontal);
 }
@@ -153,7 +202,6 @@
       color: $light;
     }
   }
-  @include padding-base();
 }
 @mixin aside-complementary-darker() {
   background-color: $ippon-complementary-darker;
@@ -162,23 +210,51 @@
 }
 
 // reprend les propriétés pour la typo Font Awesome
-@mixin config-fa() {
-  font-family: FontAwesome;
+@mixin config-icon() {
+
+  font-family: "fontello";
   font-style: normal;
   font-weight: normal;
-  line-height: 1;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  // margin-left: .2em;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+
+  // font-family: FontAwesome;
+  // font-style: normal;
+  // font-weight: normal;
+  // line-height: 1;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
 }
 
-@mixin content-fa($content) {
-  @include config-fa();
+@mixin content-icon($content) {
+  @include config-icon();
   content: $content + "  ";
 }
 
-@mixin pre-fa($content) {
+@mixin pre-icon($content) {
   &:before {
-    @include content-fa($content);
+    @include content-icon($content);
   }
 }
 

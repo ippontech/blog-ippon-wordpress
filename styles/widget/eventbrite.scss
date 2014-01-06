@@ -1,0 +1,48 @@
+// Widget custom pour Eventbrite
+// --------------------------------------------------
+.eb_event_list {
+  display: block;
+  .eb_event_list_item {
+    background-color: lighten($gray-light, 5%);
+    &:not(:first-child) {
+      @include margin-top-large();
+    }
+    &:last-child {
+      @include margin-bottom-large();
+    }
+    .info-item {
+      @include padding-base();
+      h2 {
+        color: $gray-dark;
+        font-size: $font-size-h2;
+        @include margin-none();
+        @include padding-vertical-base();
+        a {
+          text-decoration: none;
+        }
+      }
+      .author {
+        color: $gray;
+        font-size: pxtoem($font-size-meta);
+        text-transform: uppercase;
+      }
+    }
+
+    .main-item {
+      background-color: $ippon-primary;
+      color: $light;
+      display: block;
+      @include padding-base();
+      a {
+        color: $light;
+        text-decoration: none;
+      }
+      .date-item {
+        border-bottom: 0;
+        display: inline-block;
+        padding-right: $padding-small-horizontal;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

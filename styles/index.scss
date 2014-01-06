@@ -1,0 +1,5 @@
+#primary-content, #aside-content {
+  @media (min-width: $screen-sm-min) {
+    @include margin-vertical-large();
+  }
+}

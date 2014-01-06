@@ -10,89 +10,6 @@
   }
 }
 
-// Widget custom pour afficher les liens des réseaux sociaux Ippon
-// --------------------------------------------------
-.widget_ippon_rs {
-  display: flex;
-  font-size: pxtoem(24px);
-  justify-content: space-between;
-  @include aside-secondary();
-}
-
-// Widget custom pour Eventbrite
-// --------------------------------------------------
-.eb_event_list {
-  display: block;
-  .eb_event_list_item {
-    background-color: lighten($gray-light, 5%);
-    @include margin-vertical-large();
-    .info-item {
-      @include padding-base();
-      h2 {
-        color: $gray-dark;
-        font-size: $font-size-h2;
-        @include margin-none();
-        @include padding-vertical-base();
-        a {
-          text-decoration: none;
-        }
-      }
-      .author {
-        color: $gray;
-        font-size: pxtoem($font-size-meta);
-        text-transform: uppercase;
-      }
-    }
-
-    .main-item {
-      background-color: $ippon-primary;
-      color: $light;
-      display: block;
-      @include padding-base();
-      a {
-        color: $light;
-        text-decoration: none;
-      }
-      .date-item {
-        border-bottom: 0;
-        display: inline-block;
-        padding-right: $padding-small-horizontal;
-        text-transform: uppercase;
-      }
-    }
-  }
-}
-
-// Widget custom pour afficher les liens des annonces Ippon
-// --------------------------------------------------
-.widget_ippon_board {
-  a {
-    color: $ippon-complementary;
-    text-decoration: none;
-  }
-  h3 {
-    font-size: pxtoem(18px);
-    margin-bottom: 0px;
-    text-transform: uppercase;
-    @include aside-complementary-darker();
-    @include pre-fa("\f0a1");
-    @media (min-width: $screen-sm-min) {
-      margin-bottom: ($line-height-computed / 2);
-    }
-  }
-  p, .board-info {
-    @include padding-horizontal-base();
-  }
-  p {
-    font-size: pxtoem($font-size-small);
-  }
-  .board-info {
-    background-color: $ippon-complementary-darker;
-    color: $light;
-    @include padding-vertical-base();
-  }
-}
-
 // Widget Tags (Plugin  natif "Tag cloud")
 // --------------------------------------------------
 // @include responsive-invisibility('.widget_tag_cloud');
@@ -102,7 +19,7 @@
 .widget_tag_cloud {
   h3 {
     @include aside-complementary-darker();
-    @include pre-fa("\f02b");
+    @include pre-icon("\e80a");
   }
   .tagcloud {
     font-size: pxtoem(28px);

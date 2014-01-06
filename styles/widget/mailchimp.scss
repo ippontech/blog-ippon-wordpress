@@ -6,12 +6,14 @@
   .widget-title {
     margin-bottom: 0px !important;
     @include aside-secondary();
-    @include pre-fa("\f0e0");
+    @include pre-icon("\e816");
+    @include padding-base();
   }
   form {
     white-space: nowrap;
     max-width: 100%;
     @include aside-secondary();
+    @include padding-base();
     input[type="submit"] {
       background-color: $gray;
       border: 0px;

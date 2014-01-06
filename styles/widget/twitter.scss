@@ -13,8 +13,8 @@
     > li {
       font-size: pxtoem($font-size-small);
       margin-bottom: $padding-base-vertical;
-      margin-left: $padding-base-horizontal;
-      margin-right: $padding-base-horizontal;
+      // margin-left: $padding-base-horizontal;
+      // margin-right: $padding-base-horizontal;
       margin-top: $padding-base-vertical;
       border-bottom: 1px solid $gray-light;
       @include padding-vertical-base();
@@ -24,6 +24,6 @@
     background-color: #55acee;
     color: $light;
     @include padding-base();
-    @include pre-fa("\f099");
+    @include pre-icon("\e805");
   }
 }

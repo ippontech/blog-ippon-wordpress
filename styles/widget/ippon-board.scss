@@ -1,0 +1,28 @@
+// Widget custom pour afficher les liens des annonces Ippon
+// --------------------------------------------------
+.widget_ippon_board {
+  > div {
+    margin-top: pxtoem(12px);
+  }
+  a {
+    color: $ippon-complementary;
+    text-decoration: none;
+  }
+  h3 {
+    font-size: pxtoem(18px);
+    text-transform: uppercase;
+    @include aside-complementary-darker();
+    @include pre-icon("\e808");
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: ($line-height-computed / 2);
+    }
+  }
+  p {
+    font-size: pxtoem($font-size-small);
+  }
+  .board-info {
+    background-color: $ippon-complementary-darker;
+    color: $light;
+    @include padding-vertical-base();
+  }
+}

@@ -16,6 +16,8 @@ Version: 0.0.1
 
 @import "widget/widget";
 
+@import "index";
+@import "icon";
 @import "archive";
 @import "commons";
 @import "content";
@@ -56,7 +58,7 @@ a.calltoaction {
 }
 
 a.next {
-  @include pre-fa("\f0da");
+  @include pre-icon("\e812");
 }
 
 header.entry-header {

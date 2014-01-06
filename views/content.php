@@ -34,16 +34,29 @@
       <div class="col-xs-9 col-sm-6 post-meta">
         <?php ippon_meta(); ?>
           <!-- Affichage des meta données secondaires -->
-          <div class="secondary-meta hidden-xs">
-            <?php if (get_the_tag_list()) : ?>
-              <div class="tags-meta">
-                <?php echo get_the_tag_list('<i class="fa fa-tags"></i> ',', ','');?>
-              </div><!-- .tags-meta -->
-            <?php endif; // get_the_tag_list() ?>
+<!--           <div class="secondary-meta hidden-xs">
+
+          </div> -->
+
+
+        <div class="article-goto hidden-xs">
+          <div>
+            
           </div>
+          <?php if (get_the_tag_list()) : ?>
+            <div class="tags-meta">
+              <?php echo get_the_tag_list('<i class="fa fa-tags"></i> ',', ','');?>
+            </div><!-- .tags-meta -->
+          <?php endif; // get_the_tag_list() ?>
+        </div>
+
+          
       </div>
       <div class="col-xs-3 col-sm-6 post-meta-secondary">
         <!-- <a href="<?php the_permalink(); ?>" rel="bookmark"> -->
+
+
+
         <div class="article-goto visible-xs">
           <a class="next post-goto" href="<?php the_permalink(); ?>" rel="bookmark">
             Lire<span class="hidden-xs"> l'article</span>
@@ -54,19 +67,16 @@
   </div>
 
 
-  <!-- Affichage du résumé -->
   <?php if (is_search() || !is_single()) : ?>
-    <!-- Avec image -->
+  <!-- Affichage du résumé -->
     <?php if (has_post_thumbnail() && !post_password_required()) : ?>
+    <!-- Avec image -->
       <div class="entry-thumbnail row">
         <div class="col-sm-6">
           <figure class="centerImage">
           <?php if (get_post_format()=='video') : ?>
             <div class="player-btn">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-flag fa-stack-1x fa-play"></i>
-              </span>
+              <i class="icon-play"></i>
             </div>
           <?php endif; ?>
           <?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>  
@@ -83,8 +93,8 @@
           </a>
         </div>
       </div>
-    <!-- Sans image -->
     <?php else : ?>
+    <!-- Sans image -->
       <div class="entry-content">
         <?php if ($pos=strpos($post->post_content, '<!--more-->')): ?>
           <?php the_content(''); ?>
