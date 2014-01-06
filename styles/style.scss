@@ -77,6 +77,10 @@ header.entry-header {
 
 body {
   background-color: $light;
+  font-size: $font-size-base;
+  @media (min-width: $screen-sm-min) {
+    font-size: $font-size-small;
+  }
 }
 
 .color-primary {

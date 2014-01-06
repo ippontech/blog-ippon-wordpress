@@ -59,11 +59,11 @@ nav#menu {
   }
   li {
     &:first-child {
-      background-color: $ippon-secondary;
+      // background-color: $ippon-secondary;
       white-space:nowrap;
     }
     &.current-menu-item {
-      background-color: $ippon-primary;
+      background-color: $ippon-secondary;
     }
     a {
       border-bottom: 1px solid $gray-light;

@@ -45,7 +45,7 @@
     }
 
     .main-item {
-      background-color: $gray;
+      background-color: $ippon-primary;
       color: $light;
       display: block;
       @include padding-base();
@@ -57,33 +57,6 @@
         border-bottom: 0;
         display: inline-block;
         padding-right: $padding-small-horizontal;
-        .day, .month-year {
-          display: inline-block;
-        }
-        .month-year {
-          @media (min-width: $screen-sm-min) {
-            border-right: solid 1px;
-            @include padding-horizontal-small();
-          }
-        }
-        .day {
-          font-size: pxtoem($font-size-meta);
-          @media (min-width: $screen-sm-min) {
-            font-size: pxtoem($font-size-meta * 2 * $line-height-base);
-          }
-        }
-        .month, .year {
-          display: inline-block;
-          font-size: pxtoem($font-size-meta);
-          text-transform: uppercase;
-          @media (min-width: $screen-sm-min) {
-            display: block;
-          }
-        }
-      }
-      .ippevent {
-        display: inline-block;
-        font-size: pxtoem($font-size-meta);
         text-transform: uppercase;
       }
     }
@@ -94,6 +67,7 @@
 // --------------------------------------------------
 .widget_ippon_board {
   a {
+    color: $ippon-complementary;
     text-decoration: none;
   }
   h3 {
@@ -116,35 +90,6 @@
     background-color: $ippon-complementary-darker;
     color: $light;
     @include padding-vertical-base();
-  }
-}
-
-// Widget Twitter (Plugin "Twitter Widget Pro")
-// --------------------------------------------------
-@include responsive-invisibility('.widget_twitter');
-@media (min-width: $screen-sm-min) {
-  @include responsive-visibility('.widget_twitter');
-}
-.widget_twitter {
-  ul {
-    color: $gray;
-    padding-left: 0;
-    list-style: none;
-    > li {
-      font-size: pxtoem($font-size-small);
-      margin-bottom: $padding-base-vertical;
-      margin-left: $padding-base-horizontal;
-      margin-right: $padding-base-horizontal;
-      margin-top: $padding-base-vertical;
-      border-bottom: 1px solid $gray-light;
-      @include padding-vertical-base();
-    }
-  }
-  .widget-title {
-    background-color: $ippon-complementary;
-    color: $light;
-    @include padding-base();
-    @include pre-fa("\f099");
   }
 }
 

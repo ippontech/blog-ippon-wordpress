@@ -272,20 +272,13 @@ class Eventbrite {
       <div class="eb_event_list_item" id="evnt_div_%1$s">
         <div class="main-item">
           <div class="date-item">
+            <i class="fa fa-bullhorn"></i>
             <time datetime="%4$s" class="eb_event_list_item_date">
-            <div class="day">%5$s</div>
-            <div class="month-year">
-              <div class="month">%6$s</div>
-              <div class="year">%7$s</div>
-            </div>
+              %5$s %6$s %7$s
             </time>
-          </div>
-          <div class="ippevent">
-              IppEvent
           </div>
         </div>
         <div class="info-item">
-          '.$organizer_name.'
           <h2 class="eb_event_list_item_title">
             %3$s
           </h2>
@@ -300,7 +293,7 @@ class Eventbrite {
       esc_attr($evnt->title),
       esc_attr(strftime('%a, %B %e', $time)),
       esc_attr(strftime('%d', $time)),
-      esc_attr(strftime('%b', $time)),
+      esc_attr(strftime('%B', $time)),
       esc_attr(strftime('%Y', $time))
       );
   }

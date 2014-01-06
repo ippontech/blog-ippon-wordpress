@@ -354,7 +354,7 @@ function ippon_meta() {
       // Auteur de l'article
       if ( 'post' == get_post_type() ) {
        printf(
-        '<div class="author vcard">
+        '<div class="author vcard hidden-xs">
           <a class="url fn n" href="%1$s" title="%2$s" rel="author">
             Par %3$s
           </a>

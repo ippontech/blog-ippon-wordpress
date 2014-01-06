@@ -19,3 +19,18 @@ Feuille de style pour les types
   h6, .h6 { font-size: $font-size-h6-large; }
 }
 
+h1,
+h2,
+h3 {
+  // @include margin-vertical-small();
+  // @include margin-none();
+  margin-bottom: 0;
+  margin-top: $margin-small-vertical;
+}
+
+h4,
+h5,
+h6 {
+  @include margin-none();
+}
+

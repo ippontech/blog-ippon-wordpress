@@ -22,7 +22,7 @@ $ippon-primary: $ippon-sunshine;
 $ippon-primary-lighter: #ec5d58;
 $ippon-secondary: $ippon-star-red;
 $ippon-secondary-lighter: #fdcb15;
-$ippon-complementary: #10b5c6;
+$ippon-complementary: #25afb5;
 $ippon-complementary-darker: #157187;
 
 
@@ -53,8 +53,8 @@ $padding-small-vertical:         5px !default;
 $padding-small-horizontal:       10px !default;
 
 $headings-color: $ippon-complementary;
-$link-color: $ippon-primary;
-$link-hover-color: $ippon-primary-lighter;
+$link-color: $ippon-complementary;
+$link-hover-color: $ippon-complementary-darker;
 $line-height-base: 1.5;
 // $grid-gutter-width: 0px !default;
 $grid-gutter-width: 2 * $padding-base-horizontal !default;
@@ -77,7 +77,7 @@ $margin-small-vertical:         14px !default;
 $margin-small-horizontal:       14px !default;
 
 $font-size-meta: $font-size-small;
-$font-size-h1-large:            floor($font-size-base * 2.15) !default; // ~34px
+$font-size-h1-large:            floor($font-size-base * 1.25) !default; // ~20px
 $font-size-h2-large:            floor($font-size-base * 1.7) !default; // ~27px
 $font-size-h3-large:            ceil($font-size-base * 1.25) !default; // ~20px
 $font-size-h4-large:            $font-size-base !default;

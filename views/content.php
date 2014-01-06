@@ -33,6 +33,14 @@
       <!-- Affichage des meta données principales -->
       <div class="col-xs-9 col-sm-6 post-meta">
         <?php ippon_meta(); ?>
+          <!-- Affichage des meta données secondaires -->
+          <div class="secondary-meta hidden-xs">
+            <?php if (get_the_tag_list()) : ?>
+              <div class="tags-meta">
+                <?php echo get_the_tag_list('<i class="fa fa-tags"></i> ',', ','');?>
+              </div><!-- .tags-meta -->
+            <?php endif; // get_the_tag_list() ?>
+          </div>
       </div>
       <div class="col-xs-3 col-sm-6 post-meta-secondary">
         <!-- <a href="<?php the_permalink(); ?>" rel="bookmark"> -->
@@ -42,14 +50,6 @@
           </a>
         </div>
       <!-- </a> -->
-        <!-- Affichage des meta données secondaires -->
-        <div class="secondary-meta hidden-xs">
-          <?php if (get_the_tag_list()) : ?>
-            <div class="tags-meta">
-              <?php echo get_the_tag_list('<i class="fa fa-tags"></i> ',', ','');?>
-            </div><!-- .tags-meta -->
-          <?php endif; // get_the_tag_list() ?>
-        </div>
       </div>
   </div>
 
@@ -78,6 +78,9 @@
           <?php else : ?>
             <?php the_excerpt(); ?>
           <?php endif; ?>
+          <a class="calltoaction next" href="<?php the_permalink(); ?>" rel="bookmark">
+            Lire l'article
+          </a>
         </div>
       </div>
     <!-- Sans image -->
@@ -92,9 +95,7 @@
     <?php endif; ?>
     <!-- Lien pour accéder à l'article en entier -->
     <footer class="hidden-xs">
-      <a class="calltoaction next" href="<?php the_permalink(); ?>" rel="bookmark">
-        Lire l'article
-      </a>
+
     </footer>
 
   <!-- Affichage de l'ensemble de l'article -->

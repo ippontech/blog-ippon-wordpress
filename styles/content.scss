@@ -23,7 +23,7 @@ $post-bg-color: $gray-light;
   article.post {
     border-bottom: solid 1px $light;
     background-color: $post-bg-color;
-    @include margin-vertical-large();
+    padding-top: 1px;
     @media (min-width: $screen-sm-min) {
       @include padding-vertical-base();
     }
@@ -120,30 +120,31 @@ $post-bg-color: $gray-light;
       @media (min-width: $screen-sm-min) {
         display: inline-block;
       }
-      font-size: pxtoem($font-size-meta);
+      font-size: pxtoem($font-size-base);
       text-transform: uppercase;
     }
   }
   .secondary-meta {
-    
+    color: $light;
     vertical-align: top;
     @media (min-width: $screen-sm-min) {
       display: inline-block;
+    }
+    a {
+      color: $light;
     }
   }
 }
 
 .post-annex {
-  background-color: $ippon-secondary;
-  @media (min-width: $screen-sm-min) {
-    background-color: lighten($gray-light, 5%);
-  }
+  // @media (min-width: $screen-sm-min) {
+  //   background-color: lighten($gray-light, 5%);
+  // }
 }
 
 
 .post-meta-secondary {
   text-align: right;
-  // @include padding-vertical-large();
   @include meta-complementary();
   @media (min-width: $screen-sm-min) {
     text-align: left;

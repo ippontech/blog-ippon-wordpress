@@ -95,6 +95,7 @@
                   'menu_class'      => '',
                   'menu_id'         => '',
                   'echo'            => true,
+                  'show_home'       => 1,
                   'fallback_cb'     => 'wp_page_menu',
                   'before'          => '',
                   'after'           => '',
