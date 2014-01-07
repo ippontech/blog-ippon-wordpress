@@ -274,6 +274,26 @@
   @include padding-large();
 }
 
+@mixin img-background($width, $height, $img, $img-2x) {
+  background-image: url('img/' + $img);
+  background-size: 100%;
+  //background-size: $width $height;  
+  height: $height;
+  width: $width;
+  @include device-resolution(retina) {
+    background-image: url('img/' + $img-2x);
+  }
+}
+
+@mixin device-resolution($resolution) {
+  @if $resolution == classic {
+    @media screen and (-webkit-min-device-pixel-ratio: 1) { @content; }
+  }
+  @if $resolution == retina {
+    @media screen and (-webkit-min-device-pixel-ratio: 2) { @content; }
+  }
+}
+
 
 
 

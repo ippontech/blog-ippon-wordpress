@@ -51,28 +51,23 @@
   <div id="page" class="container-fluid">
     <header id="masthead" class="" role="banner">
       <div class="row header-banner">
-        <div class="col-sm-2">
-          <div class="row visible-xs">
-            <div class="col-xs-6">
-              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/logo_IpponGroupe.png" class="img-responsive"/>
+            <div class="col-xs-6 col-sm-9 col-sm-push-3">
+              <div class="visible-xs">
+                <a href="#menu" class="menu-link">
+                  <div class="menu-mobile">
+                    <i class="icon-menu"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="hidden-xs">
+                <img src="<?php echo get_header_image() ?>" class="img-responsive"/>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-sm-pull-9 second-banner">
+              <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
+                <div class="logo"></div>
               </a>
             </div>
-            <div class="col-xs-6">
-              <a href="#menu" class="menu-link">
-                <i class="icon-menu"></i>
-              </a>
-            </div>
-          </div>
-          <div class="hidden-xs">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/logo_IpponGroupe.png" class="img-responsive"/>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-10 hidden-xs">
-          <img src="<?php echo get_header_image() ?>" class="img-responsive"/>
-        </div>
       </div>
 
       <div class="menu-search row">

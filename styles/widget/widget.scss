@@ -3,18 +3,28 @@
 @import "ippon-board";
 @import "ippon-rs";
 @import "mailchimp";
+@import "tag-cloud";
 @import "twitter";
 
-.widget-area {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @include margin-none();
+// SIDEBAR
+// --------------------------------------------------
+
+.sidebar-inner {
+  .widget-title {
+    font-size: pxtoem($font-size-large);
+    text-transform: uppercase;
   }
-  aside:not(:first-child) {
-    @include margin-top-large();
+  .widget-area {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include margin-none();
+    }
+    aside:not(:first-child) {
+      @include margin-top-large();
+    }
   }
 }

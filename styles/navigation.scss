@@ -5,7 +5,10 @@
 // Bannière
 ////////////////////////////////////////////////////////////////////////
 .header-banner {
-  @include padding-vertical-large();
+  @include padding-vertical(6px);
+  @media (min-width: $screen-sm-min) {
+    @include padding-vertical(12px);
+  }
 }
 
 
@@ -27,12 +30,28 @@
   @include padding-vertical-small();
 }
 
-a.menu-link {
-  @include block-colorized($ippon-secondary);
-  &:hover {
-    text-decoration: none;
+.second-banner {
+  text-align: right;
+  .logo {
+    display: inline-block;
+    @include img-background(125px, 32px, 'logo_ippon_mobile.png', 'logo_ippon_mobile-2x.png');
   }
-  // @include pre-icon("\e808", 0);
+  @media (min-width: $screen-sm-min) {
+    text-align: left;
+    .logo {
+      @include img-background(179px, 64px, 'logo_ippon_desktop.png', 'logo_ippon_mobile-2x.png');
+    }
+  }
+}
+
+
+.menu-mobile {
+  background-color: $ippon-secondary;
+  color: $light;
+  display: inline-block;
+  font-size: $font-size-large;
+  text-transform: uppercase;
+  @include padding-large();
 }
 
 .js nav#menu {
