@@ -27,7 +27,7 @@
 }
 
 .search-link {
-  @include padding-vertical-small();
+  @include padding-vertical(4px);
 }
 
 .second-banner {
@@ -80,6 +80,10 @@ nav#menu {
     &:first-child {
       // background-color: $ippon-secondary;
       white-space:nowrap;
+      a {
+        font-size: font-size-large;
+        @include pre-icon("\e80c", 0);
+      }
     }
     &.current-menu-item {
       background-color: $ippon-secondary;

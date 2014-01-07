@@ -75,12 +75,6 @@
           <div class="menu">
             <nav id="menu" role="navigation">
               <ul>
-                <li>
-                  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                    <span class="visible-xs"><i class="icon-home"></i> Accueil</span>
-                    <span class="hidden-xs"><i class="icon-home"></i></span>
-                  </a>
-                </li>
                 <?php
                 $defaults = array(
                   'theme_location'  => '',

@@ -5,4 +5,5 @@
   font-size: pxtoem(24px);
   justify-content: space-between;
   @include aside-secondary();
+  @include padding-horizontal(6px);
 }
