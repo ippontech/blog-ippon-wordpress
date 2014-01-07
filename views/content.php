@@ -62,11 +62,6 @@
       <div class="entry-thumbnail row">
         <div class="col-sm-6">
           <figure class="centerImage">
-          <?php if (get_post_format()=='video') : ?>
-            <div class="player-btn">
-              <i class="icon-play"></i>
-            </div>
-          <?php endif; ?>
           <?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>  
           </figure>
         </div>
@@ -78,7 +73,11 @@
           <?php endif; ?>
           <div class="calltoaction">
             <a class="next" href="<?php the_permalink(); ?>" rel="bookmark">
+            <?php if (get_post_format()=='video') : ?>
+              Voir la vidéo
+            <?php else : ?>
               Lire l'article
+            <?php endif; ?>
             </a>
           </div>
         </div>
