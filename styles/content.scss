@@ -66,79 +66,39 @@ Feuille de style pour le contenu d'un article
 
 .post-meta {
   background-color: $ippon-complementary;
-  display: block;
-  @media (min-width: $screen-sm-min) {
-    // background-color: lighten($gray-light, 5%);
-    // display: inline-block;
-  }
-  .main-meta {
-    // background-color: $ippon-complementary;
-    color: $light;
-    // display: block;
-    // @media (min-width: $screen-sm-min) {
-      display: inline-block;
-    // }
-    a {
-      color: $light;
-      text-decoration: none;
-    }
-    .date-meta {
-      border-bottom: 0;
-      display: block;
-      padding-right: $padding-small-horizontal;
-      @media (min-width: $screen-sm-min) {
-        display: inline-block;
-      }
-      .day, .month-year {
-        display: inline-block;
-      }
-      .month-year {
-        @media (min-width: $screen-sm-min) {
-          border-right: solid 1px;
-          @include padding-horizontal-small();
-        }
-      }
-      .day {
-        font-size: pxtoem($font-size-meta);
-        @media (min-width: $screen-sm-min) {
-          font-size: pxtoem($font-size-meta * 2 * $line-height-base);
-        }
-      }
-      .month, .year {
-        display: inline-block;
-        font-size: pxtoem($font-size-meta);
-        text-transform: uppercase;
-        @media (min-width: $screen-sm-min) {
-          display: block;
-        }
-      }
-    }
-    .author {
-      display: block;
-      @media (min-width: $screen-sm-min) {
-        display: inline-block;
-      }
-      font-size: pxtoem($font-size-base);
-      text-transform: uppercase;
-    }
-  }
-  .secondary-meta {
-    color: $light;
-    vertical-align: top;
-    @media (min-width: $screen-sm-min) {
-      display: inline-block;
-    }
-    a {
-      color: $light;
-    }
-  }
-}
+  @include padding-vertical-base();
+  color: $light;
+  position: relative;
 
-.post-annex {
-  // @media (min-width: $screen-sm-min) {
-  //   background-color: lighten($gray-light, 5%);
-  // }
-  display: inline-block;
+  .day {
+    font-size: pxtoem($font-size-meta * 2 * $line-height-base);
+    line-height: $line-height-base;
+    // font-size: 2em;
+    position:absolute;
+    margin-top: pxtoem(-3px);
+    width:4em;
+  }
+  .month-year {
+    border-right: 1px solid;
+    font-size: pxtoem($font-size-meta);
+    margin-left: pxtoem(60px);
+    padding-right: pxtoem(6px);
+    margin-top: pxtoem(4px);
+    position:absolute;
+// min-height:150px;
+  }
+  .other-meta {
+    // font-size: pxtoem($font-size-meta);
+    // line-height: 24px;
+    margin-left: pxtoem(100px);
+    white-space: nowrap;
+    // margin-top: pxtoem(-2px);
+
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  }
 }
 
 

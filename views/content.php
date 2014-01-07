@@ -32,19 +32,17 @@
 
       <!-- Affichage des meta données principales -->
       <div class="col-xs-6 post-meta">
-        <?php ippon_meta(); ?>
-          <!-- Affichage des meta données secondaires -->
-<!--           <div class="secondary-meta hidden-xs">
-
-          </div> -->
-
-
-        <div class="article-goto hidden-xs">
-          <div>
-            
-          </div>
+        <div class="day">
+          02
+        </div>
+        <div class="month-year">
+          <div>JAN</div>
+          <div>2014</div>
+        </div>
+        <div class="other-meta">
+          <div>par Alvin hgf hg hg hgf hg hgf hgf khf hkg hkgc ghkc cghcg khg </div>
           <?php if (get_the_tag_list()) : ?>
-            <div class="tags-meta">
+            <div>
               <?php echo get_the_tag_list('<i class="icon-tags"></i> ',', ','');?>
             </div><!-- .tags-meta -->
           <?php endif; // get_the_tag_list() ?>
