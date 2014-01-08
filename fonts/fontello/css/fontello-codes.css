@@ -11,6 +11,7 @@
 .icon-play:before { content: '\e80d'; } /* '' */
 .icon-award:before { content: '\e808'; } /* '' */
 .icon-circle:before { content: '\e800'; } /* '' */
+.icon-megaphone:before { content: '\e80b'; } /* '' */
 .icon-tag:before { content: '\e809'; } /* '' */
 .icon-github:before { content: '\e801'; } /* '' */
 .icon-gplus:before { content: '\e802'; } /* '' */
@@ -23,4 +24,4 @@
 .icon-down-open:before { content: '\e810'; } /* '' */
 .icon-left-open:before { content: '\e80f'; } /* '' */
 .icon-right-open:before { content: '\e80e'; } /* '' */
-.icon-megaphone:before { content: '\e80b'; } /* '' */
+.icon-facebook:before { content: '\e819'; } /* '' */

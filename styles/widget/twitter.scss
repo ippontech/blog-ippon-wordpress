@@ -1,4 +1,3 @@
-
 // Widget Twitter (Plugin "Twitter Widget Pro")
 // --------------------------------------------------
 @include responsive-invisibility('.widget_twitter');
@@ -21,7 +20,7 @@
     }
   }
   .widget-title {
-    background-color: #55acee;
+    background-color: $twitter-color;
     color: $light;
     @include padding-base();
     @include pre-icon("\e805", pxtoem($margin-icon));

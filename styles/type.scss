@@ -32,16 +32,19 @@ a {
 
 h1,
 h2,
-h3 {
-  // @include margin-vertical-small();
+h3,
+h4,
+h5,
+h6 {
+  @include margin-vertical-small();
   // @include margin-none();
-  margin-bottom: 0;
-  margin-top: $margin-small-vertical;
+  // margin-bottom: 0;
+  // margin-top: $margin-small-vertical;
 }
 
 h4,
 h5,
 h6 {
-  @include margin-none();
+  // @include margin-none();
 }
 
