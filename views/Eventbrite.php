@@ -282,6 +282,9 @@ class Eventbrite {
           <h2 class="eb_event_list_item_title">
             %3$s
           </h2>
+          <p>
+            %8$s
+          </p>
           <div class="suscribe">
             <a class="calltoaction next" href="%2$s" target="_blank" title="%3$s" rel="bookmark">
               S\'inscrire
@@ -296,7 +299,8 @@ class Eventbrite {
       esc_attr(strftime('%a, %B %e', $time)),
       esc_attr(strftime('%d', $time)),
       esc_attr(strftime('%B', $time)),
-      esc_attr(strftime('%Y', $time))
+      esc_attr(strftime('%Y', $time)),
+      esc_attr($evnt->description)
       );
   }
   /*

@@ -4,8 +4,11 @@
 // --------------------------------------------------
 .widget_ns_mailchimp {
   .widget-title {
-    margin-bottom: 0px !important;
+    // background-color: $ippon-secondary;
+    border-bottom: 1px solid lighten($ippon-secondary, 33%);;
+    // color: $light;
     @include aside-secondary();
+    margin-bottom: 0px !important;
     @include pre-icon("\e816", pxtoem($margin-icon));
     @include padding-base();
   }
