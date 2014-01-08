@@ -70,6 +70,10 @@ Feuille de style pour le contenu d'un article
   color: $light;
   position: relative;
 
+  a {
+    color: $light;
+  }
+
   .day {
     font-size: pxtoem($font-size-meta * 2 * $line-height-base);
     line-height: $line-height-base;

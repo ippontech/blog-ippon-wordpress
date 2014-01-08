@@ -15,12 +15,19 @@ Cf :
 - category.php
 */
 
+#primary-content, #primary, #aside-content {
+  @media (min-width: $screen-sm-min) {
+    @include margin-vertical-large();
+  }
+}
+
 article .entry-content,
 .entry-header h1,
 .entry-thumbnail,
 #content article footer,
 .archive-header,
-.nav-previous, .nav-next {
+.nav-previous, .nav-next,
+.page-content {
   @include padding-horizontal-base();
   @include padding-vertical-large();
 }

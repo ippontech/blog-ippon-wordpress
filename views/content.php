@@ -40,7 +40,7 @@
           <div>2014</div>
         </div>
         <div class="other-meta">
-          <div>par Alvin hgf hg hg hgf hg hgf hgf khf hkg hkgc ghkc cghcg khg </div>
+          <div>par Alvin Berthelot</div>
           <?php if (get_the_tag_list()) : ?>
             <div>
               <?php echo get_the_tag_list('<i class="icon-tags"></i> ',', ','');?>
