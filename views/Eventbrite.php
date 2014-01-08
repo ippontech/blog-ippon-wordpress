@@ -276,15 +276,17 @@ class Eventbrite {
             <time datetime="%4$s" class="eb_event_list_item_date">
               %5$s %6$s %7$s
             </time>
-            <a class="calltoaction next" href="%2$s" target="_blank" title="%3$s" rel="bookmark">
-              S\'inscrire
-            </a>
           </div>
         </div>
         <div class="info-item">
           <h2 class="eb_event_list_item_title">
             %3$s
           </h2>
+          <div class="suscribe">
+            <a class="calltoaction next" href="%2$s" target="_blank" title="%3$s" rel="bookmark">
+              S\'inscrire
+            </a>
+          </div>
         </div>
       </div>
       ',
@@ -293,7 +295,7 @@ class Eventbrite {
       esc_attr($evnt->title),
       esc_attr(strftime('%a, %B %e', $time)),
       esc_attr(strftime('%d', $time)),
-      esc_attr(strftime('%b', $time)),
+      esc_attr(strftime('%B', $time)),
       esc_attr(strftime('%Y', $time))
       );
   }

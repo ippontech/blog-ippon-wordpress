@@ -32,10 +32,17 @@
       @media (min-width: $screen-sm-min) {
         padding: $padding-base-horizontal;
       }
+      &:hover {
+        border-bottom: 0;
+      }
     }
+
   }
   .accounts-links {
     font-size: pxtoem(28px);
+    a:hover {
+      color: $light;
+    }
     @media (min-width: $screen-sm-min) {
       font-size: pxtoem(16px);
     }

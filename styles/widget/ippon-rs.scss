@@ -6,4 +6,9 @@
   justify-content: space-between;
   @include aside-secondary();
   @include padding-horizontal(6px);
+  a {
+    &:hover {
+      border-bottom: 0;
+    }
+  }
 }

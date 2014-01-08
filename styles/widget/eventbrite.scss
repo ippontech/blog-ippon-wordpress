@@ -17,9 +17,13 @@
         font-size: $font-size-h2;
         @include margin-none();
         @include padding-vertical-base();
+      }
+      .suscribe {
         a {
-          text-decoration: none;
+          // text-decoration: none;
+          color: $ippon-primary;
         }
+        text-align: right;
       }
       .author {
         color: $gray;
