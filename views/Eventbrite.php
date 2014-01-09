@@ -277,6 +277,7 @@ class Eventbrite {
               %5$s %6$s %7$s
             </time>
           </div>
+          <div class="beveling pull-right"></div>
         </div>
         <div class="info-item">
           <h2 class="eb_event_list_item_title">
@@ -286,7 +287,7 @@ class Eventbrite {
             %8$s
           </p>
           <div class="suscribe">
-            <a class="calltoaction next" href="%2$s" target="_blank" title="%3$s" rel="bookmark">
+            <a class="next" href="%2$s" target="_blank" title="%3$s" rel="bookmark">
               S\'inscrire
             </a>
           </div>

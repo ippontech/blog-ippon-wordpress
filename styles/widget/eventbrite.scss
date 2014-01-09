@@ -4,9 +4,13 @@
   display: block;
   .eb_event_list_item {
     background-color: lighten($gray-light, 5%);
-    &:not(:first-child) {
-      @include margin-top-large();
+    @include margin-top-large();
+    @media (min-width: $screen-sm-min) {
+      &:not(:first-child) {
+        @include margin-top-large();
+      }
     }
+
     &:last-child {
       @include margin-bottom-large();
     }
@@ -19,11 +23,25 @@
         @include padding-vertical-base();
       }
       .suscribe {
+        display: block;
+        // @include padding-large();
+        // background-color: $ippon-primary;
         a {
-          // text-decoration: none;
           color: $ippon-primary;
+          display: inline;
+          @include padding-vertical-large();
+          &:hover {
+            border-bottom: 0;
+          }
+          @media (min-width: $screen-sm-min) {
+            display: inline-block;
+            @include padding-vertical-none();
+            &:hover {
+              border-bottom: 1px dotted;
+            }
+          }
         }
-        // text-align: right;
+
       }
       .author {
         color: $gray;
@@ -36,7 +54,6 @@
       background-color: $ippon-primary;
       color: $light;
       display: block;
-      @include padding-base();
       a {
         color: $light;
         text-decoration: none;
@@ -46,6 +63,17 @@
         display: inline-block;
         padding-right: $padding-small-horizontal;
         text-transform: uppercase;
+        @include padding-base();
+      }
+      .beveling {
+        width: 0;
+        height: 0;
+        border-top: ($font-size-base * 1.5) + ($padding-base-vertical * 2) solid $light;
+        border-left: ($font-size-base * 1.5) + ($padding-base-vertical * 2) solid transparent;
+        @media (min-width: $screen-sm-min) {
+          border-top: ($font-size-small * 1.5) + ($padding-base-vertical * 2) solid $light;
+          border-left: ($font-size-small * 1.5) + ($padding-base-vertical * 2) solid transparent;
+        }
       }
     }
   }
