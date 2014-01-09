@@ -4,14 +4,27 @@
 // Paddings
 ////////////////////////////////////////////////////////////////////////
 
-// mixins génériques
-@mixin padding-horizontal($padding) {
+@mixin padding-bottom($padding) {
+  padding-bottom: $padding;
+}
+@mixin padding-left($padding) {
   padding-left: $padding;
+}
+@mixin padding-right($padding) {
   padding-right: $padding;
 }
-@mixin padding-vertical($padding) {
-  padding-bottom: $padding;
+@mixin padding-top($padding) {
   padding-top: $padding;
+}
+
+// mixins génériques
+@mixin padding-horizontal($padding) {
+  @include padding-left($padding);
+  @include padding-right($padding);
+}
+@mixin padding-vertical($padding) {
+  @include padding-bottom($padding);
+  @include padding-top($padding);
 }
 
 // padding none
@@ -27,6 +40,18 @@
 }
 
 // padding base
+@mixin padding-bottom-base() {
+  @include padding-bottom($padding-base-vertical);
+}
+@mixin padding-left-base() {
+  @include padding-left($padding-base-horizontal);
+}
+@mixin padding-right-base() {
+  @include padding-right($padding-base-horizontal);
+}
+@mixin padding-top-base() {
+  @include padding-top($padding-base-vertical);
+}
 @mixin padding-horizontal-base() {
   @include padding-horizontal($padding-base-horizontal);
 }
@@ -39,6 +64,18 @@
 }
 
 // padding small
+@mixin padding-bottom-small() {
+  @include padding-bottom($padding-small-vertical);
+}
+@mixin padding-left-small() {
+  @include padding-left($padding-small-horizontal);
+}
+@mixin padding-right-small() {
+  @include padding-right($padding-small-horizontal);
+}
+@mixin padding-top-small() {
+  @include padding-top($padding-small-vertical);
+}
 @mixin padding-horizontal-small() {
   @include padding-horizontal($padding-small-horizontal);
 }
@@ -51,6 +88,18 @@
 }
 
 // padding large
+@mixin padding-bottom-large() {
+  @include padding-bottom($padding-large-vertical);
+}
+@mixin padding-left-large() {
+  @include padding-left($padding-large-horizontal);
+}
+@mixin padding-right-large() {
+  @include padding-right($padding-large-horizontal);
+}
+@mixin padding-top-large() {
+  @include padding-top($padding-large-vertical);
+}
 @mixin padding-horizontal-large() {
   @include padding-horizontal($padding-large-horizontal);
 }
