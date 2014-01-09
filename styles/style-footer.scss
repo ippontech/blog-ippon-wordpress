@@ -3,10 +3,10 @@
 // FOOTER
 // --------------------------------------------------
 
-.main-footer {
+footer.main-footer {
   background-color: $gray;
   color: $gray-light;
-  font-size: pxtoem(14px);
+  font-size: pxtoem($font-size-base);
   @media (min-width: $screen-sm-min) {
     padding-left: $padding-large-horizontal;
     padding-right: $padding-large-horizontal;
@@ -14,50 +14,39 @@
   text-align: center;
   a {
     color: $gray-light;
-    font-size: pxtoem(24px);
     text-decoration: none;
-    .fa {
-      color: $gray-light;
-      padding: $padding-small-horizontal;
-      @media (min-width: $screen-sm-min) {
-        font-size: pxtoem(24px);
-        padding: $padding-large-horizontal;
-      }
+    &:hover {
+      color: $light;
     }
   }
   .accounts-links, .friends-links {
     border-bottom: 1px solid $gray-light;
+    @include padding-vertical-large();
     a {
-      padding: $padding-large-horizontal;
+      @include padding-large();
       @media (min-width: $screen-sm-min) {
-        padding: $padding-base-horizontal;
+        @include padding-horizontal-base();
       }
       &:hover {
         border-bottom: 0;
       }
     }
-
   }
   .accounts-links {
-    font-size: pxtoem(28px);
-    a:hover {
-      color: $light;
-    }
-    @media (min-width: $screen-sm-min) {
-      font-size: pxtoem(16px);
+    a {
+      font-size: pxtoem($font-size-large);
     }
   }
   .friends-links {
-    @include padding-vertical-large();
     a {
       display: block;
       @media (min-width: $screen-sm-min) {
         display: inline;
-        font-size: pxtoem(16px);
       }
     }
   }
   .copyrights {
+    font-size: pxtoem($font-size-small);
     padding: $padding-base-horizontal;
   }
 }

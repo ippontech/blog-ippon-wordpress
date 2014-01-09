@@ -23,9 +23,8 @@
       </div>
       <div class="friends-links">
         <a href="http://www.ippon.fr" target="_blank">ippon.fr</a>
-        <a href="http://www.atomes.com" target="_blank">atomes.com</a>
+        <a href="http://www.ippon-hosting.fr" target="_blank">ippon-hosting.fr</a>
         <a href="http://www.ippon-digital.fr" target="_blank">ippon-digital.fr</a>
-        <a href="http://www.blog.ippon.fr" target="_blank">blog.ippon.fr</a>
       </div>
       <div class="copyrights">
         <p>

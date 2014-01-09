@@ -23,6 +23,6 @@
   .board-info {
     background-color: $ippon-complementary-darker;
     color: $light;
-    @include padding-vertical-base();
+    @include padding-base();
   }
 }
