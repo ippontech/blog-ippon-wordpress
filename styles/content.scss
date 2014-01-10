@@ -72,26 +72,54 @@ Feuille de style pour le contenu d'un article
 .meta-date,
 .meta-author-tags {
   color: $gray;
-  display: inline-block;
+  display: block;
+  @media (min-width: $screen-sm-min) {
+    display: inline-block;
+  }
   @include padding-horizontal-base();
 }
 .meta-date {
   background-color: $ippon-complementary;
   color: $light;
+  display: block;
+  @media (min-width: $screen-sm-min) {
+    display: inline-block;
+  }
   .day {
     display: inline;
-    font-size: pxtoem($font-size-base * 2 * $line-height-base);
-    @include padding-right-small();
+    @media (min-width: $screen-sm-min) {
+      font-size: pxtoem($font-size-base * 2 * $line-height-base);
+      @include padding-right-small();
+    }
   }
   .month-year {
-    display: inline-block;
+    display: inline;
     text-transform: uppercase;
+    @media (min-width: $screen-sm-min) {
+      display: inline-block;
+    }
+  }
+  .month, .year {
+    display: inline;
+    @media (min-width: $screen-sm-min) {
+      display: block;
+    }
   }
 }
 .meta-author {
   text-transform: uppercase;
+  @include padding-vertical-base();
   a {
     color: $gray;
+  }
+  @media (min-width: $screen-sm-min) {
+    @include padding-vertical-none();
+  }
+}
+.meta-tags {
+  display: none;
+  @media (min-width: $screen-sm-min) {
+    display: block;
   }
 }
 
