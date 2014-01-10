@@ -65,64 +65,33 @@ Feuille de style pour le contenu d'un article
 }
 
 .post-meta {
-  background-color: $ippon-complementary;
+  display: inline;
+  font-size: pxtoem($font-size-meta);
   @include padding-vertical-base();
+}
+.meta-date,
+.meta-author-tags {
+  color: $gray;
+  display: inline-block;
+  @include padding-horizontal-base();
+}
+.meta-date {
+  background-color: $ippon-complementary;
   color: $light;
-  position: relative;
-
-  a {
-    color: $light;
-  }
-
   .day {
-    font-size: pxtoem($font-size-meta * 2 * $line-height-base);
-    line-height: $line-height-base;
-    // font-size: 2em;
-    position:absolute;
-    margin-top: pxtoem(-3px);
-    width:4em;
+    display: inline;
+    font-size: pxtoem($font-size-base * 2 * $line-height-base);
+    @include padding-right-small();
   }
   .month-year {
-    border-right: 1px solid;
-    font-size: pxtoem($font-size-meta);
-    margin-left: pxtoem(60px);
-    padding-right: pxtoem(6px);
-    margin-top: pxtoem(4px);
-    position:absolute;
-// min-height:150px;
-  }
-  .other-meta {
-    // font-size: pxtoem($font-size-meta);
-    // line-height: 24px;
-    margin-left: pxtoem(100px);
-    white-space: nowrap;
-    // margin-top: pxtoem(-2px);
-
-
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+    display: inline-block;
+    text-transform: uppercase;
   }
 }
-
-
-.post-meta-secondary {
-  text-align: right;
-  @include meta-complementary();
-  @media (min-width: $screen-sm-min) {
-    text-align: left;
-    @include padding-vertical-base();
-  }
-  .post-goto {
-    color: $light;
-    font-size: $font-size-base;
-    display: block;
-    // @include padding-vertical-base();
-    text-transform: uppercase;
-    @include padding-vertical-base();
-    a {
-      color: $light;
-    }
+.meta-author {
+  text-transform: uppercase;
+  a {
+    color: $gray;
   }
 }
 

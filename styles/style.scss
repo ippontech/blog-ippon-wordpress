@@ -56,7 +56,7 @@ img {
 }
 
 .description {
-  @include block-colorized($gray);
+  @include block-colorized($dark);
   // @include block-colorized($ippon-primary);
 }
 

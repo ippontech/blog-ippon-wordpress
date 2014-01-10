@@ -28,32 +28,17 @@
 
   </header><!-- .entry-header -->
 
-  <div class="row hack-row post-annex">
-
-      <!-- Affichage des meta données principales -->
-      <div class="col-xs-6 post-meta">
-        <div class="day">
-          02
-        </div>
-        <div class="month-year">
-          <div>JAN</div>
-          <div>2014</div>
-        </div>
-        <div class="other-meta">
-          <div>par Alvin Berthelot</div>
-          <?php if (get_the_tag_list()) : ?>
-            <div>
-              <?php echo get_the_tag_list('<i class="icon-tags"></i> ',', ','');?>
-            </div><!-- .tags-meta -->
-          <?php endif; // get_the_tag_list() ?>
-        </div>
-
-          
-      </div>
-      <div class="col-xs-6 post-meta-secondary">
-      </div>
+  <div class="post-meta">
+    <?php ippon_meta_date(); ?>
+    <div class="meta-author-tags">
+      <?php ippon_meta_author(); ?>
+      <div class="meta-tags">
+        <?php if (get_the_tag_list()) : ?>
+          <?php echo get_the_tag_list('<i class="icon-tags"></i> ',', ','');?>
+        <?php endif; // get_the_tag_list() ?>
+      </div><!-- .tags-meta -->
+    </div>
   </div>
-
 
   <?php if (is_search() || !is_single()) : ?>
   <!-- Affichage du résumé -->
