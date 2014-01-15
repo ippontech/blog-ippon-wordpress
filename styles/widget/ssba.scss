@@ -8,10 +8,14 @@
 #ssba {
   &:before {
     // background-color: lighten($gray-light, 5%);
-    content: 'Vous aimez ? Vous partagez !';
+    content: 'Vous avez aimé ? Vous partagez !';
     display: block;
-    font-size: $font-size-small;
+    font-size: $font-size-h3-large;
+    font-weight: 500;
     @include padding-top-large();
+    background-color: $ippon-complementary-darker;
+    color: $light !important;
+    @include padding-base();
   }
   @include padding-vertical-large();
   a:hover {

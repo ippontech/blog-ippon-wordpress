@@ -1,11 +1,6 @@
 
 <!doctype html>
 
-<!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
-
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
 
@@ -39,12 +34,27 @@
 
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-  <?php wp_head(); ?>
 
+  <!-- CONTENU WP_HEAD -->
+  <?php //wp_head(); ?>
+  <!-- FIN CONTENU WP_HEAD -->
+
+  <?php // Bootstrap 3 + styles spécifiques ?>  
+  <link rel="stylesheet" id="twentythirteen-style-css" href="<?php echo get_template_directory_uri(); ?>/style.css" type="text/css" media="all">
+  <?php // Fonts iconiques nécessaires (uniquement celles dont on a besoin) ?>
+  <?php // cf. http://fontello.com/ ?>
   <link href="<?php echo get_template_directory_uri(); ?>/fonts/fontello/css/fontello.css" rel="stylesheet">
 
-  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-</head>
+
+  <?php // jQuery ?>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+  <?php // html5shiv.js cf. https://code.google.com/p/html5shiv/ ?>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.js"></script>
+  <?php // respond.js cf. https://github.com/scottjehl/Respond ?>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js" type="text/javascript"></script>
+
+</head> 
 
 <body <?php body_class(); ?>>
 

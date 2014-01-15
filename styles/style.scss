@@ -27,6 +27,18 @@ Version: 0.0.1
 
 @import "video";
 
+// body {
+//   background-color: green !important;
+//   @media screen and (min-width: 480px){
+//     background-color: yellow !important;
+//   }
+// }
+// aside {
+//   background-color: pink !important;
+// }
+
+
+
 img {
   @include img-responsive();
 }
