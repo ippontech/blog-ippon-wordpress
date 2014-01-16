@@ -67,7 +67,7 @@
 
 <body <?php body_class(); ?>>
 
-  <div id="page" class="container-fluid">
+  <div id="page" class="container">
     <header id="masthead" class="" role="banner">
       <div class="row header-banner">
             <div class="col-xs-6 col-sm-9 col-sm-push-3">
