@@ -58,9 +58,6 @@
   <!-- CONTENU WP_HEAD -->
   <?php wp_head(); ?>
   <!-- FIN CONTENU WP_HEAD -->
-  <!-- CONTENU WP_HEAD -->
-
-  <!-- FIN CONTENU WP_HEAD -->
 
 
 </head> 
@@ -129,7 +126,7 @@
       </div>
     </header><!-- #masthead -->
 
-TEST 15
+<!-- TEST 15 -->
 
     <div id="main">
       <div class="row">

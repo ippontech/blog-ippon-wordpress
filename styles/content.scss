@@ -6,7 +6,7 @@ Feuille de style pour le contenu d'un article
 */
 
 #content {
-  background-color: $gray-light;
+  // background-color: $gray-light;
   article {
     header .article-meta .secondary-meta,
     > div.entry-thumbnail,
@@ -49,13 +49,14 @@ Feuille de style pour le contenu d'un article
     // @include margin-vertical-large();
   }
   article.post {
-    border-bottom: solid 1px $light;
+    background-color: $gray-light;
+    margin-bottom: 4px;
     padding-top: 1px;
     @media (min-width: $screen-sm-min) {
       @include padding-vertical-base();
     }
     &:first-child {
-      @include margin-vertical-none();
+      margin-top: 0;
     }
   }
 
