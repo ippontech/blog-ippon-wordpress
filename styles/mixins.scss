@@ -228,8 +228,6 @@
 @mixin rs($icon) {
   font-size: 1em;
   @include pre-icon($icon, 0);
-  // @include margin-right-base();
-  // @include margin-top-base();
 }
 @mixin rs-rounded($icon, $color) {
   background-color: $color;

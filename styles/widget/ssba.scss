@@ -31,22 +31,12 @@
     $colour: nth($brand_def, 3);
     #ssba_#{$title}_share {
       @include rs-rounded($icon, $colour);
+      @include margin-right-base();
+      @include margin-top-base();
     }
   }
 
   // [id^="ssba_"] {
   //   display: inline-block;    
-  // }
-  // #ssba_twitter_share {
-  //   @include rs-rounded($twitter-icon, $twitter-color);
-  // }
-  // #ssba_facebook_share {
-  //   @include rs-rounded($facebook-icon, $facebook-color);
-  // }
-  // #ssba_google_share {
-  //   @include rs-rounded($googleplus-icon, $googleplus-color);
-  // }
-  // #ssba_linkedin_share {
-  //   @include rs-rounded($linkedin-icon, $linkedin-color);
   // }
 }

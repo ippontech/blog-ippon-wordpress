@@ -40,42 +40,6 @@ $brand-list:
   (vimeo "\e803" #44bbff)
   (facebook "\e819" #3b5998);
 
-// $flash_types: (success #d4ffd4) (error #ffd5d1);
-
-// @each $flash_def in $flash_types {
-//     $type: nth($flash_def, 1);
-//     $colour: nth($flash_def, 2);
-
-//     &.#{$type} {
-//         background-color: $colour;
-//         background-image: url(../images/#{$type}.png);
-//     }
-// }
-
-// $github-icon: "\e801";
-// $github-color: #171515;
-
-// $googleplus-icon: "\e802";
-// $googleplus-color: #dd4b39;
-
-// $youtube-icon: "\e806";
-// $youtube-color: #c4302b;
-
-// $twitter-icon: "\e805";
-// $twitter-color: #55acee;
-
-// $rss-icon: "\e807";
-// $rss-color: #ff6600;
-
-// $linkedin-icon: "\e804";
-// $linkedin-color: #0e76a8;
-
-// $vimeo-icon: "\e803";
-// $vimeo-color: #44bbff;
-
-// $facebook-icon: "\e819";
-// $facebook-color: #3b5998;
-
 ////////////////////////////////////////////////////////////////////////
 // Surcharge des variables Bootstrap
 ////////////////////////////////////////////////////////////////////////
