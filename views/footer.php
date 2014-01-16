@@ -13,13 +13,7 @@
     </div><!-- #main -->
     <footer class="col-md-12 main-footer">
       <div class="accounts-links">
-        <a href="http://github.com/ippontech" target="_blank"><i class="icon-github"></i></a>
-        <a href="https://plus.google.com/106753560954832510210/posts" target="_blank"><i class="icon-gplus"></i></a>
-        <a href="http://www.youtube.com/user/ippontechtv" target="_blank"><i class="icon-youtube"></i></a>
-        <a href="http://twitter.com/ippontech" target="_blank"><i class="icon-twitter"></i></a>
-        <a href="/?feed=rss" target="_blank"><i class="icon-rss"></i></a>
-        <a href="http://www.linkedin.com/company/ippon-technologies" target="_blank"><i class="icon-linkedin"></i></a>
-        <a href="https://vimeo.com/ippontech" target="_blank"><i class="icon-vimeo"></i></a>
+        <?php get_template_part('social-network', 'none'); ?>
       </div>
       <div class="friends-links">
         <a href="http://www.ippon.fr" target="_blank">ippon.fr</a>

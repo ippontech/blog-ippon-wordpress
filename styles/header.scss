@@ -1,0 +1,22 @@
+$color-header-rs: $gray;
+.header-rs {
+  color: $color-header-rs;
+  display: flex;
+  font-size: pxtoem(24px);
+  justify-content: space-between;
+  a {
+    color: $color-header-rs;
+    &:hover {
+      border-bottom: 0;
+    }
+  }
+}
+
+@each $brand_def in $brand-list {
+  $title: nth($brand_def, 1);
+  $icon: nth($brand_def, 2);
+  $colour: nth($brand_def, 3);
+  .rs-#{$title} {
+    @include rs($icon);
+  }
+}

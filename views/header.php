@@ -66,24 +66,33 @@
 
   <div id="page" class="container">
     <header id="masthead" class="" role="banner">
-      <div class="row header-banner">
-            <div class="col-xs-6 col-sm-9 col-sm-push-3">
-              <div class="visible-xs">
-                <a href="#menu" class="menu-link">
-                  <div class="menu-mobile">
-                    <i class="icon-menu"></i>
-                  </div>
-                </a>
+      <div class="row">
+        <div class="col-xs-6 col-sm-4 col-sm-push-8">
+          <div class="visible-xs">
+            <a href="#menu" class="menu-link">
+              <div class="menu-mobile">
+                <i class="icon-menu"></i>
               </div>
-              <div class="hidden-xs">
-                <img src="<?php echo get_header_image() ?>" class="img-responsive"/>
-              </div>
+            </a>
+          </div>
+          <div class="hidden-xs">
+            <div class="header-rs">
+              <?php get_template_part('social-network', 'none'); ?>
             </div>
-            <div class="col-xs-6 col-sm-3 col-sm-pull-9 second-banner">
-              <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
-                <div class="logo"></div>
-              </a>
-            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-8 col-sm-pull-4 second-banner">
+          <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
+            <div class="logo"></div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <!-- <div class="col-sm-12"> -->
+          <div class="hidden-xs">
+            <img src="<?php echo get_header_image() ?>" class="img-responsive"/>
+          </div>
+        <!-- </div> -->
       </div>
 
       <div class="menu-search row">

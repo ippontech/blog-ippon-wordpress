@@ -223,6 +223,28 @@
 }
 
 ////////////////////////////////////////////////////////////////////////
+// Réseaux sociaux
+////////////////////////////////////////////////////////////////////////
+@mixin rs($icon) {
+  font-size: 1em;
+  @include pre-icon($icon, 0);
+  // @include margin-right-base();
+  // @include margin-top-base();
+}
+@mixin rs-rounded($icon, $color) {
+  background-color: $color;
+  border-radius: 50%;
+  color: $light;
+  display: inline-block;
+  font-size: 1em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  width: 2em;
+  @include rs($icon);
+}
+
+////////////////////////////////////////////////////////////////////////
 // 
 ////////////////////////////////////////////////////////////////////////
 

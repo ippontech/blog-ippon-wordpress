@@ -1,6 +1,28 @@
-@import "ippon-variables";
 
 // Convert PX to EM global function
 @function pxtoem($px){
   @return ($px/$font-size-base)+0em;
 }
+
+// Récupérer la couleur d'une marque en passant son nom en paramètre
+@function get_brand_color($brand_title){
+  @each $brand_def in $brand-list {
+    $title: nth($brand_def, 1);
+    $colour: nth($brand_def, 3);
+    @if $title == $brand_title {
+      @return $colour;
+    }
+  }
+}
+
+// Récupérer l'icône d'une marque en passant son nom en paramètre
+@function get_brand_icon($brand_title){
+  @each $brand_def in $brand-list {
+    $title: nth($brand_def, 1);
+    $icon: nth($brand_def, 2);
+    @if $title == $brand_title {
+      @return $icon;
+    }
+  }
+}
+
