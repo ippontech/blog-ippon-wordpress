@@ -65,7 +65,7 @@
 <body <?php body_class(); ?>>
 
   <div id="page" class="container">
-    <header id="masthead" class="" role="banner">
+    <header id="masthead" role="banner">
       <div class="row">
         <div class="col-xs-6 col-sm-4 col-sm-push-8">
           <div class="visible-xs">
