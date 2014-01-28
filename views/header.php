@@ -135,7 +135,5 @@
       </div>
     </header><!-- #masthead -->
 
-<!-- TEST 15 -->
-
     <div id="main">
       <div class="row">

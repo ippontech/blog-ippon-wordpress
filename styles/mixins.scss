@@ -229,6 +229,10 @@
   font-size: 1em;
   @include pre-icon($icon, 0);
 }
+// @mixin rs($icon) {
+//   font-size: 1em;
+//   @include pre-icon($icon, 0);
+// }
 @mixin rs-rounded($icon, $color) {
   background-color: $color;
   border-radius: 50%;

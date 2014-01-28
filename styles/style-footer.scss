@@ -3,15 +3,21 @@
 // FOOTER
 // --------------------------------------------------
 
+
+
 footer.main-footer {
-  background-color: $gray;
+  background-color: $dark;
   color: $gray-light;
   font-size: pxtoem($font-size-base);
+
+  line-height: 1;
+
+  text-align: center;
   @media (min-width: $screen-sm-min) {
     padding-left: $padding-large-horizontal;
     padding-right: $padding-large-horizontal;
+    text-align: left;
   }
-  text-align: center;
   a {
     color: $gray-light;
     text-decoration: none;
@@ -19,34 +25,64 @@ footer.main-footer {
       color: $light;
     }
   }
-  .accounts-links, .friends-links {
-    border-bottom: 1px solid $gray-light;
-    @include padding-vertical-large();
+
+  .adresses, .accounts-links, .friends-links {
+    @include margin-top-large();
+    @include padding-large();
+    @media (min-width: $screen-sm-min) {
+      @include padding-base();
+    }
     a {
-      @include padding-large();
-      @media (min-width: $screen-sm-min) {
-        @include padding-horizontal-base();
-      }
+      @include padding-vertical-large();
       &:hover {
         border-bottom: 0;
       }
     }
+    h1 {
+      text-transform: uppercase;
+    }
+  }
+  .adresses {
+    $color-adresses: $ippon-complementary;
+    border-left: 1px solid $color-adresses;
+    h1 {
+      color: $ippon-complementary;
+    }
   }
   .accounts-links {
+    $color-accounts-links: $ippon-secondary;
+    border-left: 1px solid $color-accounts-links;
     a {
+      display : block;
+      &:hover {
+        color: $color-accounts-links;
+      }
+    }
+    i {
       font-size: pxtoem($font-size-large);
+    }
+    h1 {
+      color: $color-accounts-links;
     }
   }
   .friends-links {
+    $color-friends-links: $ippon-primary;
+    border-left: 1px solid $color-friends-links;
     a {
       display: block;
-      @media (min-width: $screen-sm-min) {
-        display: inline;
+      &:hover {
+        color: $color-friends-links;
       }
+    }
+    h1 {
+      color: $color-friends-links;
     }
   }
   .copyrights {
+    color: $gray;
     font-size: pxtoem($font-size-small);
+    @include margin-top-large();
     padding: $padding-base-horizontal;
+    text-align: center;
   }
 }
