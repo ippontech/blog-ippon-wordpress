@@ -334,7 +334,7 @@ function ippon_post_nav() {
 }
 endif;
 
-if ( ! function_exists( 'ippon_entry_meta' ) ) :
+if ( ! function_exists( 'ippon_meta' ) ) :
 /**
  * Print HTML with meta information for current post: date, author, tags and comments.
  *
@@ -344,27 +344,34 @@ if ( ! function_exists( 'ippon_entry_meta' ) ) :
 function ippon_meta() {
   // if ( is_sticky() && is_home() && ! is_paged() )
   //   echo '<span class="featured-post">' . __( 'Sticky', 'twentythirteen' ) . '</span>';
-
-    printf('<div class="main-meta">');
       // Date de l'article
       printf('<div class="date-meta">');
         ippon_meta_date();
       printf('</div>');
 
+}
+endif;
+
+if ( ! function_exists( 'ippon_meta_uthor' ) ) :
+/**
+ * Print HTML with meta author information for current post.
+ *
+ * @since Ippon 1.0
+ * @return void
+ */
+function ippon_meta_author() {
+
       // Auteur de l'article
       if ( 'post' == get_post_type() ) {
        printf(
-        '<div class="author vcard hidden-xs">
-          <a class="url fn n" href="%1$s" title="%2$s" rel="author">
+        '<div class="meta-author vcard">
             Par %3$s
-          </a>
         </div>',
         esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
         esc_attr( sprintf( __( 'Voir tous les articles de %s', 'ippon' ), get_the_author() ) ),
         get_the_author()
        );
       }
-    printf('</div>');
 
 }
 endif;
@@ -385,18 +392,16 @@ function ippon_meta_date($echo = true) {
     $format_prefix = '%2$s';
 
   $date = sprintf( '
-    <a href="%1$s" title="%2$s" rel="bookmark">
-      <time datetime="%3$s">
-        <div class="day">%4$s</div>
-        <div class="month-year">
-          <div class="month">%5$s</div>
-          <div class="year">%6$s</div>
-        </div>
-      </time>
-    </a>
+      <div class="meta-date">
+        <time datetime="%1$s">
+          <div class="day">%2$s</div>
+          <div class="month-year">
+            <div class="month">%3$s</div>
+            <div class="year">%4$s</div>
+          </div>
+        </time>
+      </div>
     ',
-    esc_url(get_permalink()),
-    esc_attr(sprintf(__('Permalink to %s', 'twentythirteen'), the_title_attribute('echo=0'))),
     esc_attr(get_the_date('c')),
     esc_html(sprintf($format_prefix, get_post_format_string(get_post_format()), get_the_date('d'))),
     esc_html(sprintf($format_prefix, get_post_format_string(get_post_format()), get_the_date('M'))),

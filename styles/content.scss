@@ -6,7 +6,7 @@ Feuille de style pour le contenu d'un article
 */
 
 #content {
-  background-color: $gray-light;
+  // background-color: $gray-light;
   article {
     header .article-meta .secondary-meta,
     > div.entry-thumbnail,
@@ -49,13 +49,14 @@ Feuille de style pour le contenu d'un article
     // @include margin-vertical-large();
   }
   article.post {
-    border-bottom: solid 1px $light;
+    background-color: $gray-light;
+    margin-bottom: 4px;
     padding-top: 1px;
     @media (min-width: $screen-sm-min) {
       @include padding-vertical-base();
     }
     &:first-child {
-      @include margin-vertical-none();
+      margin-top: 0;
     }
   }
 
@@ -65,64 +66,61 @@ Feuille de style pour le contenu d'un article
 }
 
 .post-meta {
-  background-color: $ippon-complementary;
+  // display: inline;
+  font-size: pxtoem($font-size-meta);
   @include padding-vertical-base();
-  color: $light;
-  position: relative;
-
-  a {
-    color: $light;
+}
+.meta-date,
+.meta-author-tags {
+  color: $gray;
+  display: block;
+  @media (min-width: $screen-sm-min) {
+    display: inline-block;
   }
-
+  @include padding-horizontal-base();
+}
+.meta-date {
+  background-color: $ippon-complementary;
+  color: $light;
+  display: block;
+  @media (min-width: $screen-sm-min) {
+    display: inline-block;
+  }
   .day {
-    font-size: pxtoem($font-size-meta * 2 * $line-height-base);
-    line-height: $line-height-base;
-    // font-size: 2em;
-    position:absolute;
-    margin-top: pxtoem(-3px);
-    width:4em;
+    display: inline;
+    @media (min-width: $screen-sm-min) {
+      font-size: pxtoem($font-size-base * 2 * $line-height-base);
+      @include padding-right-small();
+    }
   }
   .month-year {
-    border-right: 1px solid;
-    font-size: pxtoem($font-size-meta);
-    margin-left: pxtoem(60px);
-    padding-right: pxtoem(6px);
-    margin-top: pxtoem(4px);
-    position:absolute;
-// min-height:150px;
+    display: inline;
+    text-transform: uppercase;
+    @media (min-width: $screen-sm-min) {
+      display: inline-block;
+    }
   }
-  .other-meta {
-    // font-size: pxtoem($font-size-meta);
-    // line-height: 24px;
-    margin-left: pxtoem(100px);
-    white-space: nowrap;
-    // margin-top: pxtoem(-2px);
-
-
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+  .month, .year {
+    display: inline;
+    @media (min-width: $screen-sm-min) {
+      display: block;
+    }
   }
 }
-
-
-.post-meta-secondary {
-  text-align: right;
-  @include meta-complementary();
-  @media (min-width: $screen-sm-min) {
-    text-align: left;
-    @include padding-vertical-base();
+.meta-author {
+  text-transform: uppercase;
+  @include padding-vertical-base();
+  a {
+    color: $gray;
   }
-  .post-goto {
-    color: $light;
-    font-size: $font-size-base;
+  @media (min-width: $screen-sm-min) {
+    @include padding-vertical-none();
+  }
+}
+.meta-tags {
+  display: none;
+  @media (min-width: $screen-sm-min) {
     display: block;
-    // @include padding-vertical-base();
-    text-transform: uppercase;
-    @include padding-vertical-base();
-    a {
-      color: $light;
-    }
   }
 }
 

@@ -4,10 +4,10 @@
 ////////////////////////////////////////////////////////////////////////
 // Bannière
 ////////////////////////////////////////////////////////////////////////
-.header-banner {
-  @include padding-vertical(6px);
+#masthead {
+  @include padding-vertical-small();
   @media (min-width: $screen-sm-min) {
-    @include padding-vertical(12px);
+    @include padding-vertical-large();
   }
   a:hover {
     border-bottom: 0px;

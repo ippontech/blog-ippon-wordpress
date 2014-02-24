@@ -1,0 +1,10 @@
+// Plugin Pastacode
+// --------------------------------------------------
+
+.code-embed-wrapper {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  pre {
+    font-size: pxtoem(12px);
+  }
+}

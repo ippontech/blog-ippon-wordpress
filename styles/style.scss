@@ -20,12 +20,25 @@ Version: 0.0.1
 @import "archive";
 @import "commons";
 @import "content";
+@import "header";
 @import "navigation";
 @import "type";
 
 @import "style-footer";
 
 @import "video";
+
+// body {
+//   background-color: green !important;
+//   @media screen and (min-width: 480px){
+//     background-color: yellow !important;
+//   }
+// }
+// aside {
+//   background-color: pink !important;
+// }
+
+
 
 img {
   @include img-responsive();
@@ -55,8 +68,28 @@ img {
   }
 }
 
+.backtotop {
+  text-align: center;
+  a {
+    background-color: $gray-light;
+    color: $light;
+    display: inline-block;
+    font-size: 1em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    width: 2em;
+    @include pre-icon("\e811", 0);
+    &:hover {
+      border-bottom: 0;
+      color: $dark;
+      text-decoration: none;
+    }
+  }
+}
+
 .description {
-  @include block-colorized($gray);
+  @include block-colorized($dark);
   // @include block-colorized($ippon-primary);
 }
 

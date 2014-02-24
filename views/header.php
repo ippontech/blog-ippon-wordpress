@@ -1,11 +1,6 @@
 
 <!doctype html>
 
-<!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
-
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
 
@@ -14,7 +9,7 @@
 
   <title><?php bloginfo('name'); ?></title>
 
-  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+  <!-- <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"> -->
 
   <meta name="description" content="<?php echo get_bloginfo ('description' );  ?>">
 
@@ -39,35 +34,65 @@
 
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-  <?php wp_head(); ?>
 
+  <?php // Bootstrap 3 + styles spécifiques ?>  
+  <link rel="stylesheet" id="twentythirteen-style-css" href="<?php echo get_template_directory_uri(); ?>/style.css" type="text/css" media="all">
+  <?php // Fonts iconiques nécessaires (uniquement celles dont on a besoin) ?>
+  <?php // cf. http://fontello.com/ ?>
   <link href="<?php echo get_template_directory_uri(); ?>/fonts/fontello/css/fontello.css" rel="stylesheet">
 
-  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-</head>
+
+  <?php // jQuery ?>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+  <?php // Modernizr cf. http://modernizr.com/ ?>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js" type="text/javascript"></script>
+
+  <?php // html5shiv.js cf. https://code.google.com/p/html5shiv/ ?>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.js"></script>
+  <?php // respond.js cf. https://github.com/scottjehl/Respond ?>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js" type="text/javascript"></script>  
+
+
+  <!-- CONTENU WP_HEAD -->
+  <?php wp_head(); ?>
+  <!-- FIN CONTENU WP_HEAD -->
+
+
+</head> 
 
 <body <?php body_class(); ?>>
 
-  <div id="page" class="container-fluid">
-    <header id="masthead" class="" role="banner">
-      <div class="row header-banner">
-            <div class="col-xs-6 col-sm-9 col-sm-push-3">
-              <div class="visible-xs">
-                <a href="#menu" class="menu-link">
-                  <div class="menu-mobile">
-                    <i class="icon-menu"></i>
-                  </div>
-                </a>
+  <div id="page" class="container">
+    <header id="masthead" role="banner">
+      <div class="row">
+        <div class="col-xs-6 col-sm-4 col-sm-push-8">
+          <div class="visible-xs">
+            <a href="#menu" class="menu-link">
+              <div class="menu-mobile">
+                <i class="icon-menu"></i>
               </div>
-              <div class="hidden-xs">
-                <img src="<?php echo get_header_image() ?>" class="img-responsive"/>
-              </div>
+            </a>
+          </div>
+          <div class="hidden-xs">
+            <div class="header-rs">
+              <?php get_template_part('social-network', 'none'); ?>
             </div>
-            <div class="col-xs-6 col-sm-3 col-sm-pull-9 second-banner">
-              <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
-                <div class="logo"></div>
-              </a>
-            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-8 col-sm-pull-4 second-banner">
+          <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
+            <div class="logo"></div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <!-- <div class="col-sm-12"> -->
+          <div class="hidden-xs">
+            <img src="<?php echo get_header_image() ?>" class="img-responsive"/>
+          </div>
+        <!-- </div> -->
       </div>
 
       <div class="menu-search row">

@@ -1,0 +1,17 @@
+$color-header-rs: $gray;
+
+
+
+
+.header-rs {
+  color: $color-header-rs;
+  display: flex;
+  font-size: pxtoem(24px);
+  justify-content: space-between;
+  a {
+    color: $color-header-rs;
+    &:hover {
+      border-bottom: 0;
+    }
+  }
+}

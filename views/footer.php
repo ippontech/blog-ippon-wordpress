@@ -10,23 +10,74 @@
  */
 ?>
 
+      </div><!-- .row -->
     </div><!-- #main -->
-    <footer class="col-md-12 main-footer">
-      <div class="accounts-links">
-        <a href="http://github.com/ippontech" target="_blank"><i class="icon-github"></i></a>
-        <a href="https://plus.google.com/106753560954832510210/posts" target="_blank"><i class="icon-gplus"></i></a>
-        <a href="http://www.youtube.com/user/ippontechtv" target="_blank"><i class="icon-youtube"></i></a>
-        <a href="http://twitter.com/ippontech" target="_blank"><i class="icon-twitter"></i></a>
-        <a href="/?feed=rss" target="_blank"><i class="icon-rss"></i></a>
-        <a href="http://www.linkedin.com/company/ippon-technologies" target="_blank"><i class="icon-linkedin"></i></a>
-        <a href="https://vimeo.com/ippontech" target="_blank"><i class="icon-vimeo"></i></a>
+  </div><!-- #page -->
+
+  <div class="backtotop">
+    <a href="#"></a>
+  </div>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row contacts">
+        <div class="col-md-4 col-sm-8">
+          <div class="adresses">
+            <address>
+              <h1>Paris</h1>
+              Tél : + 33 (0)1 46 12 48 48<br/>
+              43, avenue de la Grande Armée<br/>
+              75116 Paris<br/>
+            </address>
+            <address>
+              <h1>New York</h1>
+              60 Broad Street Suite 3502<br/>
+              New York, NY 10004<br/>
+              United States of America<br/>
+            </address>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="adresses">          
+            <address>
+              <h1>Bordeaux</h1>
+              Tél : +33 (0)5 56 30 69 31<br/>
+              61 cours de l’Intendance<br/>
+              33000 Bordeaux<br/>
+            </address>
+            <address>
+              <h1>Nantes</h1>
+              Tél : +33 (0)2 40 48 28 06<br/>
+              1 Rue Du Guesclin<br/>
+              44019 Nantes Cedex<br/>
+            </address>
+            <address>
+              <h1>Toulouse</h1>
+              Tél : +33 (0)5 34 51 23 60<br/>
+              Immeuble Burolines II<br/>
+              2 ter, rue Marcel Doret<br/>
+              31700 Blagnac<br/>
+            </address>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-8">
+          <div class="accounts-links">
+            <h1>Nos réseaux</h1>
+            <?php get_template_part('social-network-withtitle', 'none'); ?>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4">
+          <div class="friends-links">
+            <h1>Nos sites</h1>
+            <a href="http://www.ippon.fr" target="_blank">ippon.fr</a>
+            <a href="http://www.ippon-hosting.fr" target="_blank">ippon-hosting.fr</a>
+            <a href="http://www.ippon-digital.fr" target="_blank">ippon-digital.fr</a>
+          </div>
+        </div>
       </div>
-      <div class="friends-links">
-        <a href="http://www.ippon.fr" target="_blank">ippon.fr</a>
-        <a href="http://www.ippon-hosting.fr" target="_blank">ippon-hosting.fr</a>
-        <a href="http://www.ippon-digital.fr" target="_blank">ippon-digital.fr</a>
-      </div>
-      <div class="copyrights">
+    </div>
+    <div class="row">
+      <div class="col-md-12 copyrights">
         <p>
           <?php echo 'Copyright &copy; ' . date("Y") . ' ' . get_bloginfo('name'); ?>
           - All Right Reserved
@@ -35,17 +86,17 @@
           Powered by Ippon and WorPress
         </p>
       </div>
-    </footer><!-- #colophon -->
-    
-  </div><!-- #page -->
+    </div>
+  </footer>
 
   <?php wp_footer(); ?>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="<?php bloginfo('template_url'); ?>/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/vendor/lazyload.js"></script>
-  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/vendor/jquery.fittext.js"></script>
-  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/functions.js"></script>
+  <script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/vendor/lazyload.js"></script>
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/vendor/jquery.fittext.js"></script>
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/vendor/css3-mediaqueries.js"></script>
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/functions.js"></script>
   <script>
     $(document).ready(function() {
       MY_MENU.init();

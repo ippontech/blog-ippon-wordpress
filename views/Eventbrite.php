@@ -301,7 +301,7 @@ class Eventbrite {
       esc_attr(strftime('%d', $time)),
       esc_attr(strftime('%B', $time)),
       esc_attr(strftime('%Y', $time)),
-      esc_attr($evnt->description)
+      $evnt->description
       );
   }
   /*

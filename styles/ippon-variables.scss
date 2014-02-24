@@ -25,14 +25,20 @@ $ippon-secondary-lighter: #fdcb15;
 $ippon-complementary: #25afb5;
 $ippon-complementary-darker: #157187;
 
-$twitter-color: #55acee;
-$facebook-color: #3b5998;
-$googleplus-color: #dd4b39;
-$linkedin-color: #007bb6;
-
-
-
-
+////////////////////////////////////////////////////////////////////////
+// Définitions des marques annexes
+////////////////////////////////////////////////////////////////////////
+// $brand-list: github googleplus youtube twitter rss linkedin vimeo facebook
+$brand-list:
+  (github "\e801" #171515)
+  (googleplus "\e802" #dd4b39)
+  (google "\e802" #dd4b39)
+  (youtube "\e806" #c4302b)
+  (twitter "\e805" #55acee)
+  (rss "\e807" #ff6600)
+  (linkedin "\e804" #0e76a8)
+  (vimeo "\e803" #44bbff)
+  (facebook "\e819" #3b5998);
 
 ////////////////////////////////////////////////////////////////////////
 // Surcharge des variables Bootstrap

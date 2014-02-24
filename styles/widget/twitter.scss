@@ -12,15 +12,13 @@
     > li {
       font-size: pxtoem($font-size-small);
       margin-bottom: $padding-base-vertical;
-      // margin-left: $padding-base-horizontal;
-      // margin-right: $padding-base-horizontal;
       margin-top: $padding-base-vertical;
       border-bottom: 1px solid $gray-light;
       @include padding-vertical-base();
     }
   }
   .widget-title {
-    background-color: $twitter-color;
+    background-color: get_brand_color(twitter);
     color: $light;
     @include padding-base();
     @include pre-icon("\e805", pxtoem($margin-icon));

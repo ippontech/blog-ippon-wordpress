@@ -1,0 +1,57 @@
+// Plugin Yet Another Related Posts Plugin
+// --------------------------------------------------
+
+.content-teaser .yarpp-related {
+  display: none;
+}
+
+.yarpp-related {
+  h3 {
+    background-color: $ippon-complementary;
+    color: $light !important;
+    @include padding-base();
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      border-left: 4px solid $ippon-complementary;
+      @include padding-left-base();
+      @include padding-vertical-base();
+      @include margin-vertical-base();
+    }
+  }
+
+
+  .yarpp-thumbnails-horizontal {
+    .yarpp-thumbnail {
+      border: 0 !important;
+      margin: 0 !important;
+      height: auto !important;
+      width: 100% !important;
+      display: block !important;
+      vertical-align: text-top;
+      img {
+        display: inline-block !important;
+        width: 120px !important;
+        height: 90px !important;
+        vertical-align: top;
+      }
+    }
+    .yarpp-thumbnail .yarpp-thumbnail-default {
+      border: 0 !important;
+      margin: 0 !important;
+      height: auto !important;
+      width: 100% !important;
+      display: inline !important;
+      vertical-align: text-top;
+      img {
+        display: inline-block !important;
+        width: 120px !important;
+        height: 90px !important;
+        vertical-align: top;
+      }
+    }
+  }
+}

@@ -8,10 +8,14 @@
 #ssba {
   &:before {
     // background-color: lighten($gray-light, 5%);
-    content: 'Vous aimez ? Vous partagez !';
+    content: 'Vous avez aimé ? Vous partagez !';
     display: block;
-    font-size: $font-size-small;
+    font-size: $font-size-h3-large;
+    font-weight: 500;
     @include padding-top-large();
+    background-color: $ippon-complementary-darker;
+    color: $light !important;
+    @include padding-base();
   }
   @include padding-vertical-large();
   a:hover {
@@ -20,32 +24,19 @@
   img {
     width : 0px !important;
   }
-  [id^="ssba_"] {
-    border-radius: 50%;
-    color: $light;
-    display: inline-block;
-    font-size: 1em;
-    height: 2em;
-    line-height: 2em;
-    text-align: center;
-    width: 2em;
-    @include margin-right-base();
-    @include margin-top-base();
+
+  @each $brand_def in $brand-list {
+    $title: nth($brand_def, 1);
+    $icon: nth($brand_def, 2);
+    $colour: nth($brand_def, 3);
+    #ssba_#{$title}_share {
+      @include rs-rounded($icon, $colour);
+      @include margin-right-base();
+      @include margin-top-base();
+    }
   }
-  #ssba_twitter_share {
-    background-color: $twitter-color;
-    @include pre-icon("\e805", 0);
-  }
-  #ssba_facebook_share {
-    background-color: $facebook-color;
-    @include pre-icon("\e819", 0);
-  }
-  #ssba_google_share {
-    background-color: $googleplus-color;
-    @include pre-icon("\e802", 0);
-  }
-  #ssba_linkedin_share {
-    background-color: $linkedin-color;
-    @include pre-icon("\e804", 0);
-  }
+
+  // [id^="ssba_"] {
+  //   display: inline-block;    
+  // }
 }
