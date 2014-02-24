@@ -66,7 +66,7 @@ Feuille de style pour le contenu d'un article
 }
 
 .post-meta {
-  display: inline;
+  // display: inline;
   font-size: pxtoem($font-size-meta);
   @include padding-vertical-base();
 }

@@ -36,7 +36,10 @@ h3,
 h4,
 h5,
 h6 {
-  @include margin-vertical-small();
+  margin-bottom: pxtoem(6px);
+  margin-top: pxtoem(6px);
+  // @include margin-vertical-small();
+
   // @include margin-none();
   // margin-bottom: 0;
   // margin-top: $margin-small-vertical;
