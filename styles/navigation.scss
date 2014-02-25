@@ -100,8 +100,12 @@ nav#menu {
       @include padding-large();
       &:hover {
         background-color: $ippon-secondary;
+        border-bottom: 1px solid $gray-light;
         color: $dark;
         text-decoration: none;
+        @media (min-width: $screen-sm-min) {
+          border-bottom: 0;
+        }
       }
     }
   }
