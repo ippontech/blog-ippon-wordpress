@@ -54,7 +54,6 @@
   <?php // respond.js cf. https://github.com/scottjehl/Respond ?>
   <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js" type="text/javascript"></script>  
 
-
   <!-- CONTENU WP_HEAD -->
   <?php wp_head(); ?>
   <!-- FIN CONTENU WP_HEAD -->

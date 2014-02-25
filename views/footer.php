@@ -93,10 +93,17 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+  
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/vendor/lazyload.js"></script>
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/vendor/jquery.fittext.js"></script>
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/vendor/css3-mediaqueries.js"></script>
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/functions.js"></script>
+
+
+  <?php // RWD tables cf. http://zurb.com/playground/responsive-tables ?>
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/vendor/responsive-tables.js"></script>
+
   <script>
     $(document).ready(function() {
       MY_MENU.init();
