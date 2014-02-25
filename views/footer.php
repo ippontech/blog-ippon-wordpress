@@ -75,16 +75,16 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 copyrights">
-        <p>
-          <?php echo 'Copyright &copy; ' . date("Y") . ' ' . get_bloginfo('name'); ?>
-          - All Right Reserved
-        </p>
-        <p>
-          Powered by Ippon and WorPress
-        </p>
+      <div class="row">
+        <div class="col-md-12 copyrights">
+          <p>
+            <?php echo 'Copyright &copy; ' . date("Y") . ' ' . get_bloginfo('name'); ?>
+            - All Right Reserved
+          </p>
+          <p>
+            Powered by Ippon and WorPress
+          </p>
+        </div>
       </div>
     </div>
   </footer>
