@@ -2,6 +2,8 @@
 <!doctype html>
 
 <head>
+
+
   <meta charset="<?php bloginfo('charset'); ?>">
 
   <?php // Google Chrome Frame for IE ?>

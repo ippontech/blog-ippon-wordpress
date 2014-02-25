@@ -5,8 +5,10 @@ $color-header-rs: $gray;
 
 .header-rs {
   color: $color-header-rs;
+  display: -webkit-flex;
   display: flex;
   font-size: pxtoem(24px);
+  -webkit-justify-content: space-between;
   justify-content: space-between;
   a {
     color: $color-header-rs;
