@@ -82,7 +82,7 @@
             - All Right Reserved
           </p>
           <p>
-            Powered by Ippon and WorPress
+            Powered by Ippon and WordPress
           </p>
         </div>
       </div>
