@@ -252,6 +252,7 @@ class Eventbrite {
     //Permet un affichage des dates en français.
     setlocale(LC_TIME, "fr_FR");
     $time = strtotime($evnt->start_date);
+    $event_return = "";
     $venue_name = 'online';
     if( isset($evnt->venue) && isset( $evnt->venue->name )){
       $venue_name = $evnt->venue->name;
@@ -307,9 +308,6 @@ class Eventbrite {
         esc_attr(strftime('%Y', $time)),
         $evnt->description
         );
-
-    else {
-      $event_return = "";
     }
 
     return $event_return;
