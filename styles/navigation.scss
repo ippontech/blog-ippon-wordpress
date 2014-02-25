@@ -42,7 +42,7 @@
   @media (min-width: $screen-sm-min) {
     text-align: left;
     .logo {
-      @include img-background(179px, 64px, 'logo_ippon_desktop.png', 'logo_ippon_mobile-2x.png');
+      @include img-background(179px, 64px, 'logo_ippon_desktop.png', 'logo_ippon_desktop-2x.png');
     }
   }
 }
