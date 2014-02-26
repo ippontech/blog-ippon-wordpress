@@ -19,19 +19,26 @@ $color-header-rs: $gray;
 }
 
 .no-flexbox .header-rs {
-  color: $color-header-rs;
+  
 
     /* old syntax */
     display: -ms-flexbox;
-    display: -webkit-box;
-    display: -moz-box;
     display: box;
 
-    /* new syntax: */
+    /* new syntax: */ 
     display: -webkit-flex;
     display: flex;
 
-    -ms-justify-content: space-between;
     -webkit-justify-content: space-between;
     justify-content: space-between;
+    color: $color-header-rs;
+  
+    font-size: pxtoem(24px);
+  
+    a {
+      color: $color-header-rs;
+      &:hover {
+        border-bottom: 0;
+      }
+    }
 }
