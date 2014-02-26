@@ -47,7 +47,8 @@
   <?php // jQuery ?>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-
+  <?php //Flexie ?>
+  <script src=../js/vendor/flexie.min.js type="text/javascript"></script>
   <?php // Modernizr cf. http://modernizr.com/ ?>
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js" type="text/javascript"></script>
 
