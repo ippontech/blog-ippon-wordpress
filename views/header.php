@@ -47,15 +47,26 @@
   <?php // jQuery ?>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-  <?php //Flexie ?>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/flexie/1.0.3/flexie.min.js"></script>
+  
+  </script>
   <?php // Modernizr cf. http://modernizr.com/ ?>
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js" type="text/javascript"></script>
+  <?php //YepNope ?>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/yepnope/1.5.4/yepnope.min.js"></script>
 
   <?php // html5shiv.js cf. https://code.google.com/p/html5shiv/ ?>
   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.js"></script>
   <?php // respond.js cf. https://github.com/scottjehl/Respond ?>
   <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js" type="text/javascript"></script>  
+
+  <?php //Flexie ?>
+  <script>
+  Modernizr.load({
+  test: Modernizr.flexbox,
+  nope: '//cdnjs.cloudflare.com/ajax/libs/flexie/1.0.3/flexie.min.js'
+  });
+  </script>
+
 
   <!-- CONTENU WP_HEAD -->
   <?php wp_head(); ?>

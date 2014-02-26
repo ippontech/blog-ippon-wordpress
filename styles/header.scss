@@ -5,8 +5,12 @@ $color-header-rs: $gray;
 
 .header-rs {
   color: $color-header-rs;
-  display: -webkit-flex;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
   display: flex;
+
   font-size: pxtoem(24px);
   -webkit-justify-content: space-between;
   justify-content: space-between;
@@ -19,26 +23,17 @@ $color-header-rs: $gray;
 }
 
 .no-flexbox .header-rs {
-  
 
-    /* old syntax */
-    display: -ms-flexbox;
-    display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
 
-    /* new syntax: */ 
-    display: -webkit-flex;
-    display: flex;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
 
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-    color: $color-header-rs;
-  
-    font-size: pxtoem(24px);
-  
-    a {
-      color: $color-header-rs;
-      &:hover {
-        border-bottom: 0;
-      }
-    }
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+
 }
