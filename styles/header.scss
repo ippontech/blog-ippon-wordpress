@@ -5,10 +5,10 @@ $color-header-rs: $gray;
 
 .header-rs {
   color: $color-header-rs;
-  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;      /* TWEENER - IE 10 */
-  display: -webkit-flex;     /* NEW - Chrome */
+  display: -webkit-box;      
+  display: -moz-box;         
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
 
   font-size: pxtoem(24px);
@@ -23,7 +23,7 @@ $color-header-rs: $gray;
 }
 
 .no-flexbox .header-rs {
-
+  
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -32,8 +32,55 @@ $color-header-rs: $gray;
   -moz-box-align: start;
   box-align: start;
 
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  box-pack: justify;
+}
+
+.no-flexbox .rs-github {
+
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+
+}
+
+.no-flexbox .rs-googleplus {
+
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+
+}
+.no-flexbox .rs-youtube {
+
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+
+}
+.no-flexbox .rs-twitter {
+
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+
+}
+.no-flexbox .rs-rss {
+
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+
+}
+.no-flexbox .rs-linkedin {
+
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+
+}
+.no-flexbox .rs-vimeo{
+
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
 
 }
