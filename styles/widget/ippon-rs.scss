@@ -29,5 +29,10 @@
   -webkit-box-align: start;
   -moz-box-align: start;
   box-align: start;
+  text-align: center;
 
+}
+
+.no-flexbox .rs-vimeo {
+  width: 5%;
 }
