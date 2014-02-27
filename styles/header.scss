@@ -5,16 +5,17 @@ $color-header-rs: $gray;
 
 .header-rs {
   color: $color-header-rs;
+  font-size: pxtoem(24px);
+
   display: -webkit-box;      
   display: -moz-box;         
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 
-  font-size: pxtoem(24px);
   -webkit-justify-content: space-between;
-  -ms-flex: justify;
   justify-content: space-between;
+  
   a {
     color: $color-header-rs;
     &:hover {
