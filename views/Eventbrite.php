@@ -225,7 +225,7 @@ class Eventbrite {
         }
       }
     }else{
-      $html .= "No events were found at this time.";
+      $html .= ""; //No events were found at this time.
     }
     return $html . "</div>";
   }

@@ -8,12 +8,18 @@ include(get_template_directory()."/Eventbrite.php");
 //   http://www.eventbrite.com/api/key/
 //  Eventbrite user_key (OPTIONAL, only needed for reading/writing private user data)
 //   http://www.eventbrite.com/userkeyapi
+
+try {
 $authentication_tokens = array('app_key'  => 'VBGXTDKF6KIURVPCBR',
                                'user_key' => '138668242583242740277');
+
 $eb_client = new Eventbrite( $authentication_tokens );
 
 // For more information about the features that are available through the Eventbrite API, see http://developer.eventbrite.com/doc/
 $events = $eb_client->user_list_events();
+}
+catch (Exception $e) {
+}
 
 //mark-up the list of events that were requested 
 // render in html - ?>
