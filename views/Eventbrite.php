@@ -250,7 +250,7 @@ class Eventbrite {
 
   public static function eventListRow( $evnt ) {
     //Permet un affichage des dates en français.
-    setlocale (LC_TIME, 'fr_FR.utf8');
+    setlocale(LC_TIME, "fr_FR");
     $time = strtotime($evnt->start_date);
     $event_return = "";
     $venue_name = 'online';
@@ -270,7 +270,6 @@ class Eventbrite {
       esc_attr($evnt->organizer->name)
       );
     }
-
     //On affiche les évenements uniquement si il n'ont pas encore eu lieu.
     if($time > time()){
       $event_return = sprintf( '
