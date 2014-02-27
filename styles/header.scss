@@ -5,13 +5,87 @@ $color-header-rs: $gray;
 
 .header-rs {
   color: $color-header-rs;
-  display: flex;
   font-size: pxtoem(24px);
+
+  display: -webkit-box;      
+  display: -moz-box;         
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-justify-content: space-between;
   justify-content: space-between;
+  
   a {
     color: $color-header-rs;
     &:hover {
       border-bottom: 0;
     }
   }
+}
+
+
+.no-flexbox .header-rs {
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+
+  text-align: center;
+
+}
+
+.no-flexbox .rs-github {
+
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+
+}
+
+.no-flexbox .rs-googleplus {
+
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+
+}
+.no-flexbox .rs-youtube {
+
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+
+}
+.no-flexbox .rs-twitter {
+
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+
+}
+.no-flexbox .rs-rss {
+
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+
+}
+.no-flexbox .rs-linkedin {
+
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+
+}
+.no-flexbox .rs-vimeo{
+
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+
 }

@@ -1,7 +1,10 @@
 
+ 
 <!doctype html>
 
 <head>
+
+
   <meta charset="<?php bloginfo('charset'); ?>">
 
   <?php // Google Chrome Frame for IE ?>
@@ -43,11 +46,26 @@
 
   <?php // Modernizr cf. http://modernizr.com/ ?>
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js" type="text/javascript"></script>
+  <?php //YepNope ?>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/yepnope/1.5.4/yepnope.min.js"></script>
 
   <?php // html5shiv.js cf. https://code.google.com/p/html5shiv/ ?>
   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.js"></script>
   <?php // respond.js cf. https://github.com/scottjehl/Respond ?>
   <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js" type="text/javascript"></script>  
+
+  <?php //Flexie ?>
+  <script>
+  Modernizr.load({
+  test: Modernizr.flexbox,
+  nope: '//cdnjs.cloudflare.com/ajax/libs/flexie/1.0.3/flexie.min.js'
+  });
+  </script>
+  <!--[if gt IE 8]><!--> 
+  <style type="text/css"> .no-flexbox .menu {
+  margin-top: -21px;
+  }
+  </style> <!--<![endif]--> 
 
   <!-- CONTENU WP_HEAD -->
   <?php wp_head(); ?>

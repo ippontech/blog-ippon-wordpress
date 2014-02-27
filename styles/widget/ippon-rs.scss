@@ -1,9 +1,17 @@
 // Widget custom pour afficher les liens des réseaux sociaux Ippon
 // --------------------------------------------------
 .widget_ippon_rs {
+  
+  display: -webkit-box;      
+  display: -moz-box;         
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+
   font-size: pxtoem(24px);
+  -webkit-justify-content: space-between;
   justify-content: space-between;
+  
   @include aside-secondary();
   @include padding-horizontal(6px);
   a {
@@ -11,4 +19,20 @@
       border-bottom: 0;
     }
   }
+}
+
+.no-flexbox .widget_ippon_rs {
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  text-align: center;
+
+}
+
+.no-flexbox .rs-vimeo {
+  width: 5%;
 }
