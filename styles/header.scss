@@ -13,6 +13,7 @@ $color-header-rs: $gray;
 
   font-size: pxtoem(24px);
   -webkit-justify-content: space-between;
+  -ms-flex: justify;
   justify-content: space-between;
   a {
     color: $color-header-rs;
@@ -21,6 +22,7 @@ $color-header-rs: $gray;
     }
   }
 }
+
 
 .no-flexbox .header-rs {
   

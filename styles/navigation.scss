@@ -28,6 +28,10 @@
     display: inline-block;
   }
 }
+//Uniquement sur ie 10 : correction de la taille du menu
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+.menu{ margin-top: -21px;} 
+} 
 
 .search-link {
   @include padding-vertical(4px);
