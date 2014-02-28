@@ -9,14 +9,12 @@ include(get_template_directory()."/Eventbrite.php");
 //  Eventbrite user_key (OPTIONAL, only needed for reading/writing private user data)
 //   http://www.eventbrite.com/userkeyapi
 
-
-//test_user_key: 138668242583242740277
 //test_app_key: VBGXTDKF6KIURVPCBR
-
+//test_user_key: 138668242583242740277
 
 try {
-$authentication_tokens = array('app_key'  => '138668242583242740277',
-                               'user_key' => 'VBGXTDKF6KIURVPCBR');
+$authentication_tokens = array('app_key'  => 'VCQZTVRNGERPPCJIYP',
+                               'user_key' => '134123987636170296330');
 
 $eb_client = new Eventbrite( $authentication_tokens );
 
