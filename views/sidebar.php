@@ -21,6 +21,7 @@ $events = $eb_client->user_list_events();
 catch (Exception $e) {
 }
 
+
 //mark-up the list of events that were requested 
 // render in html - ?>
 
