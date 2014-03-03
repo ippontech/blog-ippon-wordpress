@@ -35,6 +35,9 @@ article .entry-content,
 .entry-content, .entry-thumbnail {
   text-align: justify;
 }
+.entry-content p, a{
+	word-wrap: break-word;
+}
 
 ////////////////////////////////////////////////////////////////////////
 // Titres
