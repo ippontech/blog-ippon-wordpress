@@ -29,8 +29,10 @@
   }
 }
 //Uniquement sur ie 10 : correction de la taille du menu
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
-.menu{ margin-top: -21px;} 
+
+
+.ie10 { 
+  margin-top: -21px;
 } 
 
 .search-link {

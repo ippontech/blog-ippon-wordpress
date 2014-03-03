@@ -58,13 +58,18 @@
   test: Modernizr.flexbox,
   nope: '//cdnjs.cloudflare.com/ajax/libs/flexie/1.0.3/flexie.min.js'
   });
-  </script>
-  <!--[if gt IE 8]><!--> 
-  <style type="text/css"> .no-flexbox .menu {
-  margin-top: -21px;
-  }
-  </style> <!--<![endif]--> 
 
+
+  $( "div" ).addClass(function( index, currentClass ) {
+  var addedClass;
+ 
+  if ( currentClass === "menu" ) {
+    addedClass = "ie10";
+  }
+ 
+  return addedClass;
+  });
+  </script>
   <!-- CONTENU WP_HEAD -->
   <?php wp_head(); ?>
   <!-- FIN CONTENU WP_HEAD -->

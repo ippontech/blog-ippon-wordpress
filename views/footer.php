@@ -108,9 +108,22 @@
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/vendor/responsive-tables.js"></script>
 
   <script>
+  
     $(document).ready(function() {
       MY_MENU.init();
     });
+  if (Function('/*@cc_on return document.documentMode===10@*/')()){
+    $( "div" ).addClass(function( index, currentClass ) {
+    var addedClass;
+   
+    if ( currentClass === "menu" ) {
+      addedClass = "ie10";
+    }
+  
+   
+    return addedClass;
+    });
+  }
   </script>
 
 </body>
