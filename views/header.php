@@ -58,18 +58,9 @@
   test: Modernizr.flexbox,
   nope: '//cdnjs.cloudflare.com/ajax/libs/flexie/1.0.3/flexie.min.js'
   });
-
-
-  $( "div" ).addClass(function( index, currentClass ) {
-  var addedClass;
- 
-  if ( currentClass === "menu" ) {
-    addedClass = "ie10";
-  }
- 
-  return addedClass;
-  });
   </script>
+
+  
   <!-- CONTENU WP_HEAD -->
   <?php wp_head(); ?>
   <!-- FIN CONTENU WP_HEAD -->

@@ -112,12 +112,12 @@
     $(document).ready(function() {
       MY_MENU.init();
     });
-  if (Function('/*@cc_on return document.documentMode===10@*/')()){
+  if (Function('/*@cc_on return document.documentMode===10@*/')() || Function('/*@cc_on return document.documentMode===9@*/')()){
     $( "div" ).addClass(function( index, currentClass ) {
     var addedClass;
    
     if ( currentClass === "menu" ) {
-      addedClass = "ie10";
+      addedClass = "ie9_10";
     }
   
    
