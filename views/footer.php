@@ -117,10 +117,11 @@
     var addedClass;
    
     if ( currentClass === "menu" ) {
-      addedClass = "ie9_10";
+      addedClass = "ie9_10_menu";
     }
-  
-   
+    if ( currentClass === "header-rs") {
+      addedClass = "ie9_10_flex";
+    }
     return addedClass;
     });
   }

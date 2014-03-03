@@ -25,67 +25,52 @@ $color-header-rs: $gray;
 }
 
 
-.no-flexbox .header-rs {
-  
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
+.ie9_10_flex {
 
-  -webkit-box-align: start;
-  -moz-box-align: start;
+  display: -ms-flexbox;
+  display: box;
   box-align: start;
+  -ms-flex-align: justify;
+  box-pack: justify;
 
   text-align: center;
 
 }
 
-.no-flexbox .rs-github {
+.ie9_10_flex .rs-github {
 
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
   box-flex: 1;
+
 
 }
 
-.no-flexbox .rs-googleplus {
+.ie9_10_flex .rs-googleplus {
 
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
   box-flex: 1;
 
 }
-.no-flexbox .rs-youtube {
+.ie9_10_flex .rs-youtube {
 
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
   box-flex: 1;
 
 }
-.no-flexbox .rs-twitter {
+.ie9_10_flex .rs-twitter {
 
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
   box-flex: 1;
 
 }
-.no-flexbox .rs-rss {
+.ie9_10_flex .rs-rss {
 
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
   box-flex: 1;
 
 }
-.no-flexbox .rs-linkedin {
+.ie9_10_flex .rs-linkedin {
 
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
   box-flex: 1;
 
 }
-.no-flexbox .rs-vimeo{
+.ie9_10_flex .rs-vimeo{
 
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
   box-flex: 1;
 
 }
