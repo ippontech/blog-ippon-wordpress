@@ -25,7 +25,15 @@ $color-header-rs: $gray;
 }
 
 
-.ie9_10_flex {
+.ie10_flex {
+
+  display: -ms-flexbox;
+  -ms-flex-pack: justify;
+  
+
+}
+
+.ie9_flex {
 
   display: -ms-flexbox;
   display: box;
@@ -37,39 +45,39 @@ $color-header-rs: $gray;
 
 }
 
-.ie9_10_flex .rs-github {
+.ie9_flex .rs-github {
 
   box-flex: 1;
 
 
 }
 
-.ie9_10_flex .rs-googleplus {
+.ie9_flex .rs-googleplus {
 
   box-flex: 1;
 
 }
-.ie9_10_flex .rs-youtube {
+.ie9_flex .rs-youtube {
 
   box-flex: 1;
 
 }
-.ie9_10_flex .rs-twitter {
+.ie9_flex .rs-twitter {
 
   box-flex: 1;
 
 }
-.ie9_10_flex .rs-rss {
+.ie9_flex .rs-rss {
 
   box-flex: 1;
 
 }
-.ie9_10_flex .rs-linkedin {
+.ie9_flex .rs-linkedin {
 
   box-flex: 1;
 
 }
-.ie9_10_flex .rs-vimeo{
+.ie9_flex .rs-vimeo{
 
   box-flex: 1;
 

@@ -10,7 +10,7 @@
     @include padding-base();
   }
   form {
-    white-space: nowrap;
+    white-space: normal;
     max-width: 100%;
     @include aside-secondary();
     @include padding-base();

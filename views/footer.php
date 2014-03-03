@@ -114,13 +114,16 @@
     });
   if (Function('/*@cc_on return document.documentMode===10@*/')() || Function('/*@cc_on return document.documentMode===9@*/')()){
     $( "div" ).addClass(function( index, currentClass ) {
+    
     var addedClass;
    
     if ( currentClass === "menu" ) {
       addedClass = "ie9_10_menu";
     }
-    if ( currentClass === "header-rs") {
-      addedClass = "ie9_10_flex";
+    if ( currentClass === "header-rs" && Function('/*@cc_on return document.documentMode===9@*/')()) {
+      addedClass = "ie9_flex";
+    } else if ( currentClass === "header-rs" ){
+      addedClass = "ie10_flex";
     }
     return addedClass;
     });
