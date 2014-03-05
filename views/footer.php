@@ -129,15 +129,9 @@
       return addedClass;
       });
     }
-
-    $( "table" ).addClass(function( index, respClass ) {
-
-      var respClass = "responsive";
-
-      return respClass;
-
-    });
+    $(".entry-content").find("table").addClass("responsive");
   </script>
+  
 
 </body>
 </html>
