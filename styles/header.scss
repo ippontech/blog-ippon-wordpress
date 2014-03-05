@@ -24,7 +24,6 @@ $color-header-rs: $gray;
   }
 }
 
-
 .ie10_flex {
 
   display: -ms-flexbox;
@@ -37,18 +36,15 @@ $color-header-rs: $gray;
 
   display: -ms-flexbox;
   display: box;
-  box-align: start;
+
   -ms-flex-align: justify;
   box-pack: justify;
-
-  text-align: center;
 
 }
 
 .ie9_flex .rs-github {
 
   box-flex: 1;
-
 
 }
 

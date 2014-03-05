@@ -100,7 +100,6 @@
 
   <?php // Polyfill pour les media queries ?>
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/vendor/css3-mediaqueries.js"></script>
-
   <?php // Fonctionnalités spécifiques au blog Ippon ?>
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/functions.js"></script>
 
@@ -129,6 +128,7 @@
       return addedClass;
       });
     }
+    //Ajout de la classe responsive aux tableaux dontenu dans les posts
     $(".entry-content").find("table").addClass("responsive");
   </script>
   
