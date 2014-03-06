@@ -47,6 +47,10 @@ img {
   @include img-responsive();
 }
 
+.wp-smiley {
+  display: inline-block;  
+}
+
 .calltoaction {
   background-color: $ippon-secondary;
   @include padding-large();
