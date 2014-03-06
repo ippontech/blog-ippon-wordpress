@@ -128,7 +128,7 @@
       return addedClass;
       });
     }
-    //Ajout de la classe responsive aux tableaux dontenu dans les posts
+    //Ajout de la classe responsive aux tableaux contenu dans les posts
     $(".entry-content").find("table").addClass("responsive");
   </script>
   

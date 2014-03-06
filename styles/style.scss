@@ -72,6 +72,9 @@ img {
 }
 
 .backtotop {
+  @media (max-width: $screen-sm-min) {
+    @include margin-top-large();
+  }
   text-align: center;
   a {
     background-color: $gray-light;
