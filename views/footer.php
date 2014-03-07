@@ -112,14 +112,14 @@
     $(document).ready(function() {
       MY_MENU.init();
     });
-
+    var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
     //Image header loaded only if needed (width >= 768)
-    if( document.documentElement.clientWidth >= 768 ){
+    if( width >= 768 ){
       var src = "<?php echo get_header_image() ?>";
       var imgresp = '<img src="'+src+'" class="img-responsive"/>';
       $( "#headerResponsive" ).append(imgresp);
-    }
 
+    }
 
     if (Function('/*@cc_on return document.documentMode===10@*/')() || Function('/*@cc_on return document.documentMode===9@*/')()){
       $( "div" ).addClass(function( index, currentClass ) {
