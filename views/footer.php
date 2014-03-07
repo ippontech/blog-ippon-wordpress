@@ -95,13 +95,14 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
+  <?php // Fonctionnalités spécifiques au blog Ippon ?>
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/functions.js"></script>
+
   <?php // Pour le chargement d'images en asynchrone cf. https://github.com/vvo/lazyload ?>
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/vendor/lazyload.min.js"></script>
 
   <?php // Polyfill pour les media queries ?>
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/vendor/css3-mediaqueries.js"></script>
-  <?php // Fonctionnalités spécifiques au blog Ippon ?>
-  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/functions.js"></script>
 
   <?php // RWD tables cf. http://zurb.com/playground/responsive-tables ?>
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/vendor/responsive-tables.js"></script>
@@ -111,6 +112,14 @@
     $(document).ready(function() {
       MY_MENU.init();
     });
+
+    //Image header loaded only if needed (width >= 768)
+    if( document.documentElement.clientWidth >= 768 ){
+      var src = "<?php echo get_header_image() ?>";
+      var imgresp = '<img src="'+src+'" class="img-responsive"/>';
+      $( "#headerResponsive" ).append(imgresp);
+    }
+
 
     if (Function('/*@cc_on return document.documentMode===10@*/')() || Function('/*@cc_on return document.documentMode===9@*/')()){
       $( "div" ).addClass(function( index, currentClass ) {

@@ -50,7 +50,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.js"></script>
 
   <?php // respond.js cf. https://github.com/scottjehl/Respond ?>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js" type="text/javascript"></script>  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js" type="text/javascript"></script> 
 
   <?php //Flexie ?>
   <script>
@@ -95,8 +95,8 @@
       </div>
       <div class="row">
         <!-- <div class="col-sm-12"> -->
-          <div class="hidden-xs">
-            <img src="<?php echo get_header_image() ?>" class="img-responsive"/>
+          <div class="hidden-xs" id="headerResponsive">
+            <!-- <img src="<?php echo get_header_image() ?>" class="img-responsive"/> -->
           </div>
         <!-- </div> -->
       </div>
