@@ -33,6 +33,7 @@
 .widget_twitter {
   .in-reply-to {
     white-space: nowrap;
+    margin-right: 0.2em;
     @include pre-icon("\e81a",0);
   }
 }
@@ -40,6 +41,7 @@
 .widget_twitter {
   .retweet {
     white-space: nowrap;
+    margin-right: 0.2em;
     @include pre-icon("\e81b",0);
   }
 }
