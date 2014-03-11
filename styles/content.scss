@@ -34,7 +34,8 @@ Feuille de style pour le contenu d'un article
     }
   }
 }
-
+//Prise en compte de la taille d'écran pour
+//Déterminer la taille de la tabulation de la liste
 .entry-content ul{
   @media (min-width: $screen-sm-min) {
     l-moz-padding-start: 30px;
