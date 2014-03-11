@@ -13,6 +13,12 @@
       "src": "fontawesome"
     },
     {
+      "uid": "474656633f79ea2f1dad59ff63f6bf07",
+      "css": "star",
+      "code": 59420,
+      "src": "fontawesome"
+    },
+    {
       "uid": "3db5347bd219f3bce6025780f5d9ef45",
       "css": "tag",
       "code": 59401,
@@ -22,6 +28,18 @@
       "uid": "a3f89e106175a5c5c4e9738870b12e55",
       "css": "tags",
       "code": 59402,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "c6be5a58ee4e63a5ec399c2b0d15cf2c",
+      "css": "reply",
+      "code": 59418,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "09feb4465d9bd1364f4e301c9ddbaa92",
+      "css": "retweet",
+      "code": 59419,
       "src": "fontawesome"
     },
     {

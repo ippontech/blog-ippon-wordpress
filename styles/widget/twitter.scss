@@ -24,3 +24,29 @@
     @include pre-icon("\e805", pxtoem($margin-icon));
   }
 }
+.widget_twitter {
+      .from-meta {
+        display:none;
+      }
+}
+
+.widget_twitter {
+  .in-reply-to {
+    white-space: nowrap;
+    @include pre-icon("\e81a",0);
+  }
+}
+
+.widget_twitter {
+  .retweet {
+    white-space: nowrap;
+    @include pre-icon("\e81b",0);
+  }
+}
+
+.widget_twitter {
+  .favorite {
+    white-space: nowrap;
+    @include pre-icon("\e81c",0);
+  }
+}
