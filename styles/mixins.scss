@@ -367,6 +367,13 @@
   }
 }
 
+@mixin bullet-list-responsive($padding) {
+  l-moz-padding-start: $padding;
+    -webkit-padding-start: $padding;
+    -khtml-padding-start: $padding;
+    -o-padding-start: $padding;
+    padding-start: $padding;
+}
 
 
 

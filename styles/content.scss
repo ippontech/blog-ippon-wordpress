@@ -38,18 +38,10 @@ Feuille de style pour le contenu d'un article
 //Déterminer la taille de la tabulation de la liste
 .entry-content ul{
   @media (min-width: $screen-sm-min) {
-    l-moz-padding-start: 30px;
-    -webkit-padding-start: 30px;
-    -khtml-padding-start: 30px;
-    -o-padding-start: 30px;
-    padding-start: 30px;
+    @include bullet-list-responsive(30px)
   }
   @media (max-width: $screen-sm-min) {
-    l-moz-padding-start: 15px;
-    -webkit-padding-start: 15px;
-    -khtml-padding-start: 15px;
-    -o-padding-start: 15px;
-    padding-start: 15px;
+    @include bullet-list-responsive(15px)
   }
 }
 
