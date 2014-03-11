@@ -35,6 +35,23 @@ Feuille de style pour le contenu d'un article
   }
 }
 
+.entry-content ul{
+  @media (min-width: $screen-sm-min) {
+    l-moz-padding-start: 30px;
+    -webkit-padding-start: 30px;
+    -khtml-padding-start: 30px;
+    -o-padding-start: 30px;
+    padding-start: 30px;
+  }
+  @media (max-width: $screen-sm-min) {
+    l-moz-padding-start: 15px;
+    -webkit-padding-start: 15px;
+    -khtml-padding-start: 15px;
+    -o-padding-start: 15px;
+    padding-start: 15px;
+  }
+}
+
 .entry-content h1, .h1{
   color: $ippon-complementary-darker;
   font-size: 2.3em;
