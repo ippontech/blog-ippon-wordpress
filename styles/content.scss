@@ -127,15 +127,12 @@ Feuille de style pour le contenu d'un article
   }
 }
 
-
 .centerImage {
   display: block;
   margin-top: 12px;
   position: relative;
   width: 100%;
 }
-
-
 
 .player-btn {
   background-color: $ippon-secondary;
@@ -149,5 +146,10 @@ Feuille de style pour le contenu d'un article
   .fa-play {
     color: $light;
   }
+}
+
+// classe CSS utilisée par le WYSIWYG pour centrer les images
+.aligncenter {
+  margin: auto;
 }
 
