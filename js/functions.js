@@ -4,6 +4,10 @@
 
 var MY_MENU = (function() {
 
+  if (!window.console) {
+    window.console = {};
+  }
+
   var init = function() {
 
     console.debug('begin building menu-link');
