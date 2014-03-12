@@ -24,6 +24,11 @@
     @include pre-icon("\e805", pxtoem($margin-icon));
   }
 }
+
+.widget_twitter .intent-meta {
+  display: block;
+}
+
 .widget_twitter {
       .from-meta {
         display:none;
