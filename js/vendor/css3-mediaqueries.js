@@ -400,12 +400,19 @@ return document.documentElement["client"+d];
 }
 }
 };
-return {addStyle:function(s,_30){
-var el=document.createElement("style");
-el.setAttribute("type","text/css");
-document.getElementsByTagName("head")[0].appendChild(el);
-if(el.styleSheet){
-el.styleSheet.cssText=s;
+return {addStyle: function (s, process) {
+var el;
+if (null !== document.getElementById('css-mediaqueries-js')) {
+  el = document.getElementById('css-mediaqueries-js');
+}
+else {
+  el = document.createElement('style');
+  el.setAttribute('type', 'text/css');
+  el.setAttribute('id', 'css-mediaqueries-js');
+  document.getElementsByTagName('head')[0].appendChild(el);
+}
+if (el.styleSheet) { // IE
+  el.styleSheet.cssText += s;
 }else{
 el.appendChild(document.createTextNode(s));
 }
@@ -424,8 +431,9 @@ _a("newStyleParsed",el);
 el.parsingDisallowed=true;
 }
 return el;
-},removeStyle:function(el){
-return el.parentNode.removeChild(el);
+},removeStyle: function (el) {
+  if (el.parentNode)
+    return el.parentNode.removeChild(el);
 },parsed:function(fn){
 if(_5){
 _7(fn);
