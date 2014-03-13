@@ -6,7 +6,11 @@ Feuille de style pour le contenu d'un article
 */
 
 .widget-area aside:nth-child(2){
-border-top: solid 1px #27b0b5;
+  border-top: solid 1px #27b0b5;
+}
+
+.widget-area #widget_sp_image-4 h3 {
+  margin-bottom: 10px;
 }
 
 #content {
