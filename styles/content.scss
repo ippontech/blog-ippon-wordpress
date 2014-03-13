@@ -5,6 +5,10 @@
 Feuille de style pour le contenu d'un article
 */
 
+.widget-area aside:nth-child(2){
+border-top: solid 1px #27b0b5;
+}
+
 #content {
   // background-color: $gray-light;
   article {
