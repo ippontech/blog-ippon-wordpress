@@ -3,14 +3,9 @@
  */
 
 var MY_MENU = (function() {
-
-  if (!window.console) {
-    window.console = {};
-  }
-
   var init = function() {
 
-    console.debug('begin building menu-link');
+    //console.debug('begin building menu-link');
     $('body').addClass('js');
     var $menu = $('#menu'),
     $menulink = $('.menu-link');
@@ -20,7 +15,7 @@ var MY_MENU = (function() {
       $menu.toggleClass('active');
       return false;
     });
-    console.debug('end building menu-link');
+    //console.debug('end building menu-link');
   }
 
   var public_functions = {};
