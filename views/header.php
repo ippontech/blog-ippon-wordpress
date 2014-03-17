@@ -8,7 +8,12 @@
   <?php // Google Chrome Frame for IE ?>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title><?php bloginfo('name'); ?></title>
+   <title><?php bloginfo('name');
+                if ( is_single() ){
+                  echo " - ";
+                  single_post_title();
+                }
+  ?></title>
 
   <!-- <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"> -->
 
