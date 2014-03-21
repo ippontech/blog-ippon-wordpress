@@ -363,15 +363,14 @@ function ippon_meta_author() {
 
       // Auteur de l'article
       if ( 'post' == get_post_type() ) {
-       printf(
-        '<div class="meta-author vcard">
-            Par %3$s
-        </div>',
-        esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-        esc_attr( sprintf( __( 'Voir tous les articles de %s', 'ippon' ), get_the_author() ) ),
-        get_the_author()
-       );
+        printf('<div class="meta-author vcard">');
+        esc_attr_e( 'Par', 'textdomain' );
+        echo ' ';
+        the_author_posts_link();
+        printf('</div>');
+
       }
+      
 
 }
 endif;
