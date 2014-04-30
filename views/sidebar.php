@@ -9,21 +9,26 @@ include(get_template_directory()."/Eventbrite.php");
 //  Eventbrite user_key (OPTIONAL, only needed for reading/writing private user data)
 //   http://www.eventbrite.com/userkeyapi
 
-//test_app_key: VBGXTDKF6KIURVPCBR
-//test_user_key: 138668242583242740277
+//test_app_key: VBGXTDKF6KIURVPCBR / vrai key: VCQZTVRNGERPPCJIYP
+//test_user_key: 138668242583242740277 / vri userkey 134123987636170296330
 
-try {
-$authentication_tokens = array('app_key'  => 'VCQZTVRNGERPPCJIYP',
-                               'user_key' => '134123987636170296330');
+$now = time();
+if( $now > intval(file_get_contents('time'))+60*60*24){
+  try {
+  $authentication_tokens = array('app_key'  => 'VCQZTVRNGERPPCJIYP',
+                                 'user_key' => '134123987636170296330');
 
-$eb_client = new Eventbrite( $authentication_tokens );
+  $eb_client = new Eventbrite( $authentication_tokens );
 
-// For more information about the features that are available through the Eventbrite API, see http://developer.eventbrite.com/doc/
-$events = $eb_client->user_list_events();
+  // For more information about the features that are available through the Eventbrite API, see http://developer.eventbrite.com/doc/
+  $events = $eb_client->user_list_events();
+  $s = serialize($events);
+  file_put_contents('events', $s);
+  }
+  catch (Exception $e) {
+  }
+  file_put_contents('time', $now);
 }
-catch (Exception $e) {
-}
-
 
 //mark-up the list of events that were requested 
 // render in html - ?>
@@ -46,7 +51,7 @@ if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
     <aside id="aside-content">
       <div class="sidebar-inner">
         <!-- insertions automatiques des événements Eventbrite rattachés au compte Ippon -->
-        <?= Eventbrite::eventList( $events, 'eventListRow'); ?>
+        <?= Eventbrite::eventList( unserialize(file_get_contents('events')), 'eventListRow'); ?>
         <div class="widget-area">
           <?php dynamic_sidebar( 'sidebar-2' ); ?>
         </div><!-- .widget-area -->

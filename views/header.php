@@ -65,6 +65,8 @@
   });
   </script>
 
+
+
   
   <!-- CONTENU WP_HEAD -->
   <?php wp_head(); ?>
