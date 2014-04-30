@@ -265,6 +265,11 @@
     color: $light;
   }
 }
+@mixin aside-complementary() {
+  background-color: $ippon-complementary;
+  color: $light;
+  @include padding-base();
+}
 
 @mixin aside-secondary() {
   background-color: $ippon-secondary;

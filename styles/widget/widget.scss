@@ -32,3 +32,48 @@
     }
   }
 }
+
+@include responsive-invisibility('.widget_text');
+@media (min-width: $screen-sm-min) {
+  @include responsive-visibility('.widget_text');
+}
+.widget_text {
+  background-color: lighten($gray-light, 5%);
+  h3 {
+    @include aside-complementary-darker();
+    @include pre-icon("\e80b", pxtoem($margin-icon));
+  }
+  .textwidget {
+      @include padding-left-base();
+      @include padding-bottom-base();
+      @include padding-right-base();
+      h2 {
+        color: $gray-dark;
+        font-size: $font-size-h2;
+        @include margin-none();
+        @include padding-vertical-base();
+      }
+      a {
+        display: block;
+          color: $ippon-complementary-darker;
+          display: inline;
+          @include padding-vertical-large();
+          &:hover {
+            border-bottom: 0;
+          }
+          @media (min-width: $screen-sm-min) {
+            display: inline-block;
+            @include padding-vertical-none();
+            &:hover {
+              border-bottom: 1px dotted;
+            }
+          }
+          &:before {
+            padding-right: 4px;
+          }
+        
+
+      }
+
+    }
+  }

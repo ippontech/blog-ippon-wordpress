@@ -15,8 +15,8 @@ include(get_template_directory()."/Eventbrite.php");
 $now = time();
 if( $now > intval(file_get_contents('time'))+60*60*24){
   try {
-  $authentication_tokens = array('app_key'  => 'VCQZTVRNGERPPCJIYP',
-                                 'user_key' => '134123987636170296330');
+  $authentication_tokens = array('app_key'  => 'VBGXTDKF6KIURVPCBR',
+                                 'user_key' => '138668242583242740277');
 
   $eb_client = new Eventbrite( $authentication_tokens );
 
