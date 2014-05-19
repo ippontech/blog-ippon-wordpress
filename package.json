@@ -1,6 +1,6 @@
 {
   "name": "blog-ippon-wordpress",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "author": {
     "name": "Alvin Berthelot",
     "email": "aberthelot@ippon.fr"
@@ -20,7 +20,9 @@
     "grunt-contrib-jshint": "~0.1.1",
     "grunt-contrib-watch": "~0.5.1",
     "grunt-express": "~1.0.0-beta2",
-    "grunt-open": "~0.2.1"
+    "grunt-open": "~0.2.1",
+    "grunt-string-replace": "~0.2.7",
+    "grunt-replace": "~0.7.7"
   },
   "engines": {
     "node": ">=0.8.0"

@@ -174,6 +174,19 @@ module.exports = function(grunt) {
         // }
       }
     },
+    'string-replace': {
+      version:{
+        files: {
+          'styles/style.scss' : 'styles/style.scss'
+        },
+        options: {
+          replacements: [{
+            pattern: /Version: \d+(\.\d+)+/ig,
+            replacement: 'Version: <%= pkg.version %>'
+          }]
+        }
+      }
+    },
     //
     zip: {
       theme: {
@@ -214,6 +227,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   // grunt.loadNpmTasks('grunt-express');
   // grunt.loadNpmTasks('grunt-open');
+  // Plugin remplacement numéro de version
+  grunt.loadNpmTasks('grunt-string-replace');
 
   // plugin pour lancer CasperJS
   grunt.loadNpmTasks('grunt-casper');
@@ -231,6 +246,7 @@ module.exports = function(grunt) {
   ]);
   // Réalise la distribution
   grunt.registerTask('build', [
+    'string-replace:version',
     'casper:theme',
     'clean',
     'compass',
