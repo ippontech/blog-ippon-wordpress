@@ -287,9 +287,9 @@ class Eventbrite {
             <h2 class="eb_event_list_item_title">
               %3$s
             </h2>
-            <p>
-              %8$s
-            </p>
+            <!--  <p> -->
+              <!-- %8$s -->
+            <!-- </p> -->
             <div class="suscribe">
               <a class="next" href="%2$s" target="_blank" title="%3$s" rel="bookmark">
                 S\'inscrire
