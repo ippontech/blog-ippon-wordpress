@@ -10,22 +10,6 @@
  */
 ?>
 
-<meta property="og:type" content="article">
-<meta property="og:title" content="<?php the_title(); ?>">
-<meta property="og:site_name" content="<?php bloginfo('name'); ?>">
-<meta property="og:description" content="<?php the_excerpt(); ?>">
-<meta property="og:url" content="<?php the_permalink(); ?>">
-<meta property="og:locale" content="fr_FR">
-<meta property="og:image" content="<?php the_post_thumbnail('full', array()); ?>">
-<meta property="og:image:height" content="200">
-<meta property="og:image:width" content="200">
-<!-- <meta property="og:image:type" content="image/jpeg"> -->
-
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@ippontech">
-
-<meta property="fb:app_id" content="108841395819162">
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <header class="entry-header row">
 
