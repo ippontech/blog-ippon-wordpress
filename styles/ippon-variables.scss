@@ -7,7 +7,7 @@ $light: #ffffff;
 //$light: green;
 $gray: #ababab;
 $gray-dark: #333333;
-$gray-light: #F1F1F1;
+$gray-light: #F9F9F9;
 
 $ippon-star-red: #fcc007;
 $ippon-sunshine: #e42420;
@@ -22,7 +22,7 @@ $ippon-primary: $ippon-sunshine;
 $ippon-primary-lighter: #ec5d58;
 $ippon-secondary: $ippon-star-red;
 $ippon-secondary-lighter: #fdcb15;
-$ippon-complementary: #25afb5;
+$ippon-complementary: #2AC9D2; //old #25afb5
 $ippon-complementary-darker: #157187;
 
 ////////////////////////////////////////////////////////////////////////
@@ -63,7 +63,7 @@ $padding-large-horizontal:       16px !default;
 $padding-small-vertical:         5px !default;
 $padding-small-horizontal:       10px !default;
 
-$headings-color: $ippon-complementary;
+$headings-color: $ippon-complementary-darker;
 $link-color: $ippon-complementary;
 $link-hover-color: $ippon-complementary-darker;
 $line-height-base: 1.5;
@@ -89,7 +89,7 @@ $margin-small-horizontal:       14px !default;
 $margin-icon: 8px;
 
 $font-size-meta: $font-size-small;
-$font-size-h1-large:            floor($font-size-base * 1.25) !default; // ~20px
+$font-size-h1-large:            floor($font-size-base * 1.8) !default; // ~20px
 $font-size-h2-large:            floor($font-size-base * 1.7) !default; // ~27px
 $font-size-h3-large:            ceil($font-size-base * 1.25) !default; // ~20px
 $font-size-h4-large:            $font-size-base !default;

@@ -54,7 +54,7 @@ Feuille de style pour le contenu d'un article
 }
 
 .entry-content h1, .h1{
-  color: $ippon-complementary-darker;
+  color: $ippon-orange-juice;
   font-size: 2.3em;
 }
 ////////////////////////////////////////////////////////////////////////
@@ -140,6 +140,9 @@ Feuille de style pour le contenu d'un article
 }
 .meta-tags {
   display: none;
+  a {
+      color:  $ippon-orange-juice;
+  }
   @media (min-width: $screen-sm-min) {
     display: block;
   }
