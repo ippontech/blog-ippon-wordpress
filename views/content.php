@@ -40,7 +40,7 @@
     </div>
   </div>
 
-  <?php if (is_search() || !is_single()) : ?>
+  <?php if ((is_search() || !is_single()) && !is_page()) : ?>
   <!-- Affichage du résumé -->
     <?php if (has_post_thumbnail() && !post_password_required()) : ?>
     <!-- Avec image -->
