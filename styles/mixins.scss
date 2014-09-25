@@ -353,13 +353,13 @@
 }
 
 @mixin img-background($width, $height, $img, $img-2x) {
-  background-image: url('img/' + $img);
+  background-image: url("img/" + $img);
   background-size: 100%;
   //background-size: $width $height;  
   height: $height;
   width: $width;
   @include device-resolution(retina) {
-    background-image: url('img/' + $img-2x);
+    background-image: url("img/" + $img-2x);
   }
 }
 
