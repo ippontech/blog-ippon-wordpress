@@ -69,7 +69,8 @@ Feuille de style pour le contenu d'un article
   @media (min-width: $screen-sm-min) {
     // @include margin-vertical-large();
   }
-  article.post {
+  article.post,
+  article.page {
     background-color: $gray-light;
     margin-bottom: 4px;
     padding-top: 1px;
