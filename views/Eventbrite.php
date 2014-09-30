@@ -271,7 +271,7 @@ class Eventbrite {
       );
     }
     //On affiche les évenements uniquement si il n'ont pas encore eu lieu.
-    if( $evnt->status == "Live"){
+    if( $evnt->status == "Live" && $evnt->listed == true ){
       $event_return = sprintf( '
         <div class="eb_event_list_item" id="evnt_div_%1$s">
           <div class="main-item">
