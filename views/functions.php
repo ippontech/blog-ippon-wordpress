@@ -93,8 +93,9 @@ function twentythirteen_setup() {
     'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video'
   ) );
 
-  // This theme uses wp_nav_menu() in one location.
+  // This theme uses wp_nav_menu() in two locations (header and footer).
   register_nav_menu( 'primary', __( 'Navigation Menu', 'twentythirteen' ) );
+  register_nav_menu( 'footer', __( 'Footer Menu', 'twentythirteen' ) );
 
   /*
    * This theme uses a custom image size for featured images, displayed on
