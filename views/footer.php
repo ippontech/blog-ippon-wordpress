@@ -77,6 +77,16 @@
       </div>
       <div class="row">
         <div class="col-md-12 copyrights">
+          <?php    /**
+            * Displays a navigation menu
+            * @param array $args Arguments
+            */
+
+            $args = array(
+              'theme_location' => 'footer'
+            );
+          
+            wp_nav_menu( $args ); ?>
           <p>
             <?php echo 'Copyright &copy; ' . date("Y") . ' ' . get_bloginfo('name'); ?>
             - All Right Reserved

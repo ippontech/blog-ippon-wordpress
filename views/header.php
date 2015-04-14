@@ -115,7 +115,7 @@
               <ul>
                 <?php
                 $defaults = array(
-                  'theme_location'  => '',
+                  'theme_location'  => 'primary',
                   'menu'            => '',
                   'container'       => '',
                   'container_class' => '',
