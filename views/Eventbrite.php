@@ -270,8 +270,9 @@ class Eventbrite {
       esc_attr($evnt->organizer->name)
       );
     }
-    //On affiche les évenements uniquement si il n'ont pas encore eu lieu.
-    if( $evnt->status == "Live"){
+    // On affiche les évenements uniquement si il n'ont pas encore eu lieu.
+    // Et si ils ne sont pas à caractère privé.
+    if( $evnt->status == "Live" && $evnt->listed == false ){
       $event_return = sprintf( '
         <div class="eb_event_list_item" id="evnt_div_%1$s">
           <div class="main-item">
