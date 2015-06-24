@@ -367,7 +367,11 @@ function ippon_meta_author() {
         printf('<div class="meta-author vcard">');
         esc_attr_e( 'Par', 'textdomain' );
         echo ' ';
-        the_author_posts_link();
+        if ( function_exists( 'coauthors_posts_links' ) ) {
+          coauthors_posts_links();
+        } else {
+          the_author_posts_link();
+        }
         printf('</div>');
 
       }
